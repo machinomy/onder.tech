@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="59" viewBox="0 0 76 59">
+    <defs>
+        <linearGradient id="a" x1="49.998%" x2="50%" y1="1830.756%" y2="-128.575%">
+            <stop offset="0%" stop-color="#00A5BA"/>
+            <stop offset="51.529%" stop-color="#F7C604"/>
+            <stop offset="100%" stop-color="#F00"/>
+        </linearGradient>
+        <linearGradient id="b" x1="50%" x2="50%" y1="100%" y2="-2002.639%">
+            <stop offset="0%" stop-color="#00A5BA"/>
+            <stop offset="51.529%" stop-color="#F7C604"/>
+            <stop offset="100%" stop-color="#F00"/>
+        </linearGradient>
+        <linearGradient id="c" x1="50%" x2="50%" y1="138.586%" y2="-41.689%">
+            <stop offset="0%" stop-color="#00A5BA"/>
+            <stop offset="51.529%" stop-color="#F7C604"/>
+            <stop offset="100%" stop-color="#F00"/>
+        </linearGradient>
+        <linearGradient id="d" x1="50%" x2="50%" y1="130.854%" y2="-40.023%">
+            <stop offset="0%" stop-color="#00A5BA"/>
+            <stop offset="51.529%" stop-color="#F7C604"/>
+            <stop offset="100%" stop-color="#F00"/>
+        </linearGradient>
+        <linearGradient id="e" x1="50%" x2="50%" y1="530.757%" y2="-38.491%">
+            <stop offset="0%" stop-color="#00A5BA"/>
+            <stop offset="51.529%" stop-color="#F7C604"/>
+            <stop offset="100%" stop-color="#F00"/>
+        </linearGradient>
+        <linearGradient id="f" x1="50%" x2="50%" y1="100%" y2="-405.06%">
+            <stop offset="0%" stop-color="#00A5BA"/>
+            <stop offset="51.529%" stop-color="#F7C604"/>
+            <stop offset="100%" stop-color="#F00"/>
+        </linearGradient>
+        <linearGradient id="g" x1="50%" x2="50%" y1="135.503%" y2="-427.861%">
+            <stop offset="0%" stop-color="#00A5BA"/>
+            <stop offset="51.529%" stop-color="#F7C604"/>
+            <stop offset="100%" stop-color="#F00"/>
+        </linearGradient>
+        <linearGradient id="h" x1="50%" x2="50%" y1="507.395%" y2="0%">
+            <stop offset="0%" stop-color="#00A5BA"/>
+            <stop offset="51.529%" stop-color="#F7C604"/>
+            <stop offset="100%" stop-color="#F00"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#000" stroke-linecap="square" d="M45 7a6 6 0 1 0-6 6"/>
+        <path stroke="url(#a)" stroke-linecap="round" stroke-width="2" d="M11 20h53" transform="translate(1 1)"/>
+        <path stroke="url(#b)" stroke-linecap="round" stroke-width="2" d="M10.5 52h53" transform="translate(1 1)"/>
+        <path stroke="url(#c)" stroke-linecap="round" stroke-width="2" d="M69 47.5v-23M5 47.5v-23" transform="translate(1 1)"/>
+        <path stroke="url(#d)" stroke-linecap="round" stroke-width="2" d="M5.5 51.5l63-31M5.5 20.5l63.022 31.022" transform="translate(1 1)"/>
+        <g transform="translate(1 1)">
+            <rect width="5" height="5" x="2.5" y="17.5" stroke="#FFF" stroke-width="5" rx="2.5"/>
+            <rect width="8" height="8" x="1" y="16" stroke="url(#e)" stroke-width="2" rx="4"/>
+            <rect width="11" height="11" x="-.5" y="14.5" stroke="#FFF" rx="5.5"/>
+        </g>
+        <g transform="translate(1 1)">
+            <rect width="5" height="5" x="2.5" y="49.5" stroke="#FFF" stroke-width="5" rx="2.5"/>
+            <rect width="8" height="8" x="1" y="48" stroke="url(#f)" stroke-width="2" rx="4"/>
+            <rect width="11" height="11" x="-.5" y="46.5" stroke="#FFF" rx="5.5"/>
+        </g>
+        <g transform="translate(1 1)">
+            <rect width="5" height="5" x="66.5" y="49.5" stroke="#FFF" stroke-width="5" rx="2.5"/>
+            <rect width="8" height="8" x="65" y="48" stroke="url(#g)" stroke-width="2" rx="4"/>
+            <rect width="11" height="11" x="63.5" y="46.5" stroke="#FFF" rx="5.5"/>
+        </g>
+        <g transform="translate(1 1)">
+            <rect width="5" height="5" x="66.5" y="17.5" stroke="#FFF" stroke-width="5" rx="2.5"/>
+            <rect width="8" height="8" x="65" y="16" stroke="url(#h)" stroke-width="2" rx="4"/>
+            <rect width="11" height="11" x="63.5" y="14.5" stroke="#FFF" rx="5.5"/>
+        </g>
+    </g>
+</svg>
