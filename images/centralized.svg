@@ -54,33 +54,31 @@
         <path id="m" d="M0 0h14v11H0z"/>
     </defs>
     <g fill="none" fill-rule="evenodd">
-        <path stroke="url(#a)" stroke-linecap="round" stroke-width="2" d="M5 27h24"/>
-        <path stroke="url(#b)" stroke-linecap="round" stroke-width="2" d="M39 27h25.087"/>
-        <path stroke="url(#c)" stroke-linecap="round" stroke-width="2" d="M10 51.5l21-21"/>
-        <path stroke="url(#d)" stroke-linecap="round" stroke-width="2" d="M34.5 31.5v26.02"/>
-        <path stroke="url(#e)" stroke-linecap="round" stroke-width="2" d="M38 30.5l21.022 21.022"/>
+        <path fill="url(#a)" fill-rule="nonzero" d="M3 28a1 1 0 0 1 0-2h26a1 1 0 0 1 0 2H3z"/>
+        <path fill="url(#b)" fill-rule="nonzero" d="M39 28a1 1 0 0 1 0-2h27.087a1 1 0 0 1 0 2H39z"/>
+        <path fill="url(#c)" fill-rule="nonzero" d="M10.707 52.207a1 1 0 1 1-1.414-1.414l21-21a1 1 0 0 1 1.414 1.414l-21 21z"/>
+        <path fill="url(#d)" fill-rule="nonzero" d="M33.5 31.5a1 1 0 0 1 2 0v26.02a1 1 0 1 1-2 0V31.5z"/>
+        <path fill="url(#e)" fill-rule="nonzero" d="M37.293 31.207a1 1 0 0 1 1.414-1.414L59.73 50.815a1 1 0 1 1-1.414 1.414L37.293 31.207z"/>
         <rect width="2" height="2" x="1.5" y="26" stroke="url(#f)" stroke-width="2" rx="1"/>
         <rect width="2" height="2" x="8.5" y="51" stroke="url(#g)" stroke-width="2" rx="1"/>
         <rect width="2" height="2" x="33.5" y="58" stroke="url(#h)" stroke-width="2" rx="1"/>
         <rect width="2" height="2" x="58.5" y="51" stroke="url(#i)" stroke-width="2" rx="1"/>
         <rect width="2" height="2" x="65.5" y="26" stroke="url(#j)" stroke-width="2" rx="1"/>
-        <g stroke-linecap="round">
-            <rect width="11" height="11" x="29" y="21.5" stroke="#FFF" rx="5.5"/>
-            <rect width="8" height="8" x="30.5" y="23" stroke="url(#f)" stroke-width="2" rx="4"/>
-        </g>
+        <path fill="#FFF" fill-rule="nonzero" d="M34.5 22a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-1a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/>
+        <path fill="url(#f)" fill-rule="nonzero" d="M34.5 24a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/>
         <g transform="translate(27.5)">
             <mask id="l" fill="#fff">
                 <use xlink:href="#k"/>
             </mask>
-            <path stroke="#000" stroke-linecap="square" d="M-3.4 13.12c3.967 0 3.768 2 7.91 2s4.045-2 8.243-2" mask="url(#l)" transform="rotate(-90 4.677 14.12)"/>
-            <path stroke="#000" stroke-linecap="square" d="M-3.4-2.88c3.967 0 3.768 2 7.91 2s4.045-2 8.243-2" mask="url(#l)" transform="rotate(-90 4.677 -1.88)"/>
+            <path fill="#000" fill-rule="nonzero" d="M-3.4 13.62h-.5v-1h.5c1.716 0 2.602.27 4.06 1.026l.06.03c1.365.709 2.151.944 3.79.944 1.629 0 2.414-.228 3.86-.939l.02-.01c1.585-.778 2.525-1.05 4.363-1.05h.5v1h-.5c-1.663 0-2.462.232-3.922.948l-.02.01C7.24 15.35 6.314 15.62 4.51 15.62c-1.82 0-2.755-.28-4.251-1.056l-.06-.03c-1.327-.69-2.066-.914-3.599-.914z" mask="url(#l)" transform="rotate(90 4.677 14.12)"/>
+            <path fill="#000" fill-rule="nonzero" d="M-3.4-2.38h-.5v-1h.5c1.716 0 2.602.27 4.06 1.026l.06.03c1.365.709 2.151.944 3.79.944 1.629 0 2.414-.228 3.86-.939l.02-.01c1.585-.778 2.525-1.05 4.363-1.05h.5v1h-.5c-1.663 0-2.462.232-3.922.948l-.02.01C7.24-.65 6.314-.38 4.51-.38 2.69-.38 1.755-.66.259-1.436l-.06-.03c-1.327-.69-2.066-.914-3.599-.914z" mask="url(#l)" transform="rotate(90 4.677 -1.88)"/>
         </g>
         <g transform="translate(27.5 3)">
             <mask id="n" fill="#fff">
                 <use xlink:href="#m"/>
             </mask>
-            <path stroke="#000" stroke-linecap="square" d="M.6 10.12c3.967 0 3.768 2 7.91 2s4.045-2 8.243-2" mask="url(#n)" transform="rotate(-90 8.677 11.12)"/>
-            <path stroke="#000" stroke-linecap="square" d="M.6-5.88c3.967 0 3.768 2 7.91 2s4.045-2 8.243-2" mask="url(#n)" transform="rotate(-90 8.677 -4.88)"/>
+            <path fill="#000" fill-rule="nonzero" d="M.6 10.62H.1v-1h.5c1.716 0 2.602.27 4.06 1.026l.06.03c1.365.709 2.151.944 3.79.944 1.629 0 2.414-.228 3.86-.939l.02-.01c1.585-.778 2.525-1.05 4.363-1.05h.5v1h-.5c-1.663 0-2.462.232-3.922.948l-.02.01c-1.572.772-2.497 1.041-4.301 1.041-1.82 0-2.755-.28-4.251-1.056l-.06-.03c-1.327-.69-2.066-.914-3.599-.914z" mask="url(#n)" transform="rotate(90 8.677 11.12)"/>
+            <path fill="#000" fill-rule="nonzero" d="M.6-5.38H.1v-1h.5c1.716 0 2.602.27 4.06 1.026l.06.03c1.365.709 2.151.944 3.79.944 1.629 0 2.414-.228 3.86-.939l.02-.01c1.585-.778 2.525-1.05 4.363-1.05h.5v1h-.5c-1.663 0-2.462.232-3.922.948l-.02.01C11.24-3.65 10.314-3.38 8.51-3.38c-1.82 0-2.755-.28-4.251-1.056l-.06-.03C2.872-5.157 2.133-5.38.6-5.38z" mask="url(#n)" transform="rotate(90 8.677 -4.88)"/>
         </g>
     </g>
 </svg>

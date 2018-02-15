@@ -40,10 +40,10 @@ h1 {
     padding-left: 80px;
     padding-right: 80px;
     margin: 0px auto;
+    position: relative;
 }
 
 .separator {
-    width: 1183px;
     height: 2px;
     object-fit: contain;
 
@@ -137,7 +137,8 @@ article .animated .left-column a{
 }
 
 .how-to .left-column > div {
-    height: 168px;
+
+    margin-bottom: 160px;
 }
 
 article .animated .view-zone {
@@ -150,7 +151,6 @@ article .animated .view-zone {
 
 article .animated .view-zone .view-canvas {
     height: 401px;
-    background: url("images/graph.svg") no-repeat;
 
 }
 
@@ -316,3 +316,26 @@ article.road-map div ul li:before {
     bottom: 20px;
 }
 article.about p{  font-size: 24px; line-height: normal}
+
+article.optimize .animated{
+    padding-right: 100px;
+}
+article .animated:after{
+    content: ' ';
+    clear: both;
+    display: table;
+}
+article .animated .left-column{
+    float: left;
+}
+.view-canvas{
+    position: sticky;
+    top: 10px;
+    z-index: 1;
+    float: left;
+    width: 627px;
+    height: 401px;
+}
+a.selected {
+    color: red;
+}

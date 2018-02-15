@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="44" viewBox="0 0 32 44">
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="46" viewBox="0 0 34 46">
     <defs>
-        <linearGradient id="a" x1="50%" x2="50%" y1="100%" y2="-11.225%">
+        <linearGradient id="a" x1="50%" x2="50%" y1="100%" y2="0%">
             <stop offset="0%" stop-color="#00A5BA"/>
             <stop offset="51.529%" stop-color="#F7C604"/>
             <stop offset="100%" stop-color="#F00"/>
         </linearGradient>
-        <linearGradient id="b" x1="50%" x2="50%" y1="100%" y2="-76.272%">
+        <linearGradient id="b" x1="50%" x2="50%" y1="1158.51%" y2="-1065.427%">
             <stop offset="0%" stop-color="#00A5BA"/>
             <stop offset="51.529%" stop-color="#F7C604"/>
             <stop offset="100%" stop-color="#F00"/>
@@ -15,16 +15,16 @@
             <stop offset="51.529%" stop-color="#F7C604"/>
             <stop offset="100%" stop-color="#F00"/>
         </linearGradient>
-        <linearGradient id="d" x1="50%" x2="50%" y1="1964.613%" y2="-379.214%">
+        <linearGradient id="d" x1="50%" x2="50%" y1="1392.199%" y2="-379.214%">
             <stop offset="0%" stop-color="#00A5BA"/>
             <stop offset="51.529%" stop-color="#F7C604"/>
             <stop offset="100%" stop-color="#F00"/>
         </linearGradient>
     </defs>
-    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2">
-        <path stroke="url(#a)" d="M10.825 43.785L15.163.143h1.84l3.906 43.781"/>
-        <path stroke="url(#b)" stroke-linejoin="round" d="M.806 22.214H12.29"/>
-        <path stroke="url(#c)" d="M19.494 16.21H31.28"/>
-        <path stroke="url(#d)" d="M.62 10.81h12.891"/>
+    <g fill="none" fill-rule="nonzero">
+        <path fill="url(#a)" d="M11.82 43.883a1 1 0 0 1-1.99-.197L14.257-.857h3.661l3.987 44.692a1 1 0 1 1-1.992.178l-3.824-42.87-4.269 42.74z" transform="translate(1 1)"/>
+        <path fill="url(#b)" d="M.806 23.214a1 1 0 1 1 0-2H12.29a1 1 0 0 1 0 2H.806z" transform="translate(1 1)"/>
+        <path fill="url(#c)" d="M19.494 17.21a1 1 0 1 1 0-2H31.28a1 1 0 0 1 0 2H19.494z" transform="translate(1 1)"/>
+        <path fill="url(#d)" d="M.62 11.81a1 1 0 1 1 0-2h12.891a1 1 0 1 1 0 2H.621z" transform="translate(1 1)"/>
     </g>
 </svg>
