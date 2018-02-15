@@ -83,7 +83,8 @@
                         энергопотреблением этих устройств, меняя стоимость энергии.
                     </p>
                     <p>Такое управление снижает нагрузку на сеть.</p>
-                    <p>Чем быстрее цена реагирует на изменение спроса, тем <a name="peak-smoothing" class="anchor" id="peak-smoothing">ниже
+                    <p>Чем быстрее цена реагирует на изменение спроса, тем <a name="peak-smoothing" class="anchor"
+                                                                              id="peak-smoothing">ниже
                         пиковая
                         нагрузка</a>. В сети ØNDER цена может обновляться ежесекундно.</p>
                     <p>Ценовая политика становится гибкой. Можно будет потреблять нужное количество энергии, без
@@ -97,7 +98,8 @@
                         Помогая
                         им
                         мы создаём на локальном рынке дополнительные источники энергии.</p>
-                    <p>Это <a name="load-reduction" id="load-reduction" class="anchor" > снижает нагрузку </a> на узловые подстанции,
+                    <p>Это <a name="load-reduction" id="load-reduction" class="anchor"> снижает нагрузку </a> на узловые
+                        подстанции,
                         уменьшает потребность
                         в
                         мощности.</p>
@@ -222,8 +224,8 @@
                         graphSh.animate({d: noPeakSh.node.getAttribute('d')}, 1000, mina.backout);
                     }
                     toPeak = function () {
-                        graph.animate({d: peak}, 1000, mina.backout);
-                        graphSh.animate({d: peakSh}, 1000, mina.backout);
+                        graph.animate({d: peak.node.getAttribute('d')}, 1000, mina.backout);
+                        graphSh.animate({d: peakSh.node.getAttribute('d')}, 1000, mina.backout);
                     }
                     toLowLoad = function () {
                         graph.animate({d: lowLoad}, 1000, mina.backout);
@@ -353,7 +355,7 @@
                     </div>
                 </div>
                 <div class="view-canvas" id="how-to-canvas">
-                    <svg  width="627" height="401" viewBox="0 0 111 117">
+                    <svg width="627" height="401" viewBox="0 0 111 117">
                         <g fill="none" fill-rule="evenodd">
                             <rect width="109" height="115" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="3"/>
                             <g transform="translate(22 71)">
@@ -362,7 +364,8 @@
                                     <circle cx="11.5" cy="11.5" r="11" stroke="#00A5BA"/>
                                     <rect width="1" height="4" x="7" y="7" fill="#00A5BA" rx=".5"/>
                                     <rect width="1" height="4" x="15" y="7" fill="#00A5BA" rx=".5"/>
-                                    <path fill="#00A5BA" d="M11.5 15a1.5 1.5 0 0 1 1.5 1.5V18h-3v-1.5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                    <path fill="#00A5BA"
+                                          d="M11.5 15a1.5 1.5 0 0 1 1.5 1.5V18h-3v-1.5a1.5 1.5 0 0 1 1.5-1.5z"/>
                                 </g>
                                 <g fill="#00A5BA">
                                     <path d="M8 0h1v32H8zM16 0h1v32h-1zM24 0h1v32h-1zM48 0h1v32h-1zM40 0h1v32h-1zM32 0h1v32h-1z"/>
@@ -476,9 +479,9 @@
                     })
         };
         var animateElem = document.getElementById("graph-canvas");
-        new ScrollMagic.Scene({triggerElement: "#peak-smoothing", duration: 700, reverse: true})
+        new ScrollMagic.Scene({triggerElement: "#peak-smoothing", duration: 130, reverse: true})
                 .on("enter", function (event) {
-                 clean();
+                    clean();
                     console.log(event);
                     document.getElementById("peak-smoothing").classList.add("selected");
                     if (event.scrollDirection == 'FORWARD') {
@@ -490,7 +493,7 @@
                     }
                     //animateElem.style.backgroundColor = "grey";
                 })
-               // .addIndicators({name: "1 "}) // add indicators (requires plugin)
+                //.addIndicators({name: "1 "}) // add indicators (requires plugin)
                 .addTo(controller);
         new ScrollMagic.Scene({triggerElement: "#load-reduction", duration: 100, reverse: true})
                 .on("enter", function (event) {
@@ -506,7 +509,7 @@
                         clean();
                     }
                 })
-             //   .addIndicators({name: "2 "}) // add indicators (requires plugin)
+              //   .addIndicators({name: "2 "}) // add indicators (requires plugin)
                 .addTo(controller);
         new ScrollMagic.Scene({triggerElement: "#line-straightening", duration: 100, reverse: true})
                 .on("enter", function (event) {
@@ -518,7 +521,7 @@
                     else
                         toLowLoad();
                 })
-               // .addIndicators({name: "3"}) // add indicators (requires plugin)
+                // .addIndicators({name: "3"}) // add indicators (requires plugin)
                 .addTo(controller);
     </script>
 </div>
