@@ -479,14 +479,13 @@
         new ScrollMagic.Scene({triggerElement: "#peak-smoothing", duration: 700, reverse: true})
                 .on("enter", function (event) {
                  clean();
+                    console.log(event);
                     document.getElementById("peak-smoothing").classList.add("selected");
                     if (event.scrollDirection == 'FORWARD') {
                         // trigger animation by changing inline style.
                         toNoPeak();
-
                     }
                     else {
-
                         toPeak();
                     }
                     //animateElem.style.backgroundColor = "grey";

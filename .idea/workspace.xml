@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="113bd87c-d1f9-48f1-bc52-875428f86942" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/graph (1).svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/onder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/TimelineMax.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/TweenMax.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/snap.svg-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/stickyfill.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/blockchain.svg" afterPath="$PROJECT_DIR$/images/blockchain.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/centralized.svg" afterPath="$PROJECT_DIR$/images/centralized.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/power-tower.svg" afterPath="$PROJECT_DIR$/images/power-tower.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
     </list>
     <ignored path="onder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,8 +87,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="355" column="54" selection-start-line="355" selection-start-column="54" selection-end-line="355" selection-end-column="54" />
+            <state relative-caret-position="340">
+              <caret line="481" column="39" selection-start-line="481" selection-start-column="39" selection-end-line="481" selection-end-column="39" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#article#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#article#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -111,9 +99,8 @@
                 <element signature="n#div#0;n#div#0;n#article#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#article#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#25097#25254#0" expanded="false" />
-                <element signature="e#25466#25942#0" expanded="false" />
-                <element signature="e#26206#26654#0" expanded="false" />
-                <element signature="e#26922#27287#0" expanded="false" />
+                <element signature="e#26244#26692#0" expanded="false" />
+                <element signature="e#26960#27325#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -320,12 +307,12 @@
       <option name="presentableId" value="Default" />
       <updated>1518613892829</updated>
       <workItem from="1518613896364" duration="21375000" />
-      <workItem from="1518686013713" duration="19763000" />
+      <workItem from="1518686013713" duration="20410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41138000" />
+    <option name="totallyTimeSpent" value="41785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -381,9 +368,8 @@
             <element signature="n#div#0;n#div#0;n#article#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#article#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#25097#25254#0" expanded="false" />
-            <element signature="e#25466#25942#0" expanded="false" />
-            <element signature="e#26206#26654#0" expanded="false" />
-            <element signature="e#26922#27287#0" expanded="false" />
+            <element signature="e#26244#26692#0" expanded="false" />
+            <element signature="e#26960#27325#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -574,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="355" column="54" selection-start-line="355" selection-start-column="54" selection-end-line="355" selection-end-column="54" />
+        <state relative-caret-position="340">
+          <caret line="481" column="39" selection-start-line="481" selection-start-column="39" selection-end-line="481" selection-end-column="39" />
           <folding>
             <element signature="n#div#0;n#div#0;n#article#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#article#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -586,9 +572,8 @@
             <element signature="n#div#0;n#div#0;n#article#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#article#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#25097#25254#0" expanded="false" />
-            <element signature="e#25466#25942#0" expanded="false" />
-            <element signature="e#26206#26654#0" expanded="false" />
-            <element signature="e#26922#27287#0" expanded="false" />
+            <element signature="e#26244#26692#0" expanded="false" />
+            <element signature="e#26960#27325#0" expanded="false" />
           </folding>
         </state>
       </provider>
