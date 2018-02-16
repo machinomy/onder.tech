@@ -1,32 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="111" height="117" viewBox="0 0 111 117">
+<svg xmlns="http://www.w3.org/2000/svg" width="117" height="117" viewBox="0 0 117 117">
     <g fill="none" fill-rule="evenodd">
-        <rect width="109" height="115" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="3"/>
-        <g transform="translate(22 71)">
-            <rect width="78" height="31" x=".5" y=".5" stroke="#00A5BA" rx="2"/>
+        <rect width="115" height="115" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="3"/>
+        <g transform="translate(19 71)">
+            <rect width="77" height="29" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="2"/>
             <g transform="translate(52 4)">
-                <circle cx="11.5" cy="11.5" r="11" stroke="#00A5BA"/>
-                <rect width="1" height="4" x="7" y="7" fill="#00A5BA" rx=".5"/>
-                <rect width="1" height="4" x="15" y="7" fill="#00A5BA" rx=".5"/>
+                <circle cx="11.5" cy="11.5" r="10.5" stroke="#00A5BA" stroke-width="2"/>
+                <rect width="2" height="5" x="7" y="7" fill="#00A5BA" rx="1"/>
+                <rect width="2" height="5" x="14" y="7" fill="#00A5BA" rx="1"/>
                 <path fill="#00A5BA" d="M11.5 15a1.5 1.5 0 0 1 1.5 1.5V18h-3v-1.5a1.5 1.5 0 0 1 1.5-1.5z"/>
             </g>
             <g fill="#00A5BA">
-                <path d="M8 0h1v32H8zM16 0h1v32h-1zM24 0h1v32h-1zM48 0h1v32h-1zM40 0h1v32h-1zM32 0h1v32h-1z"/>
-            </g>
-            <g stroke="#00A5BA" transform="translate(2 11)">
-                <rect width="4" height="3" x=".5" y=".5" rx="1.5"/>
-                <rect width="4" height="3" x="8.5" y=".5" rx="1.5"/>
-                <rect width="4" height="3" x="16.5" y=".5" rx="1.5"/>
-                <rect width="4" height="3" x="40.5" y=".5" rx="1.5"/>
-                <rect width="4" height="3" x="32.5" y=".5" rx="1.5"/>
-                <rect width="4" height="3" x="24.5" y=".5" rx="1.5"/>
+                <path d="M0 2h2v27H0zM12 0h2v31h-2zM36 0h2v31h-2zM24 0h2v31h-2zM48 0h2v31h-2z"/>
             </g>
         </g>
-        <g stroke="#00A5BA" transform="translate(74 12)">
-            <rect width="26" height="50" x=".5" y=".5" rx="2"/>
-            <path d="M11.5 17.5h4v.5a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-.5H21a1.5 1.5 0 0 0 1.5-1.5v-1a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 15v1A1.5 1.5 0 0 0 6 17.5h1.5v.5A1.5 1.5 0 0 0 9 19.5h1a1.5 1.5 0 0 0 1.5-1.5v-.5z"/>
+        <g transform="translate(71 12)">
+            <rect width="25" height="49" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="2"/>
+            <path fill="#00A5BA" d="M15 18h-3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2H6a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h15a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2z"/>
         </g>
-        <g transform="translate(22 12)">
-            <rect width="45" height="50" x=".5" y=".5" stroke="#00A5BA" rx="2"/>
+        <g transform="translate(19 12)">
+            <rect width="44" height="49" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="2"/>
             <rect width="33" height="11" x="6.5" y="10.5" stroke="#00A5BA" rx="2"/>
             <rect width="22" height="2" x="12" y="15" fill="#00A5BA" rx="1"/>
             <path stroke="#00A5BA" stroke-linecap="round" d="M13.522 30L9 37.028l5-.725-5 7.56"/>

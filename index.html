@@ -115,7 +115,7 @@
                     </p>
                 </div>
                 <div class="view-canvas" id="graph-canvas">
-                    <svg id="graph" width="627" height="401" viewBox="0 0 627 401">
+                    <svg id="graph" width="601" height="401" viewBox="0 0 601 401">
                         <defs>
                             <linearGradient id="a" x1="21.83%" x2="75.642%" y1="50%" y2="50%">
                                 <stop offset="0%" stop-color="#404042"/>
@@ -134,7 +134,7 @@
                             </filter>
                         </defs>
                         <g fill="none" fill-rule="evenodd">
-                            <rect width="625" height="350" x="2" y="23" fill="url(#a)" opacity=".08" rx="8"/>
+                            <rect width="601" height="350" x="2" y="23" fill="url(#a)" opacity=".08" rx="8"/>
                             <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="16">
                                 <tspan x="2" y="12">Потребление энергии</tspan>
                             </text>
@@ -176,6 +176,18 @@
                                       d="M.52 135.55c26.545 0 35.595 9.867 68.498 10.027 32.903.16 64.696-7.277 106.561-7.273 41.865.005 99.339 13.25 182.287 12.818 82.949-.43 96.511-34.562 138.071-34.562 29.749 0 55.56 18.774 104.3 18.774"/>
 
                             </g>
+                            <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" id="no-peak-text" opacity="0"
+                                  opacity=".5">
+                                <tspan x="230" y="130">Ниже пиковая нагрузка</tspan>
+                            </text>
+                            <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" id="low-load-text" opacity="0"
+                                  opacity=".5">
+                                <tspan x="230" y="150">Ниже нагрузка на подстанции</tspan>
+                            </text>
+                            <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" id="ideal-text" opacity="0"
+                                  opacity=".5">
+                                <tspan x="230" y="170">Равномерная нагрузка на сеть</tspan>
+                            </text>
                             <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14"
                                   opacity=".5">
                                 <tspan x="1.179" y="394">Полночь</tspan>
@@ -194,7 +206,7 @@
                             </text>
                             <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14"
                                   opacity=".5">
-                                <tspan x="569.179" y="394">Полночь</tspan>
+                                <tspan x="540.179" y="394">Полночь</tspan>
                             </text>
                         </g>
 
@@ -215,25 +227,66 @@
                     var lowLoadSh = Snap.select('#low-load-shadow');
                     var ideal = Snap.select('#ideal');
                     var idealSh = Snap.select('#ideal-shadow');
+                    var graphLines = [peak, noPeak, lowLoad, ideal];
 
-                    var peakPoints = peak.node.getAttribute('d');
-                    var noPeakPoints = noPeak.node.getAttribute('d');
+                var noPeakText = Snap.select('#no-peak-text');
+                var noPeakText = Snap.select('#no-peak-text');
+                    var hideAll = function () {
+                        graphLines.forEach(
+                                function (e) {
+                                    e.node.style.opacity = 0;
+                                }
+                        )
+                    };
+                    var last = null;
+                    var lastText = null;
+                    var current = null;
+                    var currentText = null;
+                    animLast = function (future, futureText) {
 
-                    toNoPeak = function () {
-                        graph.animate({d: noPeak.node.getAttribute('d')}, 1000, mina.backout);
-                        graphSh.animate({d: noPeakSh.node.getAttribute('d')}, 1000, mina.backout);
+                        if (!!last) {
+                            last.animate({opacity: 0}, 1000);
+                        }
+                        if(!!currentText){
+                            currentText.animate({opacity: 0}, 1000);
+                        }
+                        if (!current)
+                            current = peak;
+                        current.opacity = 1;
+                        current.animate({opacity: 0.2}, 1000);
+
+                        last = current;
+
+                        current = future;
+                        currentText = futureText;
+                        if(!!currentText){
+                            futureText.animate({opacity: 0.5}, 1000);
+                        }
                     }
+
                     toPeak = function () {
-                        graph.animate({d: peak.node.getAttribute('d')}, 1000, mina.backout);
-                        graphSh.animate({d: peakSh.node.getAttribute('d')}, 1000, mina.backout);
+                        graph.animate({d: peak.node.getAttribute('d')}, 1000, mina.easeinout);
+                        graphSh.animate({d: peakSh.node.getAttribute('d')}, 1000, mina.easeinout);
+                        animLast(peak, null);
                     }
+                    toNoPeak = function () {
+                        animLast(noPeak, Snap.select('#no-peak-text') );
+                        graph.animate({d: noPeak.node.getAttribute('d')}, 1000, mina.easeinout);
+                        graphSh.animate({d: noPeakSh.node.getAttribute('d')}, 1000, mina.easeinout);
+
+                    }
+
                     toLowLoad = function () {
-                        graph.animate({d: lowLoad}, 1000, mina.backout);
-                        graphSh.animate({d: lowLoadSh}, 1000, mina.backout);
+
+                        graph.animate({d: lowLoad}, 1000, mina.easeinout);
+                        graphSh.animate({d: lowLoadSh}, 1000, mina.easeinout);
+                        animLast(lowLoad, Snap.select('#low-load-text'));
                     }
                     toIdeal = function () {
-                        graph.animate({d: ideal}, 1000, mina.backout);
-                        graphSh.animate({d: idealSh}, 1000, mina.backout);
+                        graph.animate({d: ideal}, 1000, mina.easeinout);
+                        graphSh.animate({d: idealSh}, 1000, mina.easeinout);
+                        animLast(ideal, Snap.select('#ideal-text'));
+
                     }
 
                     var element = document.getElementById("graph-canvas");
@@ -355,42 +408,80 @@
                     </div>
                 </div>
                 <div class="view-canvas" id="how-to-canvas">
-                    <svg width="627" height="401" viewBox="0 0 111 117">
-                        <g fill="none" fill-rule="evenodd">
-                            <rect width="109" height="115" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="3"/>
-                            <g transform="translate(22 71)">
-                                <rect width="78" height="31" x=".5" y=".5" stroke="#00A5BA" rx="2"/>
-                                <g transform="translate(52 4)">
-                                    <circle cx="11.5" cy="11.5" r="11" stroke="#00A5BA"/>
-                                    <rect width="1" height="4" x="7" y="7" fill="#00A5BA" rx=".5"/>
-                                    <rect width="1" height="4" x="15" y="7" fill="#00A5BA" rx=".5"/>
-                                    <path fill="#00A5BA"
-                                          d="M11.5 15a1.5 1.5 0 0 1 1.5 1.5V18h-3v-1.5a1.5 1.5 0 0 1 1.5-1.5z"/>
-                                </g>
-                                <g fill="#00A5BA">
-                                    <path d="M8 0h1v32H8zM16 0h1v32h-1zM24 0h1v32h-1zM48 0h1v32h-1zM40 0h1v32h-1zM32 0h1v32h-1z"/>
-                                </g>
-                                <g stroke="#00A5BA" transform="translate(2 11)">
-                                    <rect width="4" height="3" x=".5" y=".5" rx="1.5"/>
-                                    <rect width="4" height="3" x="8.5" y=".5" rx="1.5"/>
-                                    <rect width="4" height="3" x="16.5" y=".5" rx="1.5"/>
-                                    <rect width="4" height="3" x="40.5" y=".5" rx="1.5"/>
-                                    <rect width="4" height="3" x="32.5" y=".5" rx="1.5"/>
-                                    <rect width="4" height="3" x="24.5" y=".5" rx="1.5"/>
-                                </g>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="277" height="148" viewBox="0 0 277 148">
+                        <defs>
+                            <linearGradient id="b" x1="50%" x2="50%" y1="100%" y2="-39.234%">
+                                <stop offset="0%" stop-color="#00A5BA"/>
+                                <stop offset="51.529%" stop-color="#F7C604"/>
+                                <stop offset="100%" stop-color="#F00"/>
+                            </linearGradient>
+                            <path id="a" d="M17 0h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"/>
+                            <path id="c" d="M17 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H17z"/>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+
+                            <path id = "con-line-1"  fill="#00A5BA" fill-rule="nonzero" d="M23.734 105.75h-1.5v-65.5h1.5z"/>
+                            <path  id = "con-line-2" fill="#00A5BA" fill-rule="nonzero" d="M21.97 41.316l.697-1.329L84.976 72.68l-.697 1.329z"/>
+
+                            <path id = "dashed" fill="#000"
+                                  fill-rule="nonzero"
+                                  d="M69.066 64.333l-.697 1.328-6.641-3.485.697-1.328 6.641 3.485z
+                 M56.67 57.828l-.697 1.328-6.641-3.485.697-1.328 6.641 3.485zm-12.397-6.505l-.697 1.328-6.641-3.484.697-1.329 6.641 3.485z
+                 M23.734 90.174h-1.5v-7.5h1.5v7.5zm0-14h-1.5v-7.5h1.5v7.5zm0-14h-1.5v-7.5h1.5v7.5z"
+                                  opacity=".3"/>
+
+
+
+
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M145.692 105.75h-1.5v-65.5h1.5z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M84.713 137.75h-1.5v-65.5h1.5z"/>
+
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M206.934 72.68l-.697 1.329-62.307-32.693.697-1.329z"/>
+
+
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M84.976 136.68l-.697 1.329-62.308-32.693.697-1.329zM145.955 41.316l-.697-1.329L82.951 72.68l.696 1.329z"/>
+
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M84.976 73.82l-.697-1.329-62.308 32.693.697 1.329z"/>
+
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M206.934 73.82l-.697-1.329-62.307 32.693.697 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M267.914 41.184l-.697 1.329L204.909 9.82l.697-1.329z"/>
+
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M145.955 105.316l-.697-1.329-62.307 32.693.696 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M145.955 105.184l-.697 1.329L82.951 73.82l.696-1.329z"/>
+
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M267.651 105.75h-1.5v-65.5h1.5z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M206.934 9.82l-.697-1.329-62.307 32.693.697 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M267.914 41.316l-.697-1.329-62.308 32.693.697 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero" d="M267.914 105.184l-.697 1.329-62.308-32.693.697-1.329z"/>
+                            <rect width="18" height="18" x="257.425" y="32" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="257.425" y="96" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="13.507" y="96" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="135.466" y="32" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="135.466" y="96" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="74.487" y="64" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="196.445" y="64" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="196.445" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="74.487" y="128" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <g fill-rule="evenodd" transform="translate(0 31)">
+                                <use fill="#FFF" xlink:href="#a"/>
+                                <use fill="url(#b)" xlink:href="#a"/>
                             </g>
-                            <g stroke="#00A5BA" transform="translate(74 12)">
-                                <rect width="26" height="50" x=".5" y=".5" rx="2"/>
-                                <path d="M11.5 17.5h4v.5a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-.5H21a1.5 1.5 0 0 0 1.5-1.5v-1a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 15v1A1.5 1.5 0 0 0 6 17.5h1.5v.5A1.5 1.5 0 0 0 9 19.5h1a1.5 1.5 0 0 0 1.5-1.5v-.5z"/>
+                            <g transform="translate(0 31)">
+                                <use fill="url(#b)" xlink:href="#c"/>
+                                <use fill="#FFF" xlink:href="#c"/>
                             </g>
-                            <g transform="translate(22 12)">
-                                <rect width="45" height="50" x=".5" y=".5" stroke="#00A5BA" rx="2"/>
-                                <rect width="33" height="11" x="6.5" y="10.5" stroke="#00A5BA" rx="2"/>
-                                <rect width="22" height="2" x="12" y="15" fill="#00A5BA" rx="1"/>
-                                <path stroke="#00A5BA" stroke-linecap="round" d="M13.522 30L9 37.028l5-.725-5 7.56"/>
-                            </g>
+
+                            <path id="check-1" fill="#00A5BA" d="M57.124 47.338L66.333 35.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
+
+                            <path id="check-2" fill="#00A5BA" d="M7.124 77.338L16.333 65.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
+
+                            <path id="check-3" fill="#00A5BA" d="M22.124 40.338L31.333 28.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
+
                         </g>
                     </svg>
+
+
 
 
                 </div>
@@ -491,9 +582,16 @@
                     else {
                         toPeak();
                     }
+
                     //animateElem.style.backgroundColor = "grey";
-                })
-                //.addIndicators({name: "1 "}) // add indicators (requires plugin)
+                }).on("leave", function (event) {
+            if (event.scrollDirection == 'REVERSE') {
+                clean();
+                animLast(last);
+            }
+
+        })
+                .addIndicators({name: "1 "}) // add indicators (requires plugin)
                 .addTo(controller);
         new ScrollMagic.Scene({triggerElement: "#load-reduction", duration: 100, reverse: true})
                 .on("enter", function (event) {
@@ -509,19 +607,29 @@
                         clean();
                     }
                 })
-              //   .addIndicators({name: "2 "}) // add indicators (requires plugin)
+                .addIndicators({name: "2 "}) // add indicators (requires plugin)
                 .addTo(controller);
         new ScrollMagic.Scene({triggerElement: "#line-straightening", duration: 100, reverse: true})
                 .on("enter", function (event) {
                     clean();
+                    hideAll();
                     document.getElementById("line-straightening").classList.add("selected");
+                    console.log(event)
                     if (event.scrollDirection == 'FORWARD')
                     // trigger animation by changing inline style.
                         toIdeal();
                     else
                         toLowLoad();
-                })
-                // .addIndicators({name: "3"}) // add indicators (requires plugin)
+                    if (event.state == 'AFTER') {
+                        clean();
+                        hideAll();
+                    }
+                }).on('leave', function (event) {
+            if (event.scrollDirection == 'FORWARD')
+            // trigger animation by changing inline style.
+                animLast(last);
+        })
+                .addIndicators({name: "3"}) // add indicators (requires plugin)
                 .addTo(controller);
     </script>
 </div>

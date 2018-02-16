@@ -327,10 +327,11 @@ article .animated:after{
 }
 article .animated .left-column{
     float: left;
+    padding-bottom: 200px;
 }
 .view-canvas{
     position: sticky;
-    top: 10px;
+    top: 200px;
     z-index: 1;
     float: left;
     width: 627px;
