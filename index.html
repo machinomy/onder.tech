@@ -3,11 +3,14 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.css"/>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
-    <script src="js/TweenMax.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.gsap.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="js/snap.svg-min.js"></script>
     <script src="js/stickyfill.min.js"></script>
     <meta charset="UTF-8">
@@ -77,51 +80,60 @@
             <div class="animated">
 
                 <div class="left-column">
+                    <div>
+                        <h3>Выравниваем спрос и предложение энергии в реальном времени</h3>
+                        <p>В мире всё больше умных устройств, они работают, когда энергия дешевле. Мы можем управлять
+                            энергопотреблением этих устройств, меняя стоимость энергии.
+                        </p>
+                        <p>Такое управление снижает нагрузку на сеть.</p>
+                        <p><a name="peak-smoothing" class="anchor" id="peak-smoothing">Чем быстрее цена реагирует на
+                            изменение спроса, тем ниже
+                            пиковая
+                            нагрузка</a>. В сети ØNDER цена может обновляться ежесекундно.</p>
+                        <p>Ценовая политика становится гибкой. Можно будет потреблять нужное количество энергии, без
+                            резервирования
+                            избыточной мощности.</p>
+                    </div>
+                    <div>
+                        <h3> Поддерживаем распределённое производство и хранение энергии</h3>
+                        <p>Распределённая торговля энергией невозможна без понимания, кто, кому и сколько её продал. Мы
+                            отслеживаем
+                            каждую единицу энергии от производителя до потребителя.</p>
+                        <p> Владельцы распределенной генерации смогут продавать энергию когда хотят и по желаемой цене.
+                            Помогая
+                            им
+                            мы создаём на локальном рынке дополнительные источники энергии.</p>
+                        <p>Это <a name="load-reduction" id="load-reduction" class="anchor"> снижает нагрузку на узловые
+                            подстанции,
+                            уменьшает потребность
+                            в
+                            мощности.</a></p>
+                    </div>
 
-                    <h3>Выравниваем спрос и предложение энергии в реальном времени</h3>
-                    <p>В мире всё больше умных устройств, они работают, когда энергия дешевле. Мы можем управлять
-                        энергопотреблением этих устройств, меняя стоимость энергии.
-                    </p>
-                    <p>Такое управление снижает нагрузку на сеть.</p>
-                    <p>Чем быстрее цена реагирует на изменение спроса, тем <a name="peak-smoothing" class="anchor"
-                                                                              id="peak-smoothing">ниже
-                        пиковая
-                        нагрузка</a>. В сети ØNDER цена может обновляться ежесекундно.</p>
-                    <p>Ценовая политика становится гибкой. Можно будет потреблять нужное количество энергии, без
-                        резервирования
-                        избыточной мощности.</p>
-                    <h3> Поддерживаем распределённое производство и хранение энергии</h3>
-                    <p>Распределённая торговля энергией невозможна без понимания, кто, кому и сколько её продал. Мы
-                        отслеживаем
-                        каждую единицу энергии от производителя до потребителя.</p>
-                    <p> Владельцы распределенной генерации смогут продавать энергию когда хотят и по желаемой цене.
-                        Помогая
-                        им
-                        мы создаём на локальном рынке дополнительные источники энергии.</p>
-                    <p>Это <a name="load-reduction" id="load-reduction" class="anchor"> снижает нагрузку </a> на узловые
-                        подстанции,
-                        уменьшает потребность
-                        в
-                        мощности.</p>
-                    <p>Владельцы накопителей также смогут покупать и продавать энергию. Им будет выгодно накапливать её,
-                        когда
-                        она дешёвая и продавать, когда дорогая.</p>
-                    <p>
-                        Так в сети появятся распределённые накопители и <a name="line-straightening" class="anchor"
-                                                                           id="line-straightening">нагрузка на сеть
-                        станет
-                        ещё
-                        равномернее</a>.
-                    </p>
+                    <div>
+                        <p>Владельцы накопителей также смогут покупать и продавать энергию. Им будет выгодно накапливать
+                            её,
+                            когда
+                            она дешёвая и продавать, когда дорогая.</p>
+                        <p>
+                            Так <a name="line-straightening" class="anchor" id="line-straightening">в сети появятся
+                            распределённые накопители и нагрузка на сеть
+                            станет
+                            ещё
+                            равномернее</a>.
+                        </p>
+                    </div>
+
                 </div>
                 <div class="view-canvas" id="graph-canvas">
                     <svg id="graph" width="601" height="401" viewBox="0 0 601 401">
                         <defs>
-                            <linearGradient id="a" x1="21.83%" x2="75.642%" y1="50%" y2="50%">
-                                <stop offset="0%" stop-color="#404042"/>
-                                <stop offset="19.432%" stop-color="#FFF"/>
-                                <stop offset="78.062%" stop-color="#FFF"/>
-                                <stop offset="100%" stop-color="#404042"/>
+
+                            <linearGradient id="a" x1="20%" x2="80%" y1="50%" y2="50%">
+                                <stop offset="0%" stop-color="#404042"></stop>
+                                <stop offset="20%" stop-color="#FFF"></stop>
+                                <stop offset="80%" stop-color="#FFF"></stop>
+                                <stop offset="100%" stop-color="#404042"></stop>
                             </linearGradient>
                             <linearGradient id="b" x1="50%" x2="50%" y1="100%" y2="0%">
                                 <stop offset="0%" stop-color="#00A5BA"/>
@@ -146,7 +158,9 @@
                                       filter="url(#b)"/>
 
                                 <path id="graph-line" stroke-width="3"
-                                      d="M1 138.96c26.602 0 35.671 32.04 68.644 32.56 32.973.521 64.834-23.631 106.79-23.617 41.954.015 99.55 74.86 182.677 73.46C442.237 219.966 469.893 1 494.818 1 519.743 1 523.11 138.26 602 138.26"/>
+                                      d="M1 138.96c26.602 0 35.671 32.04 68.644 32.56 32.973.521 64.834-23.631 106.79-23.617 41.954.015 99.55 74.86 182.677 73.46C442.237 219.966 469.893 1 494.818 1 519.743 1 523.11 138.26 602 138.26"
+
+                                />
 
                                 <path id="peak-shadow" stroke-width="2" opacity="0"
                                       d="M1 138.96c26.602 0 35.671 32.04 68.644 32.56 32.973.521 64.834-23.631 106.79-23.617 41.954.015 99.55 74.86 182.677 73.46C442.237 219.966 469.893 1 494.818 1 519.743 1 523.11 138.26 602 138.26"
@@ -176,15 +190,18 @@
                                       d="M.52 135.55c26.545 0 35.595 9.867 68.498 10.027 32.903.16 64.696-7.277 106.561-7.273 41.865.005 99.339 13.25 182.287 12.818 82.949-.43 96.511-34.562 138.071-34.562 29.749 0 55.56 18.774 104.3 18.774"/>
 
                             </g>
-                            <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" id="no-peak-text" opacity="0"
+                            <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                                  id="no-peak-text" opacity="0"
                                   opacity=".5">
                                 <tspan x="230" y="130">Ниже пиковая нагрузка</tspan>
                             </text>
-                            <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" id="low-load-text" opacity="0"
+                            <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                                  id="low-load-text" opacity="0"
                                   opacity=".5">
                                 <tspan x="230" y="150">Ниже нагрузка на подстанции</tspan>
                             </text>
-                            <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" id="ideal-text" opacity="0"
+                            <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                                  id="ideal-text" opacity="0"
                                   opacity=".5">
                                 <tspan x="230" y="170">Равномерная нагрузка на сеть</tspan>
                             </text>
@@ -229,14 +246,17 @@
                     var idealSh = Snap.select('#ideal-shadow');
                     var graphLines = [peak, noPeak, lowLoad, ideal];
 
-                var noPeakText = Snap.select('#no-peak-text');
-                var noPeakText = Snap.select('#no-peak-text');
-                    var hideAll = function () {
-                        graphLines.forEach(
-                                function (e) {
-                                    e.node.style.opacity = 0;
-                                }
-                        )
+                    var noPeakText = Snap.select('#no-peak-text');
+                    var noPeakText = Snap.select('#no-peak-text');
+                    var hideAllNow = function (elems) {
+                        if (Array.isArray(elems))
+                            elems.forEach(
+                                    function (e) {
+                                        e.animate({opacity: 0}, 0);
+                                    }
+                            )
+                        else
+                            elems.animate({opacity: 0}, 0);
                     };
                     var last = null;
                     var lastText = null;
@@ -247,7 +267,7 @@
                         if (!!last) {
                             last.animate({opacity: 0}, 1000);
                         }
-                        if(!!currentText){
+                        if (!!currentText) {
                             currentText.animate({opacity: 0}, 1000);
                         }
                         if (!current)
@@ -259,7 +279,7 @@
 
                         current = future;
                         currentText = futureText;
-                        if(!!currentText){
+                        if (!!currentText) {
                             futureText.animate({opacity: 0.5}, 1000);
                         }
                     }
@@ -270,7 +290,7 @@
                         animLast(peak, null);
                     }
                     toNoPeak = function () {
-                        animLast(noPeak, Snap.select('#no-peak-text') );
+                        animLast(noPeak, Snap.select('#no-peak-text'));
                         graph.animate({d: noPeak.node.getAttribute('d')}, 1000, mina.easeinout);
                         graphSh.animate({d: noPeakSh.node.getAttribute('d')}, 1000, mina.easeinout);
 
@@ -375,12 +395,12 @@
             </h1>
             <div class="animated">
                 <div class="left-column">
-                    <div>
+                    <div id="onder-install">
                         <h4>1. Установка устройства</h4>
                         <p>Устройство Onder-Voltaware крепится на рейку в электрощите. Учет подключается к существующему
                             проводу.</p>
                     </div>
-                    <div>
+                    <div id="token-release">
 
                         <h4>2. Установка пломбы</h4>
                         <p> При установке электронной пломбы создается уникальный ключ, который прописывается как
@@ -389,19 +409,19 @@
                             Если пломбу вскрыть, все контракты закроются, а участник отключится.
                         </p>
                     </div>
-                    <div>
+                    <div id="connect">
                         <h4>3. Добавление в сеть</h4>
                         <p>Устройство включается в сеть ØNDER и с помощью токена регистрируется как участник электросети
                         </p>
                     </div>
-                    <div>
+                    <div id="validate">
                         <h4>4. Заключение умных контрактов</h4>
                         <p>Просьюмеры выбирают стратегию торговли энергией и заключают контракты: на установку и
                             дальнейшее
                             обслуживание устройства, на подключение к традиционной сети, на обслуживание сети и utility.
                         </p>
                     </div>
-                    <div>
+                    <div id="exchange">
                         <h4>Энергообмен</h4>
                         <p> Каждые 5 секунд устанавливается цена энергии, проводится цикл обмена энергией, транзакции
                             фиксируются.</p>
@@ -409,7 +429,7 @@
                 </div>
                 <div class="view-canvas" id="how-to-canvas">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="277" height="148" viewBox="0 0 277 148">
+                    <svg id="net" height="148" viewBox="0 0 277 148">
                         <defs>
                             <linearGradient id="b" x1="50%" x2="50%" y1="100%" y2="-39.234%">
                                 <stop offset="0%" stop-color="#00A5BA"/>
@@ -418,51 +438,79 @@
                             </linearGradient>
                             <path id="a" d="M17 0h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H17a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"/>
                             <path id="c" d="M17 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H17z"/>
+                            <defs>
+                                <linearGradient id="onder-grad" x1="50%" x2="50%" y1="100%" y2="-53.436%">
+                                    <stop offset="0%" stop-color="#00A5BA"/>
+                                    <stop offset="51.529%" stop-color="#F7C604"/>
+                                    <stop offset="100%" stop-color="#F00"/>
+                                </linearGradient>
+                            </defs>
+
                         </defs>
-                        <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
 
-                            <path id = "con-line-1"  fill="#00A5BA" fill-rule="nonzero" d="M23.734 105.75h-1.5v-65.5h1.5z"/>
-                            <path  id = "con-line-2" fill="#00A5BA" fill-rule="nonzero" d="M21.97 41.316l.697-1.329L84.976 72.68l-.697 1.329z"/>
-
-                            <path id = "dashed" fill="#000"
-                                  fill-rule="nonzero"
-                                  d="M69.066 64.333l-.697 1.328-6.641-3.485.697-1.328 6.641 3.485z
+                        <path id="dashed" fill="#000" opacity="0"
+                              fill-rule="nonzero"
+                              d="M69.066 64.333l-.697 1.328-6.641-3.485.697-1.328 6.641 3.485z
                  M56.67 57.828l-.697 1.328-6.641-3.485.697-1.328 6.641 3.485zm-12.397-6.505l-.697 1.328-6.641-3.484.697-1.329 6.641 3.485z
                  M23.734 90.174h-1.5v-7.5h1.5v7.5zm0-14h-1.5v-7.5h1.5v7.5zm0-14h-1.5v-7.5h1.5v7.5z"
-                                  opacity=".3"/>
+                              opacity=".3"/>
 
-
-
-
+                        <g id="net-back" fill="none" fill-rule="evenodd" transform="translate(0 1)" opacity="0">
+                            <path class="stable" id="con-line-1" fill="#00A5BA" fill-rule="nonzero" opacity="0"
+                                  d="M23.734 105.75
+                                  h-1.5
+                                  v-65.5
+                                  h1.5z"/>
+                            <path class="stable" id="con-line-2" fill="#00A5BA" fill-rule="nonzero" opacity="0"
+                                  d="M21.97 41.316l.697-1.329L84.976 72.68l-.697 1.329z"/>
                             <path fill="#00A5BA" fill-rule="nonzero" d="M145.692 105.75h-1.5v-65.5h1.5z"/>
                             <path fill="#00A5BA" fill-rule="nonzero" d="M84.713 137.75h-1.5v-65.5h1.5z"/>
 
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M206.934 72.68l-.697 1.329-62.307-32.693.697-1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M206.934 72.68l-.697 1.329-62.307-32.693.697-1.329z"/>
 
 
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M84.976 136.68l-.697 1.329-62.308-32.693.697-1.329zM145.955 41.316l-.697-1.329L82.951 72.68l.696 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M84.976 136.68l-.697 1.329-62.308-32.693.697-1.329zM145.955 41.316l-.697-1.329L82.951 72.68l.696 1.329z"/>
 
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M84.976 73.82l-.697-1.329-62.308 32.693.697 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M84.976 73.82l-.697-1.329-62.308 32.693.697 1.329z"/>
 
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M206.934 73.82l-.697-1.329-62.307 32.693.697 1.329z"/>
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M267.914 41.184l-.697 1.329L204.909 9.82l.697-1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M206.934 73.82l-.697-1.329-62.307 32.693.697 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M267.914 41.184l-.697 1.329L204.909 9.82l.697-1.329z"/>
 
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M145.955 105.316l-.697-1.329-62.307 32.693.696 1.329z"/>
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M145.955 105.184l-.697 1.329L82.951 73.82l.696-1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M145.955 105.316l-.697-1.329-62.307 32.693.696 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M145.955 105.184l-.697 1.329L82.951 73.82l.696-1.329z"/>
 
                             <path fill="#00A5BA" fill-rule="nonzero" d="M267.651 105.75h-1.5v-65.5h1.5z"/>
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M206.934 9.82l-.697-1.329-62.307 32.693.697 1.329z"/>
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M267.914 41.316l-.697-1.329-62.308 32.693.697 1.329z"/>
-                            <path fill="#00A5BA" fill-rule="nonzero" d="M267.914 105.184l-.697 1.329-62.308-32.693.697-1.329z"/>
-                            <rect width="18" height="18" x="257.425" y="32" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
-                            <rect width="18" height="18" x="257.425" y="96" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
-                            <rect width="18" height="18" x="13.507" y="96" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
-                            <rect width="18" height="18" x="135.466" y="32" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
-                            <rect width="18" height="18" x="135.466" y="96" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
-                            <rect width="18" height="18" x="74.487" y="64" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
-                            <rect width="18" height="18" x="196.445" y="64" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
-                            <rect width="18" height="18" x="196.445" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
-                            <rect width="18" height="18" x="74.487" y="128" fill="#FFF" stroke="#00A5BA" stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M206.934 9.82l-.697-1.329-62.307 32.693.697 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M267.914 41.316l-.697-1.329-62.308 32.693.697 1.329z"/>
+                            <path fill="#00A5BA" fill-rule="nonzero"
+                                  d="M267.914 105.184l-.697 1.329-62.308-32.693.697-1.329z"/>
+                            <rect width="18" height="18" x="257.425" y="32" fill="#FFF" stroke="#00A5BA"
+                                  stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="257.425" y="96" fill="#FFF" stroke="#00A5BA"
+                                  stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="13.507" y="96" fill="#FFF" stroke="#00A5BA"
+                                  stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="135.466" y="32" fill="#FFF" stroke="#00A5BA"
+                                  stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="135.466" y="96" fill="#FFF" stroke="#00A5BA"
+                                  stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="74.487" y="64" fill="#FFF" stroke="#00A5BA"
+                                  stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="196.445" y="64" fill="#FFF" stroke="#00A5BA"
+                                  stroke-linecap="round" stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="196.445" fill="#FFF" stroke="#00A5BA" stroke-linecap="round"
+                                  stroke-width="2" rx="3"/>
+                            <rect width="18" height="18" x="74.487" y="128" fill="#FFF" stroke="#00A5BA"
+                                  stroke-linecap="round" stroke-width="2" rx="3"/>
                             <g fill-rule="evenodd" transform="translate(0 31)">
                                 <use fill="#FFF" xlink:href="#a"/>
                                 <use fill="url(#b)" xlink:href="#a"/>
@@ -471,17 +519,50 @@
                                 <use fill="url(#b)" xlink:href="#c"/>
                                 <use fill="#FFF" xlink:href="#c"/>
                             </g>
+                        </g>
 
-                            <path id="check-1" fill="#00A5BA" d="M57.124 47.338L66.333 35.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
 
-                            <path id="check-2" fill="#00A5BA" d="M7.124 77.338L16.333 65.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
-
-                            <path id="check-3" fill="#00A5BA" d="M22.124 40.338L31.333 28.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
+                        <g id="block" fill="none" fill-rule="evenodd">
+                            <rect id="block-borders" width="115" height="115" x="1" y="1" stroke="#00A5BA" fill="#FFF"
+                                  stroke-width="2" rx="3"/>
+                            <g class="stuff" transform="translate(19 71)">
+                                <rect width="77" height="29" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="2"/>
+                                <g transform="translate(52 4)">
+                                    <circle cx="11.5" cy="11.5" r="10.5" stroke="#00A5BA" stroke-width="2"/>
+                                    <rect width="2" height="5" x="7" y="7" fill="#00A5BA" rx="1"/>
+                                    <rect width="2" height="5" x="14" y="7" fill="#00A5BA" rx="1"/>
+                                    <path fill="#00A5BA"
+                                          d="M11.5 15a1.5 1.5 0 0 1 1.5 1.5V18h-3v-1.5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                </g>
+                                <g fill="#00A5BA">
+                                    <path d="M0 2h2v27H0zM12 0h2v31h-2zM36 0h2v31h-2zM24 0h2v31h-2zM48 0h2v31h-2z"/>
+                                </g>
+                            </g>
+                            <g class="stuff" transform="translate(71 12)">
+                                <rect width="25" height="49" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="2"/>
+                                <path fill="#00A5BA"
+                                      d="M15 18h-3a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2H6a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h15a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2z"/>
+                            </g>
+                            <g class="stuff" transform="translate(19 12)">
+                                <rect width="44" height="49" x="1" y="1" stroke="#00A5BA" stroke-width="2" rx="2"/>
+                                <rect width="33" height="11" x="6.5" y="10.5" stroke="#00A5BA" rx="2"/>
+                                <rect width="22" height="2" x="12" y="15" fill="#00A5BA" rx="1"/>
+                                <path stroke="#00A5BA" stroke-linecap="round" d="M13.522 30L9 37.028l5-.725-5 7.56"/>
+                            </g>
+                            <path id="onder" opacity="0" class="stuff" fill="url(#onder-grad)" fill-rule="evenodd"
+                                  d="M612 2868h4v32h-4a3 3 0 0 1-3-3v-26a3 3 0 0 1 3-3z"
+                                  transform="translate(-597 -2850)"/>
 
                         </g>
+                        <path class="check-connect" id="check-1" opacity="0" fill="#00A5BA"
+                              d="M57.124 47.338L66.333 35.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
+
+                        <path class="check-connect" id="check-2" opacity="0" fill="#00A5BA"
+                              d="M7.124 77.338L16.333 65.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
+
+                        <path id="check-first" opacity="0" fill="#00A5BA"
+                              d="M22.124 40.338L31.333 28.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
                     </svg>
-
-
 
 
                 </div>
@@ -569,10 +650,8 @@
                         $(this).removeClass("selected");
                     })
         };
-        var animateElem = document.getElementById("graph-canvas");
         new ScrollMagic.Scene({triggerElement: "#peak-smoothing", duration: 130, reverse: true})
                 .on("enter", function (event) {
-                    clean();
                     console.log(event);
                     document.getElementById("peak-smoothing").classList.add("selected");
                     if (event.scrollDirection == 'FORWARD') {
@@ -586,8 +665,8 @@
                     //animateElem.style.backgroundColor = "grey";
                 }).on("leave", function (event) {
             if (event.scrollDirection == 'REVERSE') {
-                clean();
                 animLast(last);
+                document.getElementById("peak-smoothing").classList.remove("selected");
             }
 
         })
@@ -595,24 +674,27 @@
                 .addTo(controller);
         new ScrollMagic.Scene({triggerElement: "#load-reduction", duration: 100, reverse: true})
                 .on("enter", function (event) {
-                    clean();
                     document.getElementById("load-reduction").classList.add("selected");
                     if (event.scrollDirection == 'FORWARD') {
                         // trigger animation by changing inline style.
                         toLowLoad();
                     }
                     else {
-
                         toNoPeak();
-                        clean();
                     }
-                })
+                }).on("leave", function (event) {
+            if (event.scrollDirection == 'REVERSE') {
+
+                document.getElementById("load-reduction").classList.remove("selected");
+            }
+
+        })
                 .addIndicators({name: "2 "}) // add indicators (requires plugin)
                 .addTo(controller);
+
         new ScrollMagic.Scene({triggerElement: "#line-straightening", duration: 100, reverse: true})
                 .on("enter", function (event) {
-                    clean();
-                    hideAll();
+                    hideAllNow(graphLines);
                     document.getElementById("line-straightening").classList.add("selected");
                     console.log(event)
                     if (event.scrollDirection == 'FORWARD')
@@ -621,15 +703,251 @@
                     else
                         toLowLoad();
                     if (event.state == 'AFTER') {
-                        clean();
-                        hideAll();
+                        hideAllNow(graphLines);
                     }
                 }).on('leave', function (event) {
-            if (event.scrollDirection == 'FORWARD')
-            // trigger animation by changing inline style.
+            if (event.scrollDirection == 'FORWARD') {
+
+                // trigger animation by changing inline style.
                 animLast(last);
+            } else if (event.scrollDirection == 'REVERSE') {
+
+                document.getElementById("line-straightening").classList.remove("selected");
+            }
+
         })
                 .addIndicators({name: "3"}) // add indicators (requires plugin)
+                .addTo(controller);
+
+
+        var svg = document.getElementById("net");
+        var s = Snap(svg);
+
+        var block = Snap.select('#block');
+        var blockStuff = block.selectAll('.stuff');
+        var onder = block.select('#onder');
+
+        var firstCheck = s.select('#check-first');
+        var checks = s.selectAll('.check-connect');
+        var netBack = s.select('#net-back');
+
+        var dashedConnect = s.select('#dashed')
+        var stableConnects = s.selectAll('.stable');
+
+        var linesToAnimate = netBack.selectAll('path');
+        var blinking = false;
+        var scaleUp = new Snap.Matrix();
+        scaleUp.scale(1.3);
+        scaleUp.translate(0, 0);
+        var scaleDown = new Snap.Matrix();
+        scaleDown.scale(1);
+        scaleDown.translate(0, 0);
+        showOnder = function () {
+            if (blinking) {
+                console.log("onder", onder);
+                onder.animate({opacity: 1}, 1000, mina.easeinout, hideOnder);
+
+            }
+            else {
+                onder.animate({opacity: 1}, 1000);
+            }
+        };
+        hideOnder = function () {
+            if (blinking) {
+                onder.animate({opacity: 0}, 1000, showOnder);
+            }
+            else {
+                onder.animate({opacity: 0}, 1000);
+            }
+
+        };
+        stopOnderAnimation = function () {
+            blinking = false;
+        };
+        startOnderAnimation = function () {
+            blinking = true;
+        };
+
+        netTransformTo = function () {
+            console.log("net back", netBack);
+            hideAllNow(onder);
+            hideAllNow(checks);
+            hideAllNow(dashedConnect);
+            transformSquare();
+            // block.animate({opacity: 0}, 1000);
+            netBack.animate({opacity: 1}, 2000);
+            hideAllNow(stableConnects);
+        };
+        //        tweenTr = TweenMax.to('#net-back', 0.1, {opacity: 1, ease: Linear.easeNone});
+        //        tweenHide = new TimelineMax()
+        //                .add(TweenMax.to('.stuff', 0.1, {opacity: 0, ease: Linear.easeNone});
+
+
+        var smallBlock = new Snap.Matrix();
+        smallBlock.translate(13, 27);
+        smallBlock.scale(0.15);
+
+        transformSquare = function () {
+            hideAllAnimate(blockStuff);
+            block.fill = "#fff";
+            block.animate({transform: smallBlock}, 2000, mina.easeinout, checkPut);
+
+
+        };
+        checkPut = function () {
+            firstCheck.animate({opacity: 1}, 500, mina.bounce);
+        };
+
+        netConnect = function () {
+            firstCheck.animate({opacity: 0}, 2000, mina.easeinout);
+            dashedConnect.animate({opacity: 0.3}, 2000, mina.easeinout);
+            //hideAllAnimate()
+        };
+        netValidate = function () {
+            dashedConnect.animate({opacity: 0}, 2000, mina.backin);
+            showAllAnimate(stableConnects);
+            hideAllNow(firstCheck);
+            showAllAnimate(checks);
+        };
+        exchange = function () {
+            var i = 0;
+//                            linesToAnimate.forEach(
+//                                    function (e) {
+//                                        i =i+1;
+//                                        moveElementAlongPath(e);
+//                                    }
+//                            )
+            moveElementAlongPath(linesToAnimate[0]);
+
+        };
+
+        var showAllAnimate = function (arr) {
+            arr.forEach(
+                    function (e) {
+                        e.animate({opacity: 1}, 1000, mina.easeinout);
+                    }
+            )
+        };
+
+        var hideAllAnimate = function (arr) {
+            arr.forEach(
+                    function (e) {
+                        e.animate({opacity: 0}, 1000, mina.easeinout);
+                    }
+            )
+        };
+        function moveElementAlongPath(p) {
+
+            path = s.path(p.node.getAttribute('d')).attr({'fill': 'none', 'stroke': '#333'});
+            length = Snap.path.getTotalLength(path);
+            start = Snap.path.getPointAtLength(path, 0);
+            console.log("start", start.x, start.y);
+            el = s.circle(start.x, start.y, 5).attr({fill: "blue"});
+
+            end = Snap.path.getPointAtLength(path, length);
+            console.log("lenght", length);
+            console.log("end", end.x, end.y);
+            s.circle(end.x, end.y, 3).attr({fill: "red"});
+
+            //   element.animate({ transform:'T'+moveToPoint.x+', '+moveToPoint.y}, 0);
+
+            var lastX = start.x;
+            var lastY = start.y;
+
+            Snap.animate(1, length, function (step) {
+                moveToPoint = Snap.path.getPointAtLength(path, step);
+                console.log("move to ", moveToPoint.x, moveToPoint.y);
+
+                tx = moveToPoint.x;
+                ty = moveToPoint.y;
+                lastX = moveToPoint.x;
+                lastY = moveToPoint.y;
+                el.transform('T' + tx + ',' + ty);
+                //el.attr({x:tx, y:ty});//transform('T' + tx + ',' + ty );
+            }, 5000, mina.easeout);
+        }
+
+        var element = document.getElementById("how-to-canvas");
+        Stickyfill.add(element);
+
+        var tweenSVG = TweenMax.to("#onder", 0.1, {opacity: 1, ease: Linear.easeNone});
+
+//        new ScrollMagic.Scene({
+//            triggerElement: "#onder-install",
+//            duration: 130,
+//            offset: 200,
+//            triggerHook: 'onEnter',
+//            tweenChanges: true
+//        })
+//                .setTween(tweenSVG)
+//                .addTo(controller);
+
+
+                new ScrollMagic.Scene({triggerElement: "#onder-install", duration: 130, reverse: true})
+                        .on("enter", function (event) {
+                            console.log("install", event);
+                            if (event.state = "DURING") {
+                                startOnderAnimation();
+                                document.getElementById("onder-install").classList.add("selected");
+                                showOnder();
+                            }
+                        }).on("leave", function (event) {
+                    console.log("install leave", event);
+                    stopOnderAnimation();
+                    if (event.state = "BEFORE") {
+                        hideOnder();
+                    } else {
+                        showOnder();
+                    }
+                })
+                .addIndicators({name: "1 "}) // add indicators (requires onder-installplugin)
+                        .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: "#token-release",
+            duration: 130,
+            offset: 50,
+        })
+                                .on("enter", function (event) {
+                                    console.log("release", event);
+                                    netTransformTo();
+                                    document.getElementById("token-release").classList.add("selected");
+
+                                }).on("leave", function (event) {
+
+                        })
+                .addIndicators({name: "2 "}) // add indicators (requires onder-installplugin)
+                .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#connect", duration: 130, reverse: true})
+                .on("enter", function (event) {
+                    console.log("connect", event);
+                    netConnect();
+                    document.getElementById("connect").classList.add("selected");
+
+                }).on("leave", function (event) {
+
+        })
+                .addIndicators({name: "3 "}) // add indicators (requires onder-installplugin)
+                .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#validate", duration: 130, reverse: true})
+                .on("enter", function (event) {
+                    console.log("validate", event);
+                    netValidate();
+                    document.getElementById("validate").classList.add("selected");
+
+                }).on("leave", function (event) {
+
+        })
+                .addIndicators({name: "4 "}) // add indicators (requires onder-installplugin)
+                .addTo(controller);
+        new ScrollMagic.Scene({triggerElement: "#exchange", duration: 130, reverse: true})
+                .on("enter", function (event) {
+                    console.log("exchange", event);
+                    exchange();
+                }).on("leave", function (event) {
+
+        })
+                .addIndicators({name: "5"}) // add indicators (requires onder-installplugin)
                 .addTo(controller);
     </script>
 </div>
@@ -650,3 +968,5 @@
 </div>
 </body>
 </html>
+
+

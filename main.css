@@ -130,7 +130,7 @@ article .animated .left-column {
     vertical-align: top;
 }
 article .animated .left-column a{
-    text-decoration: underline;
+
 }
 .how-to h1{
     margin-bottom: 82px;
@@ -140,7 +140,10 @@ article .animated .left-column a{
 
     margin-bottom: 160px;
 }
+.optimize .left-column > div {
 
+    margin-top: 135px;
+}
 article .animated .view-zone {
     width: 627px;
     display: inline-block;
@@ -337,6 +340,7 @@ article .animated .left-column{
     width: 627px;
     height: 401px;
 }
-a.selected {
-    color: red;
+a.selected{
+    background: #CCEDF1;
+    text-decoration: none;
 }
