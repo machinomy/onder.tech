@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="277px" height="148px" viewBox="0 0 277 148" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Graph-linked</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="-37.6706258%" id="linearGradient-1">
+            <stop stop-color="#00A5BA" offset="0%"></stop>
+            <stop stop-color="#F7C604" offset="51.5286193%"></stop>
+            <stop stop-color="#FF0000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="web-en" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-572.000000, -3566.000000)">
+        <g id="How-it-works" transform="translate(80.000000, 2721.000000)">
+            <g id="Stages" transform="translate(492.000000, 369.000000)">
+                <g id="stage-2" transform="translate(0.000000, 477.000000)">
+                    <g id="Graph-linked">
+                        <path d="M205.921829,73 L205.921829,9" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M147.794985,40.9914668 L205.029711,9.48159613" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M205.921829,72.9960001 L144.942478,41" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M83.9631268,72.9960001 L22.9837758,41" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M22.9837758,105 L22.9837758,41" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M144.942478,105 L144.942478,41" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M83.9631268,137 L83.9631268,73" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M83.9631268,136.996 L22.9837758,105" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M86.7949853,71.9914668 L144.029711,40.4815961" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M86.7949853,135.991467 L144.029711,104.481596" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M144.942478,105.5 L83.9631268,73.5039999" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M25.7949853,104.991467 L83.0297113,73.4815961" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M147.794985,104.991467 L205.029711,73.4815961" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M266.90118,41.5 L205.921829,9.50399994" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M266.90118,105 L266.90118,41" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M208.794985,71.9914668 L266.029711,40.4815961" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <path d="M266.90118,105.5 L205.921829,73.5039999" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                        <rect id="Rectangle-4" stroke="#00A5BA" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" x="257.424779" y="32" width="18" height="18" rx="3"></rect>
+                        <rect id="Rectangle-4" stroke="#00A5BA" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" x="257.424779" y="96" width="18" height="18" rx="3"></rect>
+                        <rect id="Rectangle-4" stroke="#00A5BA" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" x="13.5073746" y="96" width="18" height="18" rx="3"></rect>
+                        <rect id="Rectangle-4" stroke="#00A5BA" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" x="135.466077" y="32" width="18" height="18" rx="3"></rect>
+                        <rect id="Rectangle-4" stroke="#00A5BA" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" x="135.466077" y="96" width="18" height="18" rx="3"></rect>
+                        <rect id="Rectangle-4" stroke="#00A5BA" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" x="74.4867257" y="64" width="18" height="18" rx="3"></rect>
+                        <rect id="Rectangle-4" stroke="#00A5BA" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" x="196.445428" y="64" width="18" height="18" rx="3"></rect>
+                        <rect id="Rectangle-4" stroke="#00A5BA" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" x="196.445428" y="0" width="18" height="18" rx="3"></rect>
+                        <rect id="Rectangle-4" stroke="#00A5BA" stroke-width="2" fill="#FFFFFF" stroke-linecap="round" x="74.4867257" y="128" width="18" height="18" rx="3"></rect>
+                        <g id="New" transform="translate(0.000000, 32.000000)">
+                            <rect id="Rectangle-6" stroke="url(#linearGradient-1)" stroke-width="2" fill="#FFFFFF" stroke-linecap="square" x="14" y="0" width="18" height="18" rx="3"></rect>
+                            <g id="Group-5" transform="translate(50.000000, 1.000000)" fill-rule="nonzero">
+                                <polygon id="Path-5" fill="#FFFFFF" points="16.0359928 0 20.0312738 3.00628169 7.3633958 19.8416078 0 11.6464514 3.71923268 8.30469917 7.02152959 11.9800197"></polygon>
+                                <polygon id="Path-5" fill="#00A5BA" points="7.12408945 14.3384961 16.3326926 2.10046881 17.930805 3.30298149 7.26083594 17.4831313 2.11829549 11.7596956 3.60598856 10.4229947"></polygon>
+                            </g>
+                            <g id="Group-3" transform="translate(0.000000, 31.000000)" fill-rule="nonzero">
+                                <polygon id="Path-5" fill="#FFFFFF" points="16.0359928 0 20.0312738 3.00628169 7.3633958 19.8416078 0 11.6464514 3.71923268 8.30469917 7.02152959 11.9800197"></polygon>
+                                <polygon id="Path-5" fill="#00A5BA" points="7.12408945 14.3384961 16.3326926 2.10046881 17.930805 3.30298149 7.26083594 17.4831313 2.11829549 11.7596956 3.60598856 10.4229947"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

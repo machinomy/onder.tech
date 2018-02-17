@@ -222,7 +222,7 @@ div.icon.centralized {
 }
 
 article.road-map {
-
+background: url("images/combined-shape.svg") no-repeat left 80px;
 }
 
 article.road-map h1 {
@@ -237,11 +237,11 @@ article.road-map .left-column {
 }
 
 article.road-map .left-column div {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 article.road-map .left-column div h3 {
-    margin-bottom: 9px;
+    margin: 9px 0px;
 }
 
 article.road-map .left-column div h4 {
@@ -253,11 +253,11 @@ article.road-map div ul {
 }
 
 article.road-map div ul li:before {
-    content: "&m";
+    content: "&m&nbsp";
 }
 
 article.road-map div ul li {
-
+    margin-bottom: 9px;
 }
 
 article.road-map div ul li:before {
@@ -273,6 +273,13 @@ article.road-map div ul li:before {
 }
 .links a{
     color: #022133;
+}
+.links .blog a{
+    padding-left: 20px;
+    background: url("images/medium-white.svg") no-repeat left;
+}
+.footer .links .blog a{
+    background: url("images/medium-black.svg") no-repeat left;
 }
 .header .links{
     display: inline-block;
@@ -294,6 +301,7 @@ article.road-map div ul li:before {
     height: 100%;
     position: relative;
 }
+
 .footer .medal{
     position: absolute;
     left: 223px;
@@ -339,6 +347,10 @@ article .animated .left-column{
     float: left;
     width: 627px;
     height: 401px;
+}
+.how-to .view-canvas{
+
+    top:300px;
 }
 a.selected{
     background: #CCEDF1;
