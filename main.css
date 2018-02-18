@@ -26,6 +26,7 @@ h1 {
 
     background: #616161;
     padding: 10px 0 13px;
+    min-width: 1343px;
 
 }
 
@@ -48,13 +49,15 @@ h1 {
     object-fit: contain;
 
     background: linear-gradient(to left, #00a5ba, #f7c604 52%, #ff0000);
-
+    min-width: 1343px;
 }
+
+
 
 .container {
     width: 100%;
     margin-bottom: 25px;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .logo {
@@ -114,10 +117,10 @@ article p {
 }
 
 article.scalable .left-column {
-    width: 442px;
+    width: 506px;
 }
 
-
+h3,
 article .animated .left-column h3,
 article .animated .left-column h4 {
     margin-bottom: 12px;
@@ -292,10 +295,13 @@ article.road-map div ul li:before {
     color: white;
 }
 .footer{
-    background: url("images/invalid-name.svg") no-repeat 0px 0px;
+    background: url(images/invalid-name.svg) no-repeat 0px 0px;
     background-size: 100%;
-    height: 500px;
     position: relative;
+    padding-top: 50px;
+    margin-top: 120px;
+    height: 210px;
+    min-width: 1343px;
 }
 .footer .roll{
     height: 100%;
@@ -303,28 +309,22 @@ article.road-map div ul li:before {
 }
 
 .footer .medal{
-    position: absolute;
-    left: 223px;
-    top: 100px;
 
     font-family: OpenSans;
     font-size: 23px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
     color: #022133;
 
 }
 .footer .medal p{
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+}
+.footer .medal a{
+    color: #022133;
 }
 .footer .links{
     position: absolute;
     left: 80px;
-    bottom: 20px;
+    bottom: 40px;
 }
 article.about p{  font-size: 24px; line-height: normal}
 
@@ -352,7 +352,11 @@ article .animated .left-column{
 
     top:300px;
 }
-a.selected{
-    background: #CCEDF1;
+.anchor{
+    display: inline-block;
+    background: rgba(204, 237, 241, 0);
+}
+.selected{
+    background: rgba(204, 237, 241, 1);
     text-decoration: none;
 }
