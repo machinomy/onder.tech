@@ -15,11 +15,12 @@
     <script src="js/stickyfill.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ØNDER - Platform for distributed energy trading</title>
+    <title>ØNDER &mdash; Platform for distributed energy trading</title>
     <script>
 
         // init controller
         var controller = new ScrollMagic.Controller();
+        var controller2 = new ScrollMagic.Controller();
 
 
         // build scene
@@ -41,7 +42,7 @@
 
 </div>
 <div class="separator">
-
+<div class="roll"></div>
 </div>
 <div class="content">
     <div class="roll">
@@ -107,6 +108,21 @@
                                 <stop offset="51.529%" stop-color="#F7C604"/>
                                 <stop offset="100%" stop-color="#F00"/>
                             </linearGradient>
+                            <linearGradient id="a4" x1="50%" x2="50%" y1="297.927%" y2="-317.494%">
+                                <stop offset="0%" stop-color="#00A5BA"/>
+                                <stop offset="51.529%" stop-color="#F7C604"/>
+                                <stop offset="100%" stop-color="#F00"/>
+                            </linearGradient>
+                            <linearGradient id="a3" x1="50%" x2="50%" y1="127.346%" y2="-68.483%">
+                                <stop offset="0%" stop-color="#00A5BA"/>
+                                <stop offset="51.529%" stop-color="#F7C604"/>
+                                <stop offset="100%" stop-color="#F00"/>
+                            </linearGradient>
+                            <linearGradient id="a2" x1="50%" x2="50%" y1="100%" y2="-50.954%">
+                                <stop offset="0%" stop-color="#00A5BA"/>
+                                <stop offset="51.529%" stop-color="#F7C604"/>
+                                <stop offset="100%" stop-color="#F00"/>
+                            </linearGradient>
                             <filter id="c" width="102.3%" height="106.4%" x="-1.1%" y="-3.2%"
                                     filterUnits="objectBoundingBox">
                                 <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
@@ -117,14 +133,14 @@
                             <text fill="#022133" font-family="Open Sans" font-size="16">
                                 <tspan x="12" y="52">Load of node substations</tspan>
                             </text>
-                            <g stroke="url(#b)" stroke-linecap="square" transform="translate(3 65)">
+                            <g  stroke-linecap="square" transform="translate(3 65)">
                                 <!--<path stroke-width="2" d="M1.033 138.96c27.488 0 36.859 32.04 70.929 32.56 34.07.521 66.991-23.631 110.343-23.617 43.35.015 102.864 74.86 188.756 73.46C456.954 219.966 485.53 1 511.284 1c25.755 0 29.235 137.26 110.75 137.26" filter="url(#c)"/>-->
                                 <!--<path id="peak" stroke-width="3" d="M1.033 138.96c27.488 0 36.859 32.04 70.929 32.56 34.07.521 66.991-23.631 110.343-23.617 43.35.015 102.864 74.86 188.756 73.46C456.954 219.966 485.53 1 511.284 1c25.755 0 29.235 137.26 110.75 137.26"/>-->
                                 <!--<path id="graph-line-shadow" stroke-width="2"-->
                                 <!--d="M1 138.96c26.602 0 35.671 32.04 68.644 32.56 32.973.521 64.834-23.631 106.79-23.617 41.954.015 99.55 74.86 182.677 73.46C442.237 219.966 469.893 1 494.818 1 519.743 1 523.11 138.26 602 138.26"-->
                                 <!--filter="url(#b)"/>-->
 
-                                <path id="graph-line" stroke-width="3"
+                                <path id="graph-line" stroke-width="3" stroke="url(#b)"
                                       d="M1 138.96c26.602 0 35.671 32.04 68.644 32.56 32.973.521 64.834-23.631 106.79-23.617 41.954.015 99.55 74.86 182.677 73.46C442.237 219.966 469.893 1 494.818 1 519.743 1 523.11 138.26 602 138.26"
 
                                 />
@@ -136,24 +152,16 @@
                                 <!--<path id="peak" stroke-width="3" opacity="0"-->
                                 <!--d="M1 138.96c26.602 0 35.671 32.04 68.644 32.56 32.973.521 64.834-23.631 106.79-23.617 41.954.015 99.55 74.86 182.677 73.46C442.237 219.966 469.893 1 494.818 1 519.743 1 523.11 138.26 602 138.26"/>-->
 
-                                <path id="no-peak-shadow" stroke-width="2" opacity="0"
-                                      d="M.52 139.405c26.545 0 35.595 32.204 68.498 32.728 32.903.524 64.696-23.753 106.561-23.738 41.865.015 99.339 75.243 182.287 73.837 82.949-1.406 96.511-144.804 138.071-144.804 29.749 0 55.56 61.274 104.3 61.274"
-                                      filter="url(#b)"/>
 
-                                <path id="no-peak" stroke-width="3" opacity="0"
+                                <path id="no-peak" stroke-width="3" opacity="0"  stroke="url(#a2)"
                                       d="M.52 139.405c26.545 0 35.595 32.204 68.498 32.728 32.903.524 64.696-23.753 106.561-23.738 41.865.015 99.339 75.243 182.287 73.837 82.949-1.406 96.511-144.804 138.071-144.804 29.749 0 55.56 61.274 104.3 61.274"/>
-                                <path id="low-load-shadow" stroke-width="2" opacity="0"
-                                      d="M.52 139.405c26.545 0 35.595 32.204 68.498 32.728 32.903.524 64.696-23.753 106.561-23.738 41.865.015 99.339 43.243 182.287 41.837 82.949-1.406 96.511-112.804 138.071-112.804 29.749 0 55.56 61.274 104.3 61.274"
-                                      filter="url(#b)"/>
 
-                                <path id="low-load" stroke-width="3" opacity="0"
+                                <path id="low-load" stroke-width="3" opacity="0"  stroke="url(#a3)"
                                       d="M.52 139.405c26.545 0 35.595 32.204 68.498 32.728 32.903.524 64.696-23.753 106.561-23.738 41.865.015 99.339 43.243 182.287 41.837 82.949-1.406 96.511-112.804 138.071-112.804 29.749 0 55.56 61.274 104.3 61.274"/>
 
-                                <path id="ideal-shadow" stroke-width="2" opacity="0"
-                                      d="M.52 135.55c26.545 0 35.595 9.867 68.498 10.027 32.903.16 64.696-7.277 106.561-7.273 41.865.005 99.339 13.25 182.287 12.818 82.949-.43 96.511-34.562 138.071-34.562 29.749 0 55.56 18.774 104.3 18.774"
-                                      filter="url(#b)"/>
 
-                                <path id="ideal" stroke-width="3" opacity="0"
+
+                                <path id="ideal" stroke-width="3" opacity="0"  stroke="url(#a4)"
                                       d="M.52 135.55c26.545 0 35.595 9.867 68.498 10.027 32.903.16 64.696-7.277 106.561-7.273 41.865.005 99.339 13.25 182.287 12.818 82.949-.43 96.511-34.562 138.071-34.562 29.749 0 55.56 18.774 104.3 18.774"/>
 
                             </g>
@@ -310,9 +318,9 @@
 
                             <g id="net-back" fill="none" fill-rule="evenodd" transform="translate(0 1)" opacity="0">
                                 <path class="stable" id="con-line-1" d="M22.9837758,41 L22.9837758,105" stroke="#00A5BA"
-                                      stroke-width="1.5" stroke-linecap="square"></path>
+                                      opacity="0" stroke-width="1.5" stroke-linecap="square"></path>
                                 <path class="stable" id="con-line-2" d="M22.9837758,41 L83.9631268,72.9960001"
-                                      stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
+                                      opacity="0" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
 
                                 <path d="M205.921829,9 L205.921829,73" id="Line-8" stroke="#00A5BA" stroke-width="1.5"
                                       stroke-linecap="square"></path>
@@ -409,12 +417,14 @@
 
                             </g>
 
+                            <g id="checks" opacity="0">
 
-                            <path class="check-connect" id="check-1" opacity="0" fill="#00A5BA"
-                                  d="M57.124 47.338L66.333 35.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
+                                <path class="check-connect" id="check-1" fill="#00A5BA"
+                                      d="M57.124 47.338L66.333 35.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
 
-                            <path class="check-connect" id="check-2" opacity="0" fill="#00A5BA"
-                                  d="M7.124 77.338L16.333 65.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
+                                <path class="check-connect" id="check-2" fill="#00A5BA"
+                                      d="M7.124 77.338L16.333 65.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"/>
+                            </g>
 
                             <path id="check-first" opacity="0" fill="#00A5BA"
                                   d="M22.124 40.338L31.333 28.1l1.598 1.203-10.67 14.18-5.143-5.723 1.488-1.337z"
@@ -534,7 +544,7 @@
         var s = Snap(svg);
 
         var animating = false;
-        exchangeAnimation = function () {
+        var exchangeAnimation = function () {
             var cnv = s.select('#net-back');
             var linesToAnimate = cnv.selectAll('path');
             var i = 0;
@@ -545,6 +555,7 @@
                         moveElementAlongPath(cnv, e);
                     }
             )
+         //   moveElementAlongPath(cnv, linesToAnimate[0]);
 
         };
 
@@ -553,34 +564,30 @@
                 var myMatrix = getMatrix(start, end, reverse);
                 var duration = Math.random() * 3000;
                 dot.animate({transform: myMatrix.toTransformString()}, duration, mina.linear, function () {
-                    moveAlongPath(dot, start, end, !reverse);
+                    moveAlongPath(dot, end, start, !reverse);
                 });
             }
 
         }
-        getMatrix = function (start, end, reverse) {
+        var getMatrix = function (start, end, reverse) {
             var myMatrix = new Snap.Matrix();
-            if (!reverse) {
-                myMatrix.translate(end.x - start.x, end.y - start.y);
-            } else {
-                myMatrix.translate(start.x - end.x, start.y - end.y);
-            }
+            myMatrix.translate(end.x, end.y );
             return myMatrix;
         };
         var dots = [];
         var paths = [];
-        function moveElementAlongPath(cnv, p) {
+        var moveElementAlongPath = function (cnv, p) {
 
-            var path = cnv.path(p.node.getAttribute('d')).attr({'fill': 'none', 'stroke': 'none'});
-            paths.push(path);
-            var length = path.getTotalLength();
-            var start = path.getPointAtLength(0);
-            var end = path.getPointAtLength(length);
-            var dot = cnv.circle(start.x, start.y, 5).attr({fill: "white"});
+                    var path = cnv.path(p.node.getAttribute('d')).attr({'fill': 'red', 'stroke': 'none'});
+
+                    var length = path.getTotalLength();
+                    var start = path.getPointAtLength(0);
+                    var end = path.getPointAtLength(length);
+                    var dot = cnv.circle(0, 0, 4).attr({fill: "white"}).transform('t'+start.x+','+start.y);
+                    paths.push(path);
             dots.push(dot);
-            moveAlongPath(dot, start, end, false);
-        }
-        ;
+                    moveAlongPath(dot, start, end, false);
+                };
 
 
         var showAllAnimate = function (arr) {
@@ -604,51 +611,51 @@
         Stickyfill.add(element);
 
 
-        onderInstall = new TimelineMax()
+        var onderInstall = new TimelineMax()
                 .add("mark1")
                 .fromTo("#onder", 0.2, {opacity: 0.7}, {opacity: 1}, "mark1")
                 .fromTo("#onder", 0.2, {y: -100}, {y: 0}, "mark1");
 
 
-        tokenRelease = new TimelineMax()
+        var tokenRelease = new TimelineMax()
 
                 .add("scale")
-                .to('.stuff', 0.1, {opacity: 0, ease: Linear.easeNone}, 0)
-                .to("#onder", 0.2, {opacity: 0, ease: Linear.easeNone}, 0)
-                .to('#block-borders', 0.4, {width: 18, height: 18, x: 14, y: 32, ease: Linear.easeNone}, 0)
+                .to('.stuff', 0.1, {opacity: 0, ease: Linear.easeNone, immediateRender: false}, 0)
+                .to("#onder", 0.2, {opacity: 0, ease: Linear.easeNone, immediateRender: false}, 0)
+                .to('#block-borders', 0.2, {
+                    width: 18, height: 18, x: 14, y: 32,
+                    ease: Linear.easeNone,
+                    immediateRender: false
+                }, 0)
                 .add("replace")
-                .to('#block-borders', 0, {opacity: 0})
-                .to('#color-block', 0, {opacity: 1})
+                .to('#block-borders', 0, {opacity: 0, immediateRender: false})
+                .to('#color-block', 0, {opacity: 1, immediateRender: false})
                 .add("show-graph")
-                .to('#check-first', 0.1, {opacity: 1, ease: Linear.easeNone}, "show-graph")
-                .to('#net-back', 0.2, {opacity: 1, ease: Linear.easeNone}, "show-graph");
+                .to('#check-first', 0.4, {opacity: 1, ease: Linear.easeNone, immediateRender: false}, "show-graph")
+                //.to()
+                .to('#net-back', 0.8, {opacity: 1, ease: Linear.easeNone, immediateRender: false}, "show-graph");
+
 
         new ScrollMagic.Scene({
-                    triggerElement: "#onder-install",
-                    duration: 180,
-                    offset: -60,
-                    triggerHook: 'onCenter',
-                    tweenChanges: true,
-                    reverse: true
-                }
-        )
+            triggerElement: "#onder-install",
+            duration: 180,
+            reverse: true
+        })
                 .setTween(onderInstall)
-                .addIndicators({name: "1"})
-                .addTo(controller);
+               // .addIndicators({name: "2"})
+                .addTo(controller2);
 
         new ScrollMagic.Scene({
             triggerElement: "#token-release",
             duration: 180,
-            offset: -60,
-            triggerHook: 'onCenter',
-            tweenChanges: true,
+            offset: -40,
             reverse: true
         })
                 .setTween(tokenRelease)
-                .addIndicators({name: "2"})
-                .addTo(controller);
+               // .addIndicators({name: "2"})
+                .addTo(controller2);
 
-        netConnect = new TimelineMax()
+        var netConnect = new TimelineMax()
 
                 .to('#check-first', 0.7, {opacity: 0}, 0)
                 .to('#dashed', 0.5, {opacity: 0.3}, 0);
@@ -656,50 +663,43 @@
         new ScrollMagic.Scene({
             triggerElement: "#connect",
             duration: 180,
-            offset: -60,
-            triggerHook: 'onCenter',
-            tweenChanges: true,
+            offset: -20,
             reverse: true
-        }).addIndicators({name: "3"})
+        })//.addIndicators({name: "3"})
                 .setTween(netConnect)
 
-                .addTo(controller);
+                .addTo(controller2);
 
-        netValidate = new TimelineMax()
 
-                .to('.stable', 1, {opacity: 1}, 0)
-                .to('#dashed', 1, {opacity: 0}, 0)
-                .to('.check-connect', 1, {opacity: 1}, 1)
-                .to('.check-connect', 1, {opacity: 0}, 2);
-
-        new ScrollMagic.Scene({
+        var scene4 = new ScrollMagic.Scene({
             triggerElement: "#validate",
-            duration: 230,
-            offset: 80,
-            triggerHook: 'onCenter',
-            tweenChanges: true,
+            duration: 150,
             reverse: true
-        }).setTween(netValidate)
-                .addIndicators({name: "2"})
-                .addTo(controller);
+        }).setTween(new TimelineMax()
 
-        exchange = new TimelineMax()
-                .to('.check-connect', 1, {opacity: 0}, 0);
+                .to('.stable', 0.2, {opacity: 1}, 0)
+                .to('#dashed', 0.2, {opacity: 0}, 0)
+
+                .to('#checks', 0.2, {opacity: 1}))
+                //.addIndicators({name: "2"})
+                .addTo(controller2);
+
 
         new ScrollMagic.Scene({
             triggerElement: "#exchange",
             duration: 150,
-            offset: 80,
+
             reverse: true
         })
                 .on("enter", function (event) {
                     console.log("exchange", event);
-
+                    s.select('#checks').attr({opacity: 0});
                     animating = true;
                     exchangeAnimation();
                 })
                 .on("leave", function (event) {
                     animating = false;
+
                     dots.forEach(function (el) {
                         el.remove();
                     })
@@ -708,19 +708,9 @@
                         el.remove();
                     })
                 })
-                .addIndicators({name: "anim"})
-                .addTo(controller);
+               // .addIndicators({name: "anim"})
+                .addTo(controller2);
 
-        //        new ScrollMagic.Scene({
-        //            triggerElement: "#exchange",
-        //            duration: 130,
-        //            offset:-130,
-        //            triggerHook: 'onCenter',
-        //            tweenChanges: true,
-        //            reverse: true
-        //        }).setTween(exchange)
-        //                .addIndicators({name: "5"})
-        //                .addTo(controller);
 
     </script>
 </div>

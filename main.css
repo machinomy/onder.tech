@@ -4,6 +4,9 @@
 
 }
 
+div{
+
+}
 h1, h3, h4, p, li, a {
 
     font-family: 'Open Sans', sans-serif;
@@ -26,22 +29,25 @@ h1 {
 
     background: #616161;
     padding: 10px 0 13px;
-    min-width: 1343px;
+    min-width: 1183px;
 
 }
 
 .content {
     background: url("images/invalid-name.svg") no-repeat 0px 0px;
     background-size: 100%;
+    min-width: 1183px;
+
 
 }
 
 .roll {
     width: 1183px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0px auto;
     position: relative;
+    box-sizing: border-box;
 }
 
 .separator {
@@ -49,10 +55,8 @@ h1 {
     object-fit: contain;
 
     background: linear-gradient(to left, #00a5ba, #f7c604 52%, #ff0000);
-    min-width: 1343px;
+    min-width: 1183px;
 }
-
-
 
 .container {
     width: 100%;
@@ -105,9 +109,11 @@ article p, article a, article li, article h4 {
     text-align: left;
     color: #022133;
 }
+
 article .animated p, article .animated a, article .animated li, article .animated h4 {
     line-height: 1.25;
 }
+
 article p + h3 {
     padding-top: 10px;
 }
@@ -131,11 +137,15 @@ article .animated .left-column {
     display: inline-block;
     margin-right: 65px;
     vertical-align: top;
-}
-article .animated .left-column a{
+    float: left;
 
 }
-.how-to h1{
+
+article .animated .left-column a {
+
+}
+
+.how-to h1 {
     margin-bottom: 82px;
 }
 
@@ -143,10 +153,12 @@ article .animated .left-column a{
 
     margin-bottom: 160px;
 }
+
 .optimize .left-column > div {
 
     margin-top: 135px;
 }
+
 article .animated .view-zone {
     width: 627px;
     display: inline-block;
@@ -225,7 +237,7 @@ div.icon.centralized {
 }
 
 article.road-map {
-background: url("images/combined-shape.svg") no-repeat left 80px;
+    background: url("images/combined-shape.svg") no-repeat left 80px;
 }
 
 article.road-map h1 {
@@ -267,80 +279,99 @@ article.road-map div ul li:before {
     content: "\2014";
 
 }
-.links{
+
+.links {
     list-style: none;
 }
-.links li{
+
+.links li {
     display: inline-block;
     margin-right: 10px;
 }
-.links a{
+
+.links a {
     color: #022133;
 }
-.links .blog a{
+
+.links .blog a {
     padding-left: 20px;
     background: url("images/medium-white.svg") no-repeat left;
 }
-.footer .links .blog a{
+
+.footer .links .blog a {
     background: url("images/medium-black.svg") no-repeat left;
 }
-.header .links{
+
+.header .links {
     display: inline-block;
     width: 200px;
     text-align: right;
     position: absolute;
     right: 50px;
 }
-.header .links a{
+
+.header .links a {
     color: white;
 }
-.footer{
+
+.footer {
     background: url(images/invalid-name.svg) no-repeat 0px 0px;
     background-size: 100%;
     position: relative;
     padding-top: 50px;
     margin-top: 120px;
     height: 210px;
-    min-width: 1343px;
+    min-width: 1183px;
 }
-.footer .roll{
+
+.footer .roll {
     height: 100%;
     position: relative;
 }
 
-.footer .medal{
+.footer .medal {
 
     font-family: OpenSans;
     font-size: 23px;
     color: #022133;
 
 }
-.footer .medal p{
+
+.footer .medal p {
     margin-bottom: 0px;
 }
-.footer .medal a{
+
+.footer .medal a {
     color: #022133;
 }
-.footer .links{
+
+.footer .links {
     position: absolute;
     left: 80px;
     bottom: 40px;
 }
-article.about p{  font-size: 24px; line-height: normal}
 
-article.optimize .animated{
+article.about p {
+    font-size: 24px;
+    line-height: normal
+}
+
+article.optimize .animated {
     padding-right: 100px;
 }
-article .animated:after{
+
+article .animated:after {
     content: ' ';
     clear: both;
     display: table;
 }
-article .animated .left-column{
-    float: left;
-    padding-bottom: 200px;
+
+article.optimize .animated .left-column {
+    padding-bottom: 220px;
 }
-.view-canvas{
+
+.view-canvas {
+    position: -webkit-sticky;
     position: sticky;
     top: 200px;
     z-index: 1;
@@ -348,15 +379,29 @@ article .animated .left-column{
     width: 627px;
     height: 401px;
 }
-.how-to .view-canvas{
 
-    top:300px;
+@media (min-height: 800px) {
+    .view-canvas {
+        position: sticky;
+        top: 200px;
+        z-index: 1;
+        float: left;
+        width: 627px;
+        height: 401px;
+    }
 }
-.anchor{
+
+.how-to .view-canvas {
+    top: 330px;
+    height: 197px;
+}
+
+.anchor {
     display: inline-block;
     background: rgba(204, 237, 241, 0);
 }
-.selected{
+
+.selected {
     background: rgba(204, 237, 241, 1);
     text-decoration: none;
 }
