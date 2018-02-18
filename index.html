@@ -14,6 +14,7 @@
     <script src="js/snap.svg-min.js"></script>
     <script src="js/stickyfill.min.js"></script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ØNDER - Platform for distributed<br/> energy trading</title>
     <script>
 
@@ -249,7 +250,8 @@
 
         </article>
         <article class="how-to">
-            <h1>How does it work </h1>
+            <h1>
+                Как это работает </h1>
             <div class="animated">
                 <div class="left-column">
                     <div id="onder-install">
@@ -431,28 +433,20 @@
 
         </article>
         <article class="road-map">
+
             <h1>Project growth plan</h1>
             <div class="left-column">
                 <div class="y-2018">
                     <div>
                         <h3>2018 Q1</h3>
                         <ul>
-                            <li>Register company, allocate budget, secure investors.</li>
-                            <li>Finish prototype, launch site, create presentation.
-                            </li>
-                            <li>Develop market strategy.
-                            </li>
+                            <li>Finish prototype</li>
                         </ul>
                         <h3>Q2</h3>
                         <ul>
-                            <li>Research market</li>
                             <li>Develop and launch device production
                             </li>
                             <li>Develop application for network users
-                            </li>
-                            <li>Present at forums and conventions
-                            </li>
-                            <li>Conduct negotiations with utility companies, foundations
                             </li>
                             <li>Launch first ØNDER version
                             </li>
@@ -468,18 +462,6 @@
                 </div>
 
                 <div class="y-2019">
-                    <h3>2019</h3>
-                    <ul>
-                        <li>Develop platform software</li>
-                        <li>Develop device</li>
-                        <li>Develop UI, API software</li>
-                        <li>Find partners</li>
-                        <li>Pilot</li>
-                    </ul>
-
-                </div>
-                <div class="y-2020">
-                    <h3>2020</h3>
                     <ul>
                         <li>Manufacture and install 10K devices</li>
                         <li>Contracts with 5+ companies</li>
@@ -523,7 +505,7 @@
 
         new ScrollMagic.Scene({
                     triggerElement: "#peak-smoothing",
-                    duration: 200,
+                    duration: 70,
                     triggerHook: 'onCenter',
                     tweenChanges: true,
                     reverse: true
@@ -533,7 +515,7 @@
 
         new ScrollMagic.Scene({
                     triggerElement: "#load-reduction",
-                    duration: 200,
+                    duration: 70,
                     triggerHook: 'onCenter',
                     tweenChanges: true,
                     reverse: true
@@ -542,7 +524,7 @@
                 .addTo(controller);
         new ScrollMagic.Scene({
                     triggerElement: "#line-straightening",
-                    duration: 200,
+                    duration: 70,
                     triggerHook: 'onCenter',
                     tweenChanges: true,
                     reverse: true
@@ -567,6 +549,21 @@
 
         };
 
+        var showAllAnimate = function (arr) {
+            arr.forEach(
+                    function (e) {
+                        e.animate({opacity: 1}, 1000, mina.easeinout);
+                    }
+            )
+        };
+
+        var hideAllAnimate = function (arr) {
+            arr.forEach(
+                    function (e) {
+                        e.animate({opacity: 0}, 1000, mina.easeinout);
+                    }
+            )
+        };
         function moveElementAlongPath(p) {
 
             path = s.path(p.node.getAttribute('d')).attr({'fill': 'none', 'stroke': '#333'});
@@ -630,6 +627,7 @@
                 }
         )
                 .setTween(onderInstall)
+                .addIndicators({name: "1"})
                 .addTo(controller);
 
         new ScrollMagic.Scene({
@@ -641,6 +639,7 @@
             reverse: true
         })
                 .setTween(tokenRelease)
+                .addIndicators({name: "2"})
                 .addTo(controller);
 
         netConnect = new TimelineMax()
@@ -654,7 +653,9 @@
             triggerHook: 'onCenter',
             tweenChanges: true,
             reverse: true
-        }).setTween(netConnect)
+        }).addIndicators({name: "3"})
+                .setTween(netConnect)
+
                 .addTo(controller);
 
         netValidate = new TimelineMax()
@@ -670,7 +671,7 @@
             tweenChanges: true,
             reverse: true
         }).setTween(netValidate)
-
+                .addIndicators({name: "2"})
                 .addTo(controller);
 
         exchange = new TimelineMax()
@@ -682,7 +683,7 @@
             tweenChanges: true,
             reverse: true
         }).setTween(exchange)
-
+                .addIndicators({name: "5"})
                 .addTo(controller);
 
     </script>

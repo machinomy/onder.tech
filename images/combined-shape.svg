@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2" height="756" viewBox="0 0 2 756">
+<svg xmlns="http://www.w3.org/2000/svg" width="2" height="456" viewBox="0 0 2 456">
     <defs>
         <linearGradient id="a" x1="37.19%" x2="50%" y1="100%" y2="0%">
             <stop offset="0%" stop-color="#00A5BA" stop-opacity="0"/>
@@ -8,5 +8,5 @@
             <stop offset="100%" stop-color="#F00" stop-opacity="0"/>
         </linearGradient>
     </defs>
-    <path fill="url(#a)" fill-rule="nonzero" d="M4 83h1.5v756H4z" transform="translate(-4 -83)"/>
+    <path fill="url(#a)" fill-rule="nonzero" d="M4 76h1.5v456H4z" transform="translate(-4 -76)"/>
 </svg>
