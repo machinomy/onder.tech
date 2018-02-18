@@ -249,8 +249,7 @@
 
         </article>
         <article class="how-to">
-            <h1>
-                Как это работает </h1>
+            <h1>How does it work </h1>
             <div class="animated">
                 <div class="left-column">
                     <div id="onder-install">
@@ -269,7 +268,7 @@
                         <p>The device connects to the network and registers as an energy network participant with a token. </p>
                     </div>
                     <div id="validate">
-                        <h4> 4. Smart contract signing</h4>
+                        <h3> 4. Smart contract signing</h3>
                         <p>Prosumers select an energy trading strategy and sign contracts: for device installation and maintenance, for connecting to the traditional network, for network maintenance and utility.</p>
                     </div>
                     <div id="exchange">
@@ -432,7 +431,7 @@
 
         </article>
         <article class="road-map">
-            <h1>План развития проекта</h1>
+            <h1>Project growth plan</h1>
             <div class="left-column">
                 <div class="y-2018">
                     <div>
@@ -498,38 +497,8 @@
 
         var svg = document.getElementById("graph");
         var s = Snap(svg);
-        var graph = Snap.select('#graph-line');
-        var graphSh = Snap.select('#graph-line-shadow');
 
-        var peak = Snap.select('#peak');
-        var peakSh = Snap.select('#peak-shadow');
-        var noPeak = Snap.select('#no-peak');
-        var noPeakSh = Snap.select('#no-peak-shadow');
-        var lowLoad = Snap.select('#low-load');
-        var lowLoadSh = Snap.select('#low-load-shadow');
-        var ideal = Snap.select('#ideal');
-        var idealSh = Snap.select('#ideal-shadow');
-        var graphLines = [peak, noPeak, lowLoad, ideal];
-
-        var noPeakText = Snap.select('#no-peak-text');
-        var noPeakText = Snap.select('#no-peak-text');
-        var hideAllNow = function (elems) {
-            if (Array.isArray(elems))
-                elems.forEach(
-                        function (e) {
-                            e.animate({opacity: 0}, 0);
-                        }
-                )
-            else
-                elems.animate({opacity: 0}, 0);
-        };
-        var last = null;
-        var lastText = null;
-        var current = null;
-        var currentText = null;
-
-
-        toNoPeakTween = new TimelineMax()
+        toNoPeak = new TimelineMax()
                 .to('#graph-line', 1, {opacity: 0}, 0)
                 .to('#no-peak', 1, {opacity: 1}, 0)
                 .to('#no-peak-text', 1, {opacity: 1}, 0)
@@ -559,7 +528,7 @@
                     tweenChanges: true,
                     reverse: true
                 }
-        ).setTween(toNoPeakTween)
+        ).setTween(toNoPeak)
                 .addTo(controller);
 
         new ScrollMagic.Scene({
@@ -598,21 +567,6 @@
 
         };
 
-        var showAllAnimate = function (arr) {
-            arr.forEach(
-                    function (e) {
-                        e.animate({opacity: 1}, 1000, mina.easeinout);
-                    }
-            )
-        };
-
-        var hideAllAnimate = function (arr) {
-            arr.forEach(
-                    function (e) {
-                        e.animate({opacity: 0}, 1000, mina.easeinout);
-                    }
-            )
-        };
         function moveElementAlongPath(p) {
 
             path = s.path(p.node.getAttribute('d')).attr({'fill': 'none', 'stroke': '#333'});
