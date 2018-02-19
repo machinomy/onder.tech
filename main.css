@@ -5,7 +5,6 @@
 }
 
 div{
-
 }
 h1, h3, h4, p, li, a {
 
@@ -26,7 +25,7 @@ h1 {
 }
 
 .header {
-
+box-sizing: border-box;
     background: #616161;
     padding: 10px 0 13px;
     min-width: 1183px;
@@ -37,12 +36,12 @@ h1 {
     background: url("images/invalid-name.svg") no-repeat 0px 0px;
     background-size: 100%;
     min-width: 1183px;
-
+    box-sizing: border-box;
 
 }
 
 .roll {
-    width: 1183px;
+    width: 1021px;
     padding-left: 20px;
     padding-right: 20px;
     margin: 0px auto;
@@ -209,6 +208,7 @@ div.icon {
     width: 115px;
     height: 49px;
     background: no-repeat left bottom;
+    margin-bottom: 8px;
 }
 
 div.icon.prosumers {
@@ -322,6 +322,7 @@ article.road-map div ul li:before {
     margin-top: 120px;
     height: 210px;
     min-width: 1183px;
+    box-sizing: border-box;
 }
 
 .footer .roll {
@@ -396,12 +397,19 @@ article.optimize .animated .left-column {
     height: 197px;
 }
 
-.anchor {
+.anchor,
+article.how-to h3 span{
     display: inline-block;
     background: rgba(204, 237, 241, 0);
 }
 
-.selected {
+article.how-to h3 span {
+padding: 2px 5px;
+    position: relative;
+    left: -5px;
+}
+.selected,
+article.how-to h3 span.selected{
     background: rgba(204, 237, 241, 1);
     text-decoration: none;
 }

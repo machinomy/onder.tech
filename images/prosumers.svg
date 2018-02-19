@@ -26,7 +26,7 @@
             <stop offset="100%" stop-color="#F00"/>
         </linearGradient>
     </defs>
-    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2">
+    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2" transform="translate(1 0)">
         <path stroke="url(#a)" d="M75 48.22v-15l9-7 9 7v15h7v-38"/>
         <path stroke="url(#b)" d="M50 48V33l9-7 9 7v15h7M25 48.22v-15l9-7 9 7v15h7M0 48.22v-15l9-7 9 7v15h7"/>
         <path stroke="url(#c)" d="M89.798.195l10.31 9.678"/>
