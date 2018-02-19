@@ -132,9 +132,9 @@ article .animated .left-column h4 {
 }
 
 article .animated .left-column {
-    width: 350px;
+    width: 35%;
     display: inline-block;
-    margin-right: 65px;
+    padding-right: 32px;
     vertical-align: top;
     float: left;
 
@@ -158,14 +158,16 @@ article .animated .left-column a {
     margin-top: 135px;
 }
 
-article .animated .view-zone {
-    width: 627px;
+article .animated .view-canvas {
+    width: 58%;
     display: inline-block;
     margin-right: 0px;
     vertical-align: top;
-
+padding-left: 32px;
 }
-
+article.optimize .view-canvas svg{
+    width: 100%;
+}
 article .animated .view-zone .view-canvas {
     height: 401px;
 
@@ -348,7 +350,6 @@ article.road-map div ul li:before {
 
 .footer .links {
     position: absolute;
-    left: 80px;
     bottom: 40px;
 }
 
@@ -358,7 +359,7 @@ article.about p {
 }
 
 article.optimize .animated {
-    padding-right: 100px;
+    padding-right: 0px;
 }
 
 article .animated:after {
@@ -377,18 +378,13 @@ article.optimize .animated .left-column {
     top: 200px;
     z-index: 1;
     float: left;
-    width: 627px;
+    width: 66%;
     height: 401px;
 }
 
 @media (min-height: 800px) {
     .view-canvas {
-        position: sticky;
-        top: 200px;
-        z-index: 1;
-        float: left;
-        width: 627px;
-        height: 401px;
+
     }
 }
 
