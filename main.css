@@ -235,11 +235,17 @@ div.icon.blockchain {
 }
 
 div.icon.centralized {
-    background-image: url("images/centralized.svg");
+    background-image: url("images/centralized.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    div.icon.centralized{background:url('images/centralized@2x.png')}
 }
 
-article.road-map {
-    background: url("images/combined-shape.svg") no-repeat left 80px;
+article.road-map .left-column {
+    background: url("images/combined-shape.svg") no-repeat left 0px;
+    background-size: 2px 100%;
 }
 
 article.road-map h1 {
@@ -390,13 +396,20 @@ article.optimize .animated .left-column {
 
 .how-to .view-canvas {
     top: 330px;
+    width: 277px;
     height: 197px;
 }
-
+.how-to .view-canvas svg{
+    position: relative;
+    top:-80px;
+}
 .anchor,
 article.how-to h3 span{
     display: inline-block;
     background: rgba(204, 237, 241, 0);
+    padding: 2px 5px;
+    position: relative;
+    left: -5px;
 }
 
 article.how-to h3 span {

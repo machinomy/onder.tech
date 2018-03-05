@@ -180,16 +180,16 @@
                                 <tspan x="1.179" y="394">Night</tspan>
                             </text>
                             <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" opacity=".5">
-                                <tspan x="159.367" y="394">Morning</tspan>
+                                <tspan x="135.367" y="394">Morning</tspan>
                             </text>
                             <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" opacity=".5">
-                                <tspan x="300.212" y="394">Day</tspan>
+                                <tspan x="285.212" y="394">Day</tspan>
                             </text>
                             <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" opacity=".5">
-                                <tspan x="427.065" y="394">Evening</tspan>
+                                <tspan x="413.065" y="394">Evening</tspan>
                             </text>
                             <text fill="#022133" font-family="OpenSans-Regular, Open Sans" font-size="14" opacity=".5">
-                                <tspan x="540.179" y="394">Night</tspan>
+                                <tspan x="560.179" y="394">Night</tspan>
                             </text>
                         </g>
 
@@ -286,7 +286,7 @@
                 </div>
                 <div class="view-canvas" id="how-to-canvas">
 
-                    <svg id="net" height="198" viewBox="0 0 277 198" style="position: relative; top: -80px">
+                    <svg id="net" height="198" viewBox="0 0 277 198" style="">
                         <defs>
                             <linearGradient id="b" x1="50%" x2="50%" y1="100%" y2="-39.234%">
                                 <stop offset="0%" stop-color="#00A5BA"/>
@@ -320,7 +320,7 @@
                                           opacity="0" stroke-width="1.5" stroke-linecap="square"></path>
                                     <path class="stable" id="con-line-2" d="M22.9837758,41 L83.9631268,72.9960001"
                                           opacity="0" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"></path>
-
+                                    <path xmlns="http://www.w3.org/2000/svg" d="M144.942478,105 L144.942478,41" id="Line-8" stroke="#00A5BA" stroke-width="1.5" stroke-linecap="square"/>
                                     <path d="M205.921829,9 L205.921829,73" id="Line-8" stroke="#00A5BA" stroke-width="1.5"
                                           stroke-linecap="square"></path>
                                     <path d="M147.794985,40.9914668 L205.029711,9.48159613" id="Line-8" stroke="#00A5BA"
@@ -634,16 +634,16 @@
                 .add("scale")
                 .to('.stuff', 0.1, {opacity: 0, ease: Linear.easeNone, immediateRender: false}, 0)
                 .to("#onder", 0.2, {opacity: 0, ease: Linear.easeNone, immediateRender: false}, 0)
-                .to('#block-borders', 0.2, {
+                .to('#block-borders', 1.3, {
                     width: 18, height: 18, x: 14, y: 32,
                     ease: Linear.easeNone,
                     immediateRender: false
                 }, 0)
-                .to('#net-back', 0.4, {opacity: 1, ease: Linear.easeNone, immediateRender: false}, 0)
+                .to('#net-back',  1.3, {opacity: 1, ease: Linear.easeNone, immediateRender: false},0)
                 .add("replace")
                 .to('#block-borders', 0, {opacity: 0, immediateRender: false}, "replace")
                 .to('#color-block', 0, {opacity: 1, immediateRender: false}, "replace")
-                .add("show-graph", 1.5)
+                .add("show-graph", 2)
                 .to('#check-first', 0.1, {opacity: 1, ease: Linear.easeNone, immediateRender: false}, "show-graph")
                 .to("#token-release h3 span", 0.1, {className:"+=selected"}, "show-graph");
         //.to()
@@ -651,7 +651,8 @@
 
         new ScrollMagic.Scene({
             triggerElement: "#onder-install",
-            duration: 180,
+            duration: 70,
+            offset: -20,
             reverse: true
         })
                 .setTween(onderInstall)
@@ -661,11 +662,11 @@
         new ScrollMagic.Scene({
             triggerElement: "#token-release",
             duration: 180,
-            offset: -40,
+            offset: -90,
             reverse: true
         })
                 .setTween(tokenRelease)
-                // .addIndicators({name: "2"})
+                //.addIndicators({name: "2"})
                 .addTo(controller2);
 
         var netConnect = new TimelineMax()
@@ -676,8 +677,8 @@
 
         new ScrollMagic.Scene({
             triggerElement: "#connect",
-            duration: 180,
-            offset: -20,
+            duration: 120,
+            offset: -30,
             reverse: true
         })//.addIndicators({name: "3"})
                 .setTween(netConnect)
@@ -743,7 +744,7 @@
     <div class="roll">
         <div class="medal">
             <p>Do you want to integrate your project with ØNDER?</p>
-            <p>Email us: <a href="mailto:hello@onder.tech?Subject=Onder integration">hello@onder.tech</a></p>
+            <p>Email us: <a href="mailto:hello@onder.tech?Subject=Integration with ØNDER" target="_blank">hello@onder.tech</a></p>
         </div>
 
         <ul class="links">
