@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="2" height="456" viewBox="0 0 2 456">
     <defs>
-        <linearGradient id="a" x1="37.19%" x2="50%" y1="100%" y2="0%">
+        <linearGradient id="c_a" x1="37.19%" x2="50%" y1="100%" y2="0%">
             <stop offset="0%" stop-color="#00A5BA" stop-opacity="0"/>
             <stop offset="8.827%" stop-color="#00A5BA"/>
             <stop offset="51.529%" stop-color="#F7C604"/>
@@ -8,5 +8,5 @@
             <stop offset="100%" stop-color="#F00" stop-opacity="0"/>
         </linearGradient>
     </defs>
-    <path fill="url(#a)" fill-rule="nonzero" d="M0 0h1.5v456H4z"/>
+    <path fill="url(#c_a)" fill-rule="nonzero" d="M0 0h1.5v456H4z"/>
 </svg>
