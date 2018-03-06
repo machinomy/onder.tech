@@ -42,8 +42,6 @@ box-sizing: border-box;
 
 .roll {
     width: 1021px;
-    padding-left: 20px;
-    padding-right: 20px;
     margin: 0px auto;
     position: relative;
     box-sizing: border-box;
@@ -188,7 +186,7 @@ article .animated .view-zone .view-canvas {
 }
 
 .col-33 {
-    width: 30%;
+    width: 33%;
 }
 
 .net {
@@ -214,7 +212,7 @@ div.icon {
 }
 
 div.icon.prosumers {
-    background-image: url("images/prosumers.svg");
+
 }
 
 div.icon.company {
@@ -360,7 +358,7 @@ article.road-map div ul li:before {
 }
 
 article.about p {
-    font-size: 24px;
+    font-size: 23px;
     line-height: normal
 }
 
