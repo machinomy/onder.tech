@@ -238,7 +238,8 @@ div.icon.centralized {
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
 
-    div.icon.centralized{background:url('images/centralized@2x.png');
+    div.icon.centralized{
+        background-image:url('images/centralized@2x.png') ;
         background-size: contain;
 
     }
