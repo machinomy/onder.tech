@@ -238,7 +238,10 @@ div.icon.centralized {
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
 
-    div.icon.centralized{background:url('images/centralized@2x.png')}
+    div.icon.centralized{background:url('images/centralized@2x.png');
+        background-size: contain;
+
+    }
 }
 
 article.road-map .left-column {
@@ -249,7 +252,7 @@ article.road-map .left-column {
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
 
-    article.road-map .left-column{background:url('images/combined-shape@2x.png')}
+    article.road-map .left-column{background:url('images/combined-shape@2x.png')  no-repeat left 0px;}
 }
 
 article.road-map h1 {
