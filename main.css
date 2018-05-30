@@ -34,7 +34,7 @@ h1 {
 }
 
 .content {
-    background: url("images/waves-sin-head.svg") no-repeat 0px 0px;
+    background: url("images/waves-sin.svg") no-repeat 0px 0px;
     background-size: 100%;
     min-width: 1183px;
     box-sizing: border-box;
@@ -88,16 +88,7 @@ h1 {
     font-family: 'Open Sans', sans-serif;
 
 }
-.header a span {
-    border-bottom: 1px solid rgba(254, 254, 254, 0.3);
-}
 
-.footer a span{
-    border-bottom: 1px solid rgba(47,68,57,0.3);
-}
-.footer a, .header a{
-    text-decoration: none;
-}
 article {
     margin-top: 50px;
     margin-bottom: 85px;
@@ -261,6 +252,9 @@ div.icon.centralized {
 article.road-map .left-column {
 
     background: url("images/combined-shape.png") no-repeat left 0px;
+    background-size: contain;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
 }
 
