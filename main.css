@@ -269,11 +269,15 @@ article.road-map .left-column {
 article.road-map h1 {
     margin-bottom: 25px;
     height: 52px;
+    position: relative;
+    left: -10px;
 }
 
 article.road-map .left-column {
     width: 480px;
     padding-left: 13px;
+    position: relative;
+    left: -6px;
 
 }
 
@@ -325,7 +329,7 @@ article.road-map div ul li:before {
 }
 
 .footer .links  a{
-    padding-left: 30px;
+    padding-left: 24px;
 }
 .footer .links .blog a {
     background: url("images/medium-black.svg") no-repeat left;
@@ -372,7 +376,7 @@ article.road-map div ul li:before {
 
     width: 100%;
     position: absolute;
-    bottom: 15px;
+    bottom: 35px;
 
     object-fit: contain;
 }
@@ -390,6 +394,7 @@ article.road-map div ul li:before {
 .footer .medal {
 
     font-family: OpenSans;
+    font-weight: bold;
     font-size: 23px;
     color: #022133;
 
@@ -406,14 +411,27 @@ article.road-map div ul li:before {
 
 .footer .links {
    float: left;
-    width: 200px;
+    width: 151px;
+    margin-bottom: 50px;
+}
+.footer .links.docs {
+    float: left;
+    width: 253px;
     margin-bottom: 50px;
 }
 .footer .links li{
     margin-bottom: 10px;
     display: block;
 }
+.footer .lg{
+    position: absolute;
+    bottom: 58px;
+    right: -4px;
+    width: 24px;
+    height: 24px;
 
+    
+}
 article.about p {
     font-size: 23px;
     line-height: normal
