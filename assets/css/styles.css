@@ -1,16 +1,19 @@
 /*
 Error: Invalid CSS after "@import "vars"": expected "{", was ";"
-        on line 3 of styles.scss
+        on line 6 of styles.scss
 
 1: ---
 2: ---
-3: @import "vars";
-4: @import "bulma/bulma.sass";
-5: @import "fonts";
-6: @import "main";
+3: 
+4: 
+5: 
+6: @import "vars";
+7: @import "bulma/bulma.sass";
+8: @import "fonts";
+9: @import "main";
 
 Backtrace:
-styles.scss:3
+styles.scss:6
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:1308:in `expected'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:1238:in `expected'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.3/lib/sass/scss/parser.rb:1233:in `tok!'
@@ -39,4 +42,4 @@ C:/Ruby24-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"@import \"vars\"\": expected \"{\", was \";\"\A         on line 3 of styles.scss\A \A 1: ---\A 2: ---\A 3: @import \"vars\";\A 4: @import \"bulma/bulma.sass\";\A 5: @import \"fonts\";\A 6: @import \"main\";"; }
+  content: "Error: Invalid CSS after \"@import \"vars\"\": expected \"{\", was \";\"\A         on line 6 of styles.scss\A \A 1: ---\A 2: ---\A 3: \A 4: \A 5: \A 6: @import \"vars\";\A 7: @import \"bulma/bulma.sass\";\A 8: @import \"fonts\";\A 9: @import \"main\";"; }
