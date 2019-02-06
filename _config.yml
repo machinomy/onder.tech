@@ -21,6 +21,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 collections:
   team:
+  partners:
 
 url_medium: https://medium.com/%C3%B8nder
 url_twitter: https://twitter.com/OnderPlatform

@@ -45,7 +45,7 @@ header{
 
 .content{
   font-size: $font-size-m;
-  
+
   h1{
     font-size: $font-size-h1;
     font-family: $font-montserrat;
@@ -60,6 +60,10 @@ header{
     figure {
       margin-right: 0;
       margin-left: 0;
+      &.partner{
+        height: 65px;
+        text-align: left;
+      }
     }
     .card-content{
       padding: 16px 0 0 0;
