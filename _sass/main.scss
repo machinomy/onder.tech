@@ -26,7 +26,7 @@ header{
   height: 100vh;
   background-color: #eeeeee;
   .main{
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font-montserrat;
     font-weight: 200;
     font-size: 64px;
     line-height: 1em;
@@ -44,8 +44,33 @@ header{
 }
 
 .content{
-  figure{
-    margin-right: 0;
-    margin-left: 0;
+  font-size: $font-size-m;
+  
+  h1{
+    font-size: $font-size-h1;
+    font-family: $font-montserrat;
+    font-weight: 900;
+  }
+  h2{
+    font-size: $font-size-m;
+    font-weight: bold;
+  }
+  .card {
+    box-shadow: none;
+    figure {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .card-content{
+      padding: 16px 0 0 0;
+
+      .title{
+        font-size: $font-size-m;
+        font-weight: bold;
+      }
+      .subtitle{
+        font-size: $font-size-m;
+      }
+    }
   }
 }
