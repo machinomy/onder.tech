@@ -77,4 +77,24 @@ header{
       }
     }
   }
+  ul {
+    margin-left: 0;
+    position: relative;
+    &.checked {
+      li:before {
+        content: url("ui/checkbox_on.svg");
+      }
+    }
+    li {
+      list-style: none;
+      margin-bottom: 1em;
+      padding-left: 50px;
+
+    }
+    li:before{
+      content: url("ui/checkbox_off.svg");
+      position: absolute;
+      left: 0;
+    }
+  }
 }
