@@ -2,3 +2,43 @@
 body{
   font-family: 'Open Sans', sans-serif;
   }
+
+a:hover{
+  opacity: 0.8;
+}
+
+.navbar {
+  background: $color-black;
+  .navbar-item a, .navbar-item a:hover {
+    color: $color-white;
+    background-color: $color-black;
+  }
+}
+
+.hero {
+  padding: 0 64px;
+  @include until($desktop){
+    padding: 0 16px;
+  }
+}
+
+header{
+  height: 100vh;
+  background-color: #eeeeee;
+  .main{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 64px;
+    line-height: 1em;
+    @include until($desktop){
+      font-size: 24px;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  margin-top: -50px;
+  padding: 64px 0px 16px 0px;
+  .columns{
+    margin-top: auto;
+  }
+}

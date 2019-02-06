@@ -22,3 +22,6 @@ markdown: kramdown
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+url_medium: https://medium.com/%C3%B8nder
+url_twitter: https://twitter.com/OnderPlatform

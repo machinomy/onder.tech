@@ -1,14 +1,16 @@
 ---
 
 ---
-<!DOCTYPE html>
+<!DOCTYPE html class="has-navbar-fixed-top">
 {% include head.html %}
-<body>
+<body class="has-navbar-fixed-top">
+{% include navbar.html %}
 <div class="hero">
     {% include header.html %}
         {{content}}
+    {% include footer.html %}
 </div>
-{% include footer.html %}
+
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </body>
 </html>
