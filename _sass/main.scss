@@ -1,10 +1,12 @@
 @charset "utf-8";
 body{
   font-family: 'Open Sans', sans-serif;
+  color: $color-black;
   }
-
+a{color: initial;}
 a:hover{
   opacity: 0.5;
+  color: initial;
 }
 
 .navbar {
@@ -24,7 +26,6 @@ a:hover{
 
 header{
   height: 100vh;
-  background-color: #eeeeee;
   .main{
     font-family: $font-montserrat;
     font-weight: 200;
@@ -97,4 +98,49 @@ header{
       left: 0;
     }
   }
+}
+.footer{
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 836px;
+  padding: 0;
+  text-align: center;
+  @include until($tablet){
+    height: 600px;
+  }
+  h1{
+    font-size: $font-size-h1;
+    font-family: $font-montserrat;
+    font-weight: 900;
+    @include until($tablet){
+      font-size: $font-size-m;
+    }
+  }
+  a{
+    color: $color-blue;
+  }
+  img{
+    padding-bottom: 30px;
+  }
+  .email{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .social_links{
+    margin-top: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    font-size: $font-size-h1;
+    padding-bottom: 80px;
+    a{
+      color: $color-black;
+    }
+  }
+
 }
