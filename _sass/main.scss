@@ -24,13 +24,21 @@ a:hover{
   }
 }
 
+#container{
+  canvas{
+    position: absolute;
+  }
+}
+
 header{
   height: 100vh;
+
   .main{
     font-family: $font-montserrat;
-    font-weight: 200;
+    font-weight: 900;
     font-size: 64px;
     line-height: 1em;
+    z-index: 2;
     @include until($desktop){
       font-size: 24px;
     }
@@ -40,6 +48,7 @@ header{
   margin-top: -50px;
   padding: 64px 0px 16px 0px;
   .columns{
+    z-index: 2;
     margin-top: auto;
   }
 }
