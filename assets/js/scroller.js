@@ -90,47 +90,29 @@ d3.selection.prototype.clone = function() {
     return this.select(selection_clone);
 };
 
-function changeScheme(i) {
+function changeScheme(j) {
+    var paths = []
+    for (var i = 0; i < 3; i++) {
+        paths.push(d3.select("path#net-load-" + (i + 1)).attr("d")) //collect paths
+    }
 
-    //console.log("active section №" + (i + 1))
-    var path1=d3.select("path#net-load-1").attr("d"),
-        path2=d3.select("path#net-load-2").attr("d"),
-        path3=d3.select("path#net-load-3").attr("d")
-    if (!d3.select("path#clone").node()) {
-        var path = d3.select("path#net-load-1").clone(),
-            path0 = d3.select("path#net-load-1").clone()
-        path.attr("id", "clone")
-        path0.attr("id", "clone2")
+    var clones = []
+    if (!d3.select("path#clone0").node()) { //create 'ghost' lines if they are not exist yet
+        for (var i = 0; i < 4; i++) {
+            clones.push(d3.select("path#net-load-1").clone().attr("id", "clone" + i).attr("stroke-width", i/1.5))
+        }
     }
     else {
-        var path = d3.select("path#clone"),
-            path0 = d3.select("path#clone2")
+        for (var i = 0; i < 4; i++) { //or collect it
+            clones.push(d3.select("path#clone" + i))
+        }
     }
 
-    if (i==0){
-        path.transition().duration(1000).attr("opacity",1)
-            .attr("d",path1)
-            .attr("transform","translate(0 0)");
-        path0.transition().duration(500).attr("opacity",1)
-            .attr("d",path1)
-            .attr("transform","translate(0 0)");
+    for (var i = 0; i < 4; i++) { //animate ghosts: they are going to current path
+        clones[i].transition().duration(i * 200 + 600).attr("opacity", 1)
+            .attr("d", paths[j])
     }
-    if (i==1){
-        path.transition().duration(1000).attr("opacity",1)
-            .attr("d",path2)
-            .attr("transform","translate(0 150)");
-        path0.transition().duration(500).attr("opacity",1)
-            .attr("d",path2)
-            .attr("transform","translate(0 150)")
-    }
-    if (i==2){
-        path.transition().duration(1000).attr("opacity",1)
-            .attr("d",path3)
-            .attr("transform","translate(0 300)");
-        path0.transition().duration(500).attr("opacity",1)
-            .attr("d",path3)
-            .attr("transform","translate(0 300)");
-    }
+
 }
 
 function drawGraph() {
@@ -163,8 +145,8 @@ function drawGraph() {
             path3=d3.select("path#net-load-3")
 
         path1.attr("d","M1,497.409783 C85.9240804,334.230866 85.9240804,0.874838727 128.253582,0.874838727 C170.583084,0.874838727 226.763539,304.81701 344.860813,304.81701 C421.067421,304.81701 455.526931,273.736273 508.898622,273.736273 C609.510858,273.736273 609.510858,605.806627 748.403123,605.806627 C799.34356,605.806627 842.468391,559.398645 877.777614,466.58268 ").attr('stroke', path1.attr('fill')).attr('fill','none')
-        path2.attr("d","M1,251.409783 C74.8173542,141.044626 68.464784,0.874838727 139.253582,0.874838727 C216.096441,0.874838727 280.192715,85.8170098 355.860813,85.8170098 C422.979088,85.8170098 455.526931,60.7362731 508.898622,60.7362731 C609.510858,60.7362731 609.510858,332.806627 748.403123,332.806627 C799.34356,332.806627 842.468391,295.065311 877.777614,219.58268").attr('stroke', path2.attr('fill')).attr('fill','none')
-        path3.attr("d","M-2.84217094e-14,65.8768373 C73.8173542,37.1190572 67.464784,0.595103435 138.253582,0.595103435 C215.096441,0.595103435 279.192715,22.7284319 354.860813,22.7284319 C421.979088,22.7284319 454.526931,16.19316 507.898622,16.19316 C608.510858,16.19316 608.510858,87.0863619 747.403123,87.0863619 C798.34356,87.0863619 841.468391,77.252131 876.777614,57.583669").attr('stroke', path3.attr('fill')).attr('fill','none')
+        path2.attr("d","M1 421.409783C74.8173542 311.044626 68.464784 170.874838727 139.253582 170.874838727C216.096441 170.874838727 280.192715 255.8170098 355.860813 255.8170098C422.979088 255.8170098 455.526931 230.7362731 508.898622 230.7362731C609.510858 230.7362731 609.510858 502.806627 748.403123 502.806627C799.34356 502.806627 842.468391 465.065311 877.777614 389.58268" ).attr('stroke', path2.attr('fill')).attr('fill','none')
+        path3.attr("d","M-2.84217094e-14 465.87683730000003C73.8173542 437.1190572 67.464784 400.595103435 138.253582 400.595103435C215.096441 400.595103435 279.192715 422.7284319 354.860813 422.7284319C421.979088 422.7284319 454.526931 416.19316 507.898622 416.19316C608.510858 416.19316 608.510858 487.0863619 747.403123 487.0863619C798.34356 487.0863619 841.468391 477.252131 876.777614 457.583669" ).attr('stroke', path3.attr('fill')).attr('fill','none')
 
         path1.attr("opacity",0)
         path2.attr("opacity",0)
