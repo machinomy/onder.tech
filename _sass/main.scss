@@ -143,5 +143,75 @@ header{
       color: $color-black;
     }
   }
+}
 
+//Graph Scroll
+
+#scroll-container {
+  position: relative;
+  padding-bottom:0;
+
+  @include until($tablet) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #sections {
+    @include from($mobile) {
+      padding-bottom: 180px; //space under last section
+    }
+
+    > div {
+      //opacity: $opacity-none;
+    }
+
+    div.graph-scroll-active {
+      opacity: $opacity-none;
+    }
+
+    div.hide{
+      opacity: $opacity-l;
+    }
+
+    .section{
+      padding: 3rem 0;
+
+      @include until($mobile) {
+        padding: 1.5rem 0;
+      }
+    }
+  }
+
+  #graph {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    overflow: hidden;
+    align-self: flex-start;
+  }
+  #graph:before,
+  #graph:after {
+    content: '';
+    display: table;
+  }
+
+  #graph.fullscreen{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-white;
+  }
+
+  #graph-container {
+    @include until($tablet) {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 50px;
+      background: $color-white;
+      align-self: flex-start;
+    }
+  }
 }

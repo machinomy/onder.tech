@@ -1,0 +1,20 @@
+<h1>
+    Optimizing energy supply in real‑time
+</h1>
+<div id='scroll-container' class="columns">
+    <div id="sections" class="column is-5-desktop is-6-tablet is-full-mobile">
+        {% for section in site.sections %}
+        <div id="{{ section.ident }}" >
+            <div class="step section">
+                {%assign cont = section.content%}
+                {% include typograph.html content=cont  %}
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div id="graph-container" class="column  is-7-desktop is-6-tablet is-full-mobile">
+        <div id="graph" class="is-centered "> graph 1211</div>
+    </div>
+
+</div>
