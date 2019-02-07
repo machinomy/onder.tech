@@ -185,7 +185,7 @@ header{
   #graph {
     position: -webkit-sticky;
     position: sticky;
-    top: 50px;
+    top: 70px;
     overflow: hidden;
     align-self: flex-start;
   }
@@ -209,7 +209,7 @@ header{
     @include until($tablet) {
       position: sticky;
       position: -webkit-sticky;
-      top: 50px;
+      top: 70px;
       background: $color-white;
       align-self: flex-start;
     }
