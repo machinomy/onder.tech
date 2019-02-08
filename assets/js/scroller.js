@@ -52,6 +52,12 @@ function fixedHeader() {
         nav.classList.remove("fixed-nav");
         document.body.classList.remove("has-navbar-fixed-top")
     }
+
+    var offset_for_hide=document.getElementsByClassName("footer")[0].offsetTop-50
+    if (pos>offset_for_hide)
+        nav.classList.add("is-hidden");
+    else nav.classList.remove("is-hidden");
+
 }
 
 

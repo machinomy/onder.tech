@@ -175,6 +175,7 @@ header{
   height: 836px;
   padding: 0;
   text-align: center;
+  height: 100vh;
   @include until($tablet){
     height: 600px;
   }
