@@ -1,3 +1,60 @@
+/*init*/
+document.addEventListener("DOMContentLoaded", init);
+
+
+/*on resize*/
+
+window.addEventListener("resize",  function(){
+    updateSvg()
+});
+
+
+/*on orientation change*/
+
+window.addEventListener("orientationchange", function() {
+    updateSvg() //resize scheme
+});
+
+
+/* on scroll */
+
+window.onscroll = function() {
+    fixedHeader();
+}
+
+function init() {
+    drawGraph() // find place and draw scheme from Scheme.svg
+}
+
+
+/* resize the scheme for current width */
+function updateSvg() {
+    var width = d3.select("#graph-container").node().getBoundingClientRect().width
+    var hh = document.documentElement.clientHeight-50
+    hh =  hh > 619 ? 619 : hh
+    var height = (document.documentElement.clientWidth>456) ? hh : "50vh"
+    d3.select('#graph')
+        .select('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .attr('preserveAspectRatio',"xMidYMin meet");
+}
+
+function fixedHeader() {
+    var pos = window.pageYOffset
+    var nav = document.getElementById("navbar");
+    var logo = document.getElementById("logo");
+    if (pos>50) {
+        nav.classList.add("fixed-nav");
+        document.body.classList.add("has-navbar-fixed-top")
+    }
+    else {
+        nav.classList.remove("fixed-nav");
+        document.body.classList.remove("has-navbar-fixed-top")
+    }
+}
+
+
 function scroller() {
     var container = d3.select('body');
     var dispatch = d3.dispatch('active', 'progress');
@@ -155,4 +212,4 @@ function drawGraph() {
 
 
 }
-drawGraph();
+
