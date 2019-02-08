@@ -138,6 +138,9 @@ header{
         font-size: $font-size-m;
       }
     }
+    .media-content{
+      overflow: hidden;
+    }
   }
   ul {
     margin-left: 0;
