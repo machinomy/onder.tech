@@ -139,7 +139,7 @@ function display() {
 
     scroll.on('active', function (index) {
         d3.selectAll('.step')
-            .style('opacity', function (d, i) { return i === index ? 1 : 0.1; });
+            .style('opacity', function (d, i) { return i <= index ? 1 : 0.1; });
 
         // activate current section
         changeScheme(index)
