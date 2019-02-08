@@ -46,11 +46,11 @@ function fixedHeader() {
     var logo = document.getElementById("logo");
     if (pos>50) {
         nav.classList.add("fixed-nav");
-        document.body.classList.add("has-navbar-fixed-top")
+        //document.body.classList.add("has-navbar-fixed-top")
     }
     else {
         nav.classList.remove("fixed-nav");
-        document.body.classList.remove("has-navbar-fixed-top")
+        //document.body.classList.remove("has-navbar-fixed-top")
     }
 
     var offset_for_hide=document.getElementsByClassName("footer")[0].offsetTop-50
