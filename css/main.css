@@ -1,19 +1,21 @@
 /*
 Error: Undefined variable: "$color-black".
-        on line 4 of main.scss
+        on line 8 of main.scss
 
-1: @charset "utf-8";
-2: body{
-3:   font-family: 'Open Sans', sans-serif;
-4:   color: $color-black;
-5:   }
-6: a{color: initial;}
-7: a:hover{
-8:   opacity: 0.5;
-9:   color: initial;
+3:   font-size: 20px;
+4: 
+5: }
+6: body{
+7:   font-family: 'Open Sans', sans-serif;
+8:   color: $color-black;
+9:   }
+10: a{color: initial;}
+11: a:hover{
+12:   opacity: 0.5;
+13:   color: initial;
 
 Backtrace:
-main.scss:4
+main.scss:8
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.3/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.3/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
@@ -65,4 +67,4 @@ C:/Ruby24-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-black\".\A         on line 4 of main.scss\A \A 1: @charset \"utf-8\";\A 2: body{\A 3:   font-family: 'Open Sans', sans-serif;\A 4:   color: $color-black;\A 5:   }\A 6: a{color: initial;}\A 7: a:hover{\A 8:   opacity: 0.5;\A 9:   color: initial;"; }
+  content: "Error: Undefined variable: \"$color-black\".\A         on line 8 of main.scss\A \A 3:   font-size: 20px;\A 4: \A 5: }\A 6: body{\A 7:   font-family: 'Open Sans', sans-serif;\A 8:   color: $color-black;\A 9:   }\A 10: a{color: initial;}\A 11: a:hover{\A 12:   opacity: 0.5;\A 13:   color: initial;"; }
