@@ -117,8 +117,8 @@
 		}
 
 		vec3 plot(vec2 st, float pct, float wieght){
-		float smooth = 0.005;
-		float brightness = smoothstep(pct-wieght/2.-smooth/2., pct-wieght/2.+smooth/2., st.y) - smoothstep(pct+wieght/2.+smooth/2., pct+wieght/2.-smooth/2., st.y);
+		float smooth = 0.003;
+		float brightness = smoothstep(pct-wieght/2.-smooth/2., pct-wieght/2.+smooth/2., st.y) - smoothstep(pct+wieght/2.-smooth/2., pct+wieght/2.+smooth/2., st.y);
 		return vec3(brightness);
 		}
 
