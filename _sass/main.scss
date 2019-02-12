@@ -163,7 +163,7 @@ header{
       }
     }
     .card-content{
-      padding: 16px 0 0 0;
+      padding: 0.5em 0 0 0;
 
       .title{
         font-size: $font-size-m;
@@ -222,6 +222,12 @@ header{
       margin-bottom: 0.5em;
     }
   }
+  .has-top-margin{
+    margin-top: 1em;
+    &.px30{
+      margin-top: 30px;
+    }
+  }
 
 }
 .footer{
@@ -233,7 +239,7 @@ header{
   height: 836px;
   padding: 0;
   text-align: center;
-  height: 100vh;
+  height: 100vh !important;
   @include until($tablet){
     height: 600px;
   }
@@ -249,13 +255,14 @@ header{
     color: $color-blue;
   }
   img{
-    padding-bottom: 30px;
+    padding-bottom: 1em;
   }
   .email{
     flex-grow: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 80px;
   }
   .social_links{
     margin-top: auto;
