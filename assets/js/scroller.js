@@ -94,17 +94,14 @@ function scroller() {
             sectionPositions.push(top - startPos);
         });
         containerStart = container.node().getBoundingClientRect().top+ + window.pageYOffset;
-        console.log(containerStart,  sectionPositions, window.pageYOffset)
     }
 
     function position() {
         var graph=d3.select("#graph").node().getBoundingClientRect().height/2+50
 
         if (document.documentElement.clientWidth>=568) graph=20
-        console.log("graph=",graph,document.documentElement.clientWidth)
         var pos = window.pageYOffset - graph - containerStart;
         var sectionIndex = d3.bisect(sectionPositions, pos);
-        console.log(pos,sectionIndex)
         sectionIndex = Math.min(sections.size() - 1, sectionIndex);
 
         if (currentIndex !== sectionIndex) {
@@ -219,7 +216,7 @@ function drawGraph() {
         path3.attr("opacity",0)
 
         display();
-    });
+        });
 
 
 

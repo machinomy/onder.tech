@@ -151,8 +151,8 @@
     var camera, scene, renderer;
     var uniforms;
 
-    init();
-    animate();
+    document.addEventListener("DOMContentLoaded", init);
+
 
     function init() {
         container = document.getElementById( 'container' );
@@ -181,8 +181,12 @@
 
         renderer = new THREE.WebGLRenderer();
         renderer.setPixelRatio( window.devicePixelRatio/2);
+        renderer.domElement.id="source"
 
         container.appendChild( renderer.domElement );
+
+
+
 
         onWindowResize();
         window.addEventListener( 'resize', onWindowResize, false );
@@ -191,6 +195,7 @@
             uniforms.u_mouse.value.x = e.pageX
             uniforms.u_mouse.value.y = e.pageY
         }
+        animate();
     }
 
     function onWindowResize( event ) {
@@ -207,6 +212,19 @@
     function render() {
         uniforms.u_time.value += 0.05;
         renderer.render( scene, camera );
+
+
+        var destinationCanvas = document.getElementById('destination');
+        var sourceCanvas = document.getElementById('source');
+        destinationCanvas.width=sourceCanvas.width;
+        destinationCanvas.height=sourceCanvas.height;
+        destinationCanvas.stylesheet=sourceCanvas.stylesheet;
+        var destinationCtx, sourceCtx;
+        //get the destination and source context
+        sourceCtx = sourceCanvas.getContext("webgl");
+        destinationCtx = destinationCanvas.getContext("2d");
+        //copy the data
+        destinationCtx.drawImage(sourceCtx.canvas, 0, 0);
     }
 </script>
 

@@ -106,6 +106,12 @@ a:hover{
   }
 }
 
+#destination{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
 header{
   min-height: 100vh;
 
@@ -277,6 +283,7 @@ header{
     flex-direction: column;
     justify-content: center;
     padding-top: 80px;
+    z-index: 2;
   }
   .social_links{
     margin-top: auto;
