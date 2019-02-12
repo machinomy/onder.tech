@@ -17,11 +17,11 @@ a:hover{
   background: $color-white;
   width: 490px;
   transition: all 0.5s ease;
-  margin-left: 32px;
-  padding-top: 64px;
-  @include until($tablet){
-    margin-left: 0px;
-    padding-top: 16px;
+  margin-left: 16px;
+  padding-top: 32px;
+  @include from($desktop){
+    margin-left: 32px;
+    padding-top: 64px;
   }
   .brand{
     display: flex;
@@ -49,6 +49,7 @@ a:hover{
   .navbar-item img{
     max-height: initial;
   }
+
   .brand {
     transition: all 0.4s ease;
 
@@ -68,19 +69,24 @@ a:hover{
     .navbar-menu{
       margin-left: 0;
     }
+
+
   }
 
-  @include until($tablet){
+  @include until($landscape){
     padding-top: 0px;
     margin-top: -1px;
-    margin-left: -16px;
-    width: 400px;
+    margin-left: 0px;
+    width: 100% !important;
     .brand {
       margin-left: 0px;
-      transform: scale(0.7);
+      transform: scale(0.6)translateX(-25px) !important;
     }
     .navbar-menu{
       margin-left: 0;
+    }
+    .navbar-item{
+        padding-right: 0;
     }
   }
 
@@ -114,8 +120,11 @@ header{
       font-size: 24px;
       line-height: 1.25em;
     }
-    @include until($tablet){
-      padding-top: 76px;
+    @include until($desktop){
+      padding-top: 106px;
+    }
+    @include until($landscape){
+      padding-top: 48px;
     }
   }
   display: flex;
@@ -224,8 +233,8 @@ header{
   }
   .has-top-margin{
     margin-top: 1em;
-    &.px30{
-      margin-top: 30px;
+    &.px35{
+      margin-top: 35px;
     }
   }
 
