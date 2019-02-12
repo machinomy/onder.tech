@@ -165,11 +165,12 @@ function changeScheme(j) {
     var clones = []
     if (!d3.select("path#clone0").node()) { //create 'ghost' lines if they are not exist yet
         for (var i = 0; i < 4; i++) {
-            clones.push(d3.select("path#p1").clone().attr("id", "clone" + i).attr("stroke-width", 4-i*0.5))
+            clones.push(d3.select("path#p"+(j+1)).clone().attr("id", "clone" + i).attr("stroke-width", 4-i*0.5))
         }
     }
     else {
         for (var i = 0; i < 4; i++) { //or collect it
+            d3.select("path#clone" + i).attr("stroke",d3.select("path#p" + (j+1)).attr("stroke"))
             clones.push(d3.select("path#clone" + i))
         }
     }
