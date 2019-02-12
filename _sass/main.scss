@@ -218,6 +218,9 @@ header{
   }
   .has-bottom-margin{
     margin-bottom: 1em;
+    &.half{
+      margin-bottom: 0.5em;
+    }
   }
 
 }
@@ -299,10 +302,11 @@ header{
     }
 
     .section{
-      padding: 3rem 0;
+      padding: 1.5rem 0;
 
-      @include until($mobile) {
-        padding: 1.5rem 0;
+
+      @include from($tablet) {
+        padding: 3rem 0;
       }
     }
   }
@@ -331,7 +335,7 @@ header{
   }
 
   #graph-container {
-    @include until($tablet) {
+    @include until($landscape) {
       position: sticky;
       position: -webkit-sticky;
       top: 0px;
@@ -339,4 +343,16 @@ header{
       align-self: flex-start;
     }
   }
+}
+
+@media screen and (min-width: $landscape) {
+  #scroll-container{
+    &.columns {
+      display: flex;
+    }
+  .column.is-6-tablet{
+    flex: none;
+    width: 50%;
+  }
+ }
 }

@@ -100,7 +100,7 @@ function scroller() {
     function position() {
         var graph=d3.select("#graph").node().getBoundingClientRect().height/2+50
 
-        if (document.documentElement.clientWidth>=640) graph=10
+        if (document.documentElement.clientWidth>=568) graph=20
         console.log("graph=",graph,document.documentElement.clientWidth)
         var pos = window.pageYOffset - graph - containerStart;
         var sectionIndex = d3.bisect(sectionPositions, pos);
