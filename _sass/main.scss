@@ -257,19 +257,21 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 836px;
   padding: 0;
   text-align: center;
   height: 100vh !important;
-  @include until($tablet){
-    height: 600px;
-  }
+
   h1{
     font-size: $font-size-h1;
     font-family: $font-montserrat;
     font-weight: 900;
     @include until($tablet){
       font-size: $font-size-m;
+    }
+    @media screen and (orientation: landscape) {
+      font-size: $font-size-m;
+      line-height: 1em;
+
     }
   }
   a{
@@ -285,6 +287,12 @@ header{
     justify-content: center;
     padding-top: 80px;
     z-index: 2;
+    @include until($tablet){
+      padding-top: 48px;
+    }
+    @media screen and (orientation: landscape) {
+      padding-top: 48px;
+    }
   }
   .social_links{
     margin-top: auto;
@@ -293,8 +301,17 @@ header{
     display: flex;
     font-size: $font-size-h1;
     padding-bottom: 80px;
+    z-index: 2;
     a{
       color: $color-black;
+    }
+    @include until($tablet){
+      font-size: 32px;
+      padding-bottom: 48px;
+    }
+    @media screen and (orientation: landscape) {
+      font-size: 32px;
+      padding-bottom: 48px;
     }
   }
 }

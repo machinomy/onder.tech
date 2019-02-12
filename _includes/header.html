@@ -157,7 +157,7 @@
     function init() {
         container = document.getElementById( 'container' );
 
-        camera = new THREE.Camera();
+        camera = new THREE.PerspectiveCamera();
         camera.position.z = 1;
 
         scene = new THREE.Scene();
@@ -199,7 +199,8 @@
     }
 
     function onWindowResize( event ) {
-        renderer.setSize(window.innerWidth, window.innerHeight/2)
+
+        renderer.setSize(window.innerWidth, window.innerHeight)
         uniforms.u_resolution.value.x = renderer.domElement.width;
         uniforms.u_resolution.value.y = renderer.domElement.height;
     }
@@ -216,10 +217,10 @@
 
         var destinationCanvas = document.getElementById('destination');
         var sourceCanvas = document.getElementById('source');
-        sourceCanvas.style.height=sourceCanvas.width/2;
+        //sourceCanvas.style.height=sourceCanvas.width/2;
         destinationCanvas.width=sourceCanvas.width;
         destinationCanvas.height=sourceCanvas.height;
-        destinationCanvas.style.height=sourceCanvas.style.height;
+        destinationCanvas.style.height=sourceCanvas.width/3;
         var destinationCtx, sourceCtx;
         //get the destination and source context
         sourceCtx = sourceCanvas.getContext("webgl");
