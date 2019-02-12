@@ -177,14 +177,30 @@ header{
       margin-bottom: 1em;
     }
   }
-  ul {
+  ul{
     margin-left: 0;
     position: relative;
+    &.with-square-bullets{
+      li:before {
+        content: url("ui/checkbox_off.svg");
+      }
+    }
     &.checked {
       li:before {
         content: url("ui/checkbox_on.svg");
       }
     }
+    &.with-long-dash{
+      li:before {
+        content: "\2014";
+      }
+      li{
+        padding-left: 1.2em;
+        margin-bottom: 0;
+      }
+    }
+
+
     li {
       list-style: none;
       margin-bottom: 1em;
@@ -192,11 +208,15 @@ header{
 
     }
     li:before{
-      content: url("ui/checkbox_off.svg");
+
       position: absolute;
       left: 0;
     }
   }
+  .has-bottom-margin{
+    margin-bottom: 1em;
+  }
+
 }
 .footer{
   background-color: $color-white;
@@ -249,7 +269,9 @@ header{
 #scroll-container {
   position: relative;
   padding-bottom:0;
-  margin-bottom: -180px;
+  @include from($mobile) {
+    margin-bottom: -180px;
+  }
 
   @include until($landscape) {
     display: flex;
