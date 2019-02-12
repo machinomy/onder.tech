@@ -216,9 +216,10 @@
 
         var destinationCanvas = document.getElementById('destination');
         var sourceCanvas = document.getElementById('source');
+        sourceCanvas.style.height=sourceCanvas.width/2;
         destinationCanvas.width=sourceCanvas.width;
         destinationCanvas.height=sourceCanvas.height;
-        destinationCanvas.stylesheet=sourceCanvas.stylesheet;
+        destinationCanvas.style.height=sourceCanvas.style.height;
         var destinationCtx, sourceCtx;
         //get the destination and source context
         sourceCtx = sourceCanvas.getContext("webgl");
