@@ -31,8 +31,8 @@ function init() {
 function updateSvg() {
     var width = d3.select("#graph-container").node().getBoundingClientRect().width
     var hh = document.documentElement.clientHeight-50
-    hh =  hh > 619 ? 619 : hh
-    var height = (document.documentElement.clientWidth>456) ? hh : "50vh"
+    hh =  hh > 679 ? 679 : hh
+    var height = (document.documentElement.clientWidth>456) ? hh : 679/( 861/width)+'px'
     d3.select('#graph')
         .select('svg')
         .attr('width', width)
@@ -93,12 +93,18 @@ function scroller() {
             }
             sectionPositions.push(top - startPos);
         });
-        containerStart = container.node().getBoundingClientRect().top + window.pageYOffset;
+        containerStart = container.node().getBoundingClientRect().top+ + window.pageYOffset;
+        console.log(containerStart,  sectionPositions, window.pageYOffset)
     }
 
     function position() {
-        var pos = window.pageYOffset - 10 - containerStart;
+        var graph=d3.select("#graph").node().getBoundingClientRect().height/2+50
+
+        if (document.documentElement.clientWidth>=640) graph=10
+        console.log("graph=",graph,document.documentElement.clientWidth)
+        var pos = window.pageYOffset - graph - containerStart;
         var sectionIndex = d3.bisect(sectionPositions, pos);
+        console.log(pos,sectionIndex)
         sectionIndex = Math.min(sections.size() - 1, sectionIndex);
 
         if (currentIndex !== sectionIndex) {
@@ -181,13 +187,14 @@ function changeScheme(j) {
 function drawGraph() {
     var width = d3.select("#graph-container").node().getBoundingClientRect().width
     var hh=document.documentElement.clientHeight-50
-    hh =  hh>619 ? 619 : hh
-    var height = (document.documentElement.clientWidth>456) ? hh : "50vh"
+    hh =  hh>679 ? 679 : hh
+    var height = (document.documentElement.clientWidth>456) ? hh : 679/( 861/width)+'px'
+
     var graph = d3.select('#graph')
         .append('svg')
         .attr('width', width)
         .attr('height', height)
-        .attr('viewBox',"0 0 865 769")
+        .attr('viewBox',"0 0 861 679")
         .attr('preserveAspectRatio',"xMidYMin meet");
 
     var svg = d3.select('#graph svg');

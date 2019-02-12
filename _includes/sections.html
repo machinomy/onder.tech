@@ -4,8 +4,8 @@
 <div id='scroll-container' class="columns">
     <div id="sections" class="column is-5-desktop is-6-tablet is-full-mobile">
         {% for section in site.sections %}
-        <div id="{{ section.ident }}" >
-            <div class="step section">
+        <div id="{{ section.ident }}" class="step section">
+            <div >
                 {%assign cont = section.content%}
                 {% include typograph.html content=cont  %}
 
