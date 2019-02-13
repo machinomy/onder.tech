@@ -168,8 +168,10 @@ header{
       margin-right: 0;
       margin-left: 0;
       &.partner{
-        height: 65px;
+        height: 55px;
         text-align: left;
+        display: flex;
+        align-items: center;
         @include until($tablet){
           height: initial;
         }
@@ -184,10 +186,17 @@ header{
       .title{
         font-size: $font-size-m;
         font-weight: bold;
+        @include until($tablet){
+          font-size: $font-size-s;
+        }
       }
       .subtitle{
         font-size: $font-size-m;
+        @include until($tablet){
+          font-size: $font-size-s;
+        }
       }
+
     }
     .media-content{
       overflow: hidden;
