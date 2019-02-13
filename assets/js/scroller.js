@@ -30,9 +30,7 @@ function init() {
 /* resize the scheme for current width */
 function updateSvg() {
     var width = d3.select("#graph-container").node().getBoundingClientRect().width
-    var hh = document.documentElement.clientHeight-50
-    hh =  hh > 679 ? 679 : hh
-    var height = (document.documentElement.clientWidth>456) ? hh : 679/( 861/width)+'px'
+    var height =679/( 861/width)+'px'
     d3.select('#graph')
         .select('svg')
         .attr('width', width)
@@ -85,34 +83,44 @@ function scroller() {
         sectionPositions = [];
         var startPos;
         sections.each(function (d, i) {
-            var top = this.getBoundingClientRect().top;
+            var top = this.getBoundingClientRect().bottom;
             if (i === 0) {
                 startPos = top;
             }
             sectionPositions.push(top - startPos);
         });
-        containerStart = container.node().getBoundingClientRect().top+ + window.pageYOffset;
+        containerStart = container.node().getBoundingClientRect().top+ window.pageYOffset;
     }
 
     function position() {
-        var graph=d3.select("#graph").node().getBoundingClientRect().height/2+50
+        var graph=d3.select("#graph").node().getBoundingClientRect().height-100
+        var w=window.innerWidth,
+            h=window.innerHeight
 
-        if (document.documentElement.clientWidth>=568) graph=20
+        if (w>=568) graph=100
+        if (w>=1024) graph=50
+        if (w>=1366) graph=-200
+
+        console.log("delta = ", graph)
         var pos = window.pageYOffset - graph - containerStart;
+        console.log("pos = ", pos)
         var sectionIndex = d3.bisect(sectionPositions, pos);
         sectionIndex = Math.min(sections.size() - 1, sectionIndex);
+        console.log("index = ", sectionIndex, sectionPositions)
 
         if (currentIndex !== sectionIndex) {
             // @v4 you now `.call` the dispatch callback
             dispatch.call('active', this, sectionIndex);
             currentIndex = sectionIndex;
+            console.log("!!!!!!!!!!!!!!!!!")
         }
 
-        var prevIndex = Math.max(sectionIndex - 1, 0);
+        /*var prevIndex = Math.max(sectionIndex - 1, 0);
         var prevTop = sectionPositions[prevIndex];
         var progress = (pos - prevTop) / (sectionPositions[sectionIndex] - prevTop);
         // @v4 you now `.call` the dispatch callback
-        dispatch.call('progress', this, currentIndex, progress);
+        dispatch.call('progress', this, currentIndex, progress);*/
+
     }
 
     scroll.container = function (value) {
@@ -155,6 +163,7 @@ d3.selection.prototype.clone = function() {
 };
 
 function changeScheme(j) {
+
     var paths = []
     for (var i = 0; i < 3; i++) {
         paths.push(d3.select("path#p" + (i + 1)).attr("d")) //collect paths
@@ -182,9 +191,7 @@ function changeScheme(j) {
 
 function drawGraph() {
     var width = d3.select("#graph-container").node().getBoundingClientRect().width
-    var hh=document.documentElement.clientHeight-50
-    hh =  hh>679 ? 679 : hh
-    var height = (document.documentElement.clientWidth>456) ? hh : 679/( 861/width)+'px'
+    var height = 679/( 861/width)+'px'
 
     var graph = d3.select('#graph')
         .append('svg')

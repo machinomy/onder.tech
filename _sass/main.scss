@@ -186,13 +186,13 @@ header{
       .title{
         font-size: $font-size-m;
         font-weight: bold;
-        @include until($tablet){
+        @include until($desktop){
           font-size: $font-size-s;
         }
       }
       .subtitle{
         font-size: $font-size-m;
-        @include until($tablet){
+        @include until($desktop){
           font-size: $font-size-s;
         }
       }
@@ -331,7 +331,7 @@ header{
   position: relative;
   padding-bottom:0;
   @include from($mobile) {
-    margin-bottom: -180px;
+    margin-bottom: -80px;
   }
 
   @include until($landscape) {
@@ -341,7 +341,7 @@ header{
 
   #sections {
     @include from($mobile) {
-      padding-bottom: 180px; //space under last section
+      padding-bottom: 80px; //space under last section
     }
 
     > div {
@@ -369,7 +369,7 @@ header{
   #graph {
     position: -webkit-sticky;
     position: sticky;
-    top: 70px;
+    top: 50px;
     overflow: hidden;
     align-self: flex-start;
   }
