@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="861px" height="679px" viewBox="0 0 861 679" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>graph</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#333363" offset="0%"></stop>
+            <stop stop-color="#333363" offset="1.93915669%"></stop>
+            <stop stop-color="#FFFFFF" offset="12.5882028%"></stop>
+            <stop stop-color="#F8F8F8" offset="50.081741%"></stop>
+            <stop stop-color="#333363" offset="60.8107659%"></stop>
+            <stop stop-color="#333363" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0.874838727" width="861" height="651.125161"></rect>
+        <linearGradient x1="50%" y1="86.5369187%" x2="50%" y2="0%" id="linearGradient-4">
+            <stop stop-color="#00A5BA" offset="0%"></stop>
+            <stop stop-color="#F7C604" offset="51.5286193%"></stop>
+            <stop stop-color="#FF0000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="-59.2628062%" id="linearGradient-5">
+            <stop stop-color="#00A5BA" offset="0%"></stop>
+            <stop stop-color="#F7C604" offset="51.5286193%"></stop>
+            <stop stop-color="#FF0000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50.0000598%" y1="253.305179%" x2="50.0000598%" y2="-344.978913%" id="linearGradient-6">
+            <stop stop-color="#00A5BA" offset="0%"></stop>
+            <stop stop-color="#F7C604" offset="51.5286193%"></stop>
+            <stop stop-color="#FF0000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="graph" transform="translate(0.000000, -2.000000)">
+            <text id="caption" font-family="OpenSans-Regular, Open Sans" font-size="20" font-weight="normal" fill="#000000">
+                <tspan x="0" y="680">Load of node substations</tspan>
+            </text>
+            <rect id="bg" fill="url(#linearGradient-1)" fill-rule="nonzero" opacity="0.100000001" x="0" y="178" width="861" height="474" rx="8"></rect>
+            <g id="1-+-2-+-3-Mask">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <g id="Mask" fill-rule="nonzero"></g>
+                <path d="M-10,501.409783 C74.9240804,338.230866 74.9240804,4.87483873 117.253582,4.87483873 C159.583084,4.87483873 215.763539,308.81701 333.860813,308.81701 C410.067421,308.81701 444.526931,277.736273 497.898622,277.736273 C598.510858,277.736273 598.510858,609.806627 737.403123,609.806627 C788.34356,609.806627 831.468391,563.398645 866.777614,470.58268" id="p1" stroke="url(#linearGradient-4)" stroke-width="4" stroke-linecap="square" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                <path d="M-10,451.409783 C63.8173542,341.044626 57.464784,200.874839 128.253582,200.874839 C205.096441,200.874839 269.192715,285.81701 344.860813,285.81701 C411.979088,285.81701 444.526931,260.736273 497.898622,260.736273 C598.510858,260.736273 598.510858,532.806627 737.403123,532.806627 C788.34356,532.806627 831.468391,495.065311 866.777614,419.58268" id="p2" stroke="url(#linearGradient-5)" stroke-width="4" stroke-linecap="square" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                <path d="M-10,364.876837 C63.8173542,336.119057 57.464784,299.595103 128.253582,299.595103 C205.096441,299.595103 269.192715,321.728432 344.860813,321.728432 C411.979088,321.728432 444.526931,315.19316 497.898622,315.19316 C598.510858,315.19316 598.510858,386.086362 737.403123,386.086362 C788.34356,386.086362 831.468391,376.252131 866.777614,356.583669" id="p3" stroke="url(#linearGradient-6)" stroke-width="4" stroke-linecap="square" fill-rule="nonzero" mask="url(#mask-3)"></path>
+            </g>
+            <g id="legend" transform="translate(237.000000, 612.000000)" fill="#000000" font-family="OpenSans-Regular, Open Sans" font-size="20" font-weight="normal" opacity="0.400000006">
+                <text id="Day">
+                    <tspan x="0" y="21">Day</tspan>
+                </text>
+                <text id="Night">
+                    <tspan x="420" y="21">Night</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

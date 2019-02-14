@@ -1,0 +1,415 @@
+@charset "utf-8";
+html{
+  font-size: $font-size-m;
+  @include until($desktop){
+    font-size: $font-size-s;
+  }
+
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  color: $color-black;
+  }
+a{color: initial;}
+a:hover{
+  opacity: 0.5;
+  color: initial;
+}
+
+.navbar {
+  background: $color-white;
+  width: 490px;
+  transition: all 0.5s ease;
+  margin-left: 16px;
+  padding-top: 32px;
+  @include from($desktop){
+    margin-left: 32px;
+    padding-top: 64px;
+  }
+  .brand{
+    display: flex;
+    margin-left: 32px;
+    @include until($desktop){
+      margin-left: 0px;
+    }
+    a{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .navbar-menu{
+    margin-left: 52px;
+    margin-right: 16px;
+    transition: all 0.5s ease;
+  }
+  .navbar-start{
+    margin-right: 0;
+  }
+  .navbar-item a, .navbar-item a:hover {
+    color: $color-black;
+    background-color: $color-white;
+  }
+  .navbar-item img{
+    max-height: initial;
+  }
+
+  .brand {
+    transition: all 0.4s ease;
+
+  }
+  &.fixed-nav {
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 8px 8px;
+    padding-top: 0px;
+    margin-top: -1px;
+    width: 400px;
+    .brand {
+      margin-left: 0px;
+      transform: scale(0.7);
+    }
+    .navbar-menu{
+      margin-left: 0;
+    }
+
+
+  }
+
+  @include until($landscape){
+    padding-top: 0px;
+    margin-top: -1px;
+    margin-left: 0px;
+    width: 100% !important;
+    border-radius: 0 !important;
+    .brand {
+      margin-left: 0px;
+      transform: scale(0.6)translateX(-25px) !important;
+    }
+    .navbar-menu{
+      margin-left: 0;
+    }
+    .navbar-item{
+        padding-right: 0;
+    }
+  }
+
+}
+
+.hero {
+  padding: 0 64px;
+  @include until($desktop){
+    padding: 0 16px;
+  }
+}
+
+#container{
+  canvas{
+    position: absolute;
+    top:200px;
+  }
+}
+
+#destination{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+header{
+  min-height: 100vh;
+
+  .main{
+    font-family: $font-montserrat;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 1em;
+    z-index: 2;
+    padding-top: 120px;
+    line-height: normal;
+    @include until($tablet){
+      font-size: 24px;
+      line-height: 1.25em;
+    }
+    @include until($desktop){
+      padding-top: 80px;
+    }
+    @include until($landscape){
+      padding-top: 48px;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  margin-top: -50px;
+  padding: 64px 0px 16px 0px;
+  .columns{
+    z-index: 2;
+    margin-top: auto;
+  }
+}
+
+.main-content{
+  h1{
+    font-size: $font-size-h1;
+    font-family: $font-montserrat;
+    font-weight: 900;
+    margin-top: 128px;
+    margin-bottom: 32px;
+    line-height: 1em;
+    @include until($tablet){
+      margin-top: 64px;
+    }
+  }
+  h2{
+    font-size: $font-size-m;
+    font-weight: bold;
+  }
+  .card {
+    box-shadow: none;
+    figure {
+      margin-right: 0;
+      margin-left: 0;
+      &.partner{
+        height: 55px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        @include until($tablet){
+          height: initial;
+        }
+      }
+      img.team{
+        border-radius: 8px;
+      }
+    }
+    .card-content{
+      padding: 0.5em 0 0 0;
+
+      .title{
+        font-size: $font-size-m;
+        font-weight: bold;
+        @include until($desktop){
+          font-size: $font-size-s;
+        }
+      }
+      .subtitle{
+        font-size: $font-size-m;
+        @include until($desktop){
+          font-size: $font-size-s;
+        }
+      }
+
+    }
+    .media-content{
+      overflow: hidden;
+    }
+    &.partner{
+      margin-bottom: 1em;
+    }
+  }
+  ul{
+    margin-left: 0;
+    position: relative;
+    &.with-square-bullets{
+      li:before {
+        content: url("ui/checkbox_off.svg");
+      }
+    }
+    &.checked {
+      li:before {
+        content: url("ui/checkbox_on.svg");
+      }
+    }
+    &.with-long-dash{
+      li:before {
+        content: "\2014";
+      }
+      li{
+        padding-left: 1.2em;
+        margin-bottom: 0;
+      }
+    }
+
+
+    li {
+      list-style: none;
+      margin-bottom: 1em;
+      padding-left: 50px;
+
+    }
+    li:before{
+
+      position: absolute;
+      left: 0;
+    }
+  }
+  .has-bottom-margin{
+    margin-bottom: 1em;
+    &.half{
+      margin-bottom: 0.5em;
+    }
+  }
+  .has-top-margin{
+    margin-top: 1em;
+    &.px35{
+      margin-top: 35px;
+    }
+  }
+  .benefit-image{
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+}
+.footer{
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  height: 100vh !important;
+  line-height: normal;
+
+  h1{
+    font-size: $font-size-h1;
+    font-family: $font-montserrat;
+    font-weight: 900;
+    @include until($tablet){
+      font-size: $font-size-m;
+    }
+    @media screen and (orientation: landscape) and (max-width: 813px){
+      font-size: $font-size-m;
+      line-height: 1em;
+    }
+  }
+  a{
+    color: $color-blue;
+  }
+  img{
+    padding-bottom: 0.5em;
+  }
+  .email{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    z-index: 2;
+    @include until($tablet){
+      padding-top: 48px;
+    }
+    @media screen and (orientation: landscape) {
+      padding-top: 48px;
+    }
+  }
+  .social_links{
+    margin-top: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    font-size: $font-size-h1;
+    padding-bottom: 80px;
+    z-index: 2;
+    a{
+      color: $color-black;
+    }
+    @include until($tablet){
+      font-size: 32px;
+      padding-bottom: 48px;
+    }
+    @media screen and (orientation: landscape) {
+      font-size: 32px;
+      padding-bottom: 48px;
+    }
+  }
+}
+
+//Graph Scroll
+
+#scroll-container {
+  position: relative;
+  padding-bottom:0;
+  @include from($mobile) {
+    margin-bottom: -80px;
+  }
+
+  @include until($landscape) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #sections {
+    @include from($mobile) {
+      padding-bottom: 80px; //space under last section
+    }
+
+    > div {
+      //opacity: $opacity-none;
+    }
+
+    div.graph-scroll-active {
+      opacity: $opacity-none;
+    }
+
+    div.hide{
+      opacity: $opacity-l;
+    }
+
+    .section{
+      padding: 1.5rem 0;
+
+
+      @include from($tablet) {
+        padding: 3rem 0;
+      }
+    }
+  }
+
+  #graph {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    overflow: hidden;
+    align-self: flex-start;
+  }
+  #graph:before,
+  #graph:after {
+    content: '';
+    display: table;
+  }
+
+  #graph.fullscreen{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-white;
+  }
+
+  #graph-container {
+    @include until($landscape) {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0px;
+      background: $color-white;
+      align-self: flex-start;
+    }
+  }
+}
+
+@media screen and (min-width: $landscape) {
+  #scroll-container{
+    &.columns {
+      display: flex;
+    }
+  .column.is-6-tablet{
+    flex: none;
+    width: 50%;
+  }
+ }
+}

@@ -1,0 +1,24 @@
+<h1>
+    Team
+</h1>
+<div class="columns is-multiline is-mobile">
+    {% for member in site.team %}
+    <div class="column is-3-tablet is-3-desktop is-half-mobile">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image">
+                    <img src="{{site.baseurl}}/{{ member.img }}"  alt="Placeholder image" class="team">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">{{ member.name }}</p>
+                        <p class="subtitle is-6">{{ member.position }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
