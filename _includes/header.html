@@ -1,3 +1,4 @@
+<img src="{{site.baseurl}}/assets/images/wave_top.svg" class="is-hidden-desktop wave-top">
 <header >
     <div class="main">
         Platform for creating, piloting and running new business models over the distributed energy market without a centralized billing system
@@ -14,6 +15,7 @@
         </div>
     </div>
 </header>
+<div class="is-hidden-touch">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.js"></script>
 <script id="vertexShader" type="x-shader/x-vertex">
         void main() {
@@ -127,8 +129,9 @@ void main(void){
     var camera, scene, renderer;
     var uniforms;
 
-    document.addEventListener("DOMContentLoaded", init);
-
+    if (window.innerWidth>1024) {
+        document.addEventListener("DOMContentLoaded", init);
+    }
 
     function init() {
         container = document.getElementById( 'container' );
@@ -206,3 +209,4 @@ void main(void){
         destinationCtx.drawImage(sourceCtx.canvas, 0, 0);
     }
 </script>
+</div>

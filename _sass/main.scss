@@ -117,10 +117,24 @@ a:hover{
   z-index: 1;
 }
 
+.wave-top{
+  position: absolute;
+  z-index: -1;
+  top:50%;
+  width: 100%;
+  left:0;
+}
+
+.wave-bottom{
+  @extend .wave-top;
+  top:initial;
+  z-index: 1;
+}
+
 header{
   min-height: 100vh;
 
-  .main{
+   .main{
     font-family: $font-montserrat;
     font-weight: 900;
     font-size: 64px;
@@ -218,7 +232,7 @@ header{
         content: url("ui/checkbox_off.svg");
         margin-top: -0.25em;
         @include until($desktop){
-          margin-top: -0.4em;
+          margin-top: -0.45em;
           transform: scale(0.6);
         }
       }
