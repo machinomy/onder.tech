@@ -1,5 +1,5 @@
 # bundle exec jekyll serve --port 4001 --baseurl ''
-title: ØNDER — platform for creating, piloting and running new business models over the distributed energy market without a centralized billing system
+title: ONDER — platform for creating, piloting and running new business models over the distributed energy market without a centralized billing system
 email: hello@onder.tech
 description: >- # this means to ignore newlines until "baseurl:"
   Commonwealth environment for digital energy business

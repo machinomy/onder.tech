@@ -84,7 +84,7 @@ a:hover{
     border-radius: 0 !important;
     .brand {
       margin-left: 0px;
-      transform: scale(0.6)translateX(-25px) !important;
+      transform: scale(0.6)translateX(-46px) !important;
     }
     .navbar-menu{
       margin-left: 0;
@@ -107,6 +107,7 @@ a:hover{
   canvas{
     position: absolute;
     top:200px;
+    z-index: -1;
   }
 }
 
@@ -116,10 +117,24 @@ a:hover{
   z-index: 1;
 }
 
+.wave-top{
+  position: absolute;
+  z-index: -1;
+  top:50%;
+  width: 100%;
+  left:0;
+}
+
+.wave-bottom{
+  @extend .wave-top;
+  top:initial;
+  z-index: 1;
+}
+
 header{
   min-height: 100vh;
 
-  .main{
+   .main{
     font-family: $font-montserrat;
     font-weight: 900;
     font-size: 64px;
@@ -127,6 +142,9 @@ header{
     z-index: 2;
     padding-top: 120px;
     line-height: normal;
+    @media screen and (orientation: landscape) and (max-width: 824px){
+      font-size: 32px;
+    }
     @include until($tablet){
       font-size: 24px;
       line-height: 1.25em;
@@ -161,7 +179,6 @@ header{
     }
   }
   h2{
-    font-size: $font-size-m;
     font-weight: bold;
   }
   .card {
@@ -213,6 +230,11 @@ header{
     &.with-square-bullets{
       li:before {
         content: url("ui/checkbox_off.svg");
+        margin-top: -0.25em;
+        @include until($desktop){
+          margin-top: -0.45em;
+          transform: scale(0.6);
+        }
       }
     }
     &.checked {
@@ -227,18 +249,22 @@ header{
       li{
         padding-left: 1.2em;
         margin-bottom: 0;
+        line-height: normal;
       }
     }
 
 
     li {
       list-style: none;
-      margin-bottom: 1em;
-      padding-left: 50px;
+      margin-bottom: 0.75em;
+      padding-left: 46px;
+      line-height: normal;
+      @include until($desktop) {
+        padding-left: 36px;
+      }
 
     }
     li:before{
-
       position: absolute;
       left: 0;
     }
@@ -361,9 +387,11 @@ header{
     .section{
       padding: 1.5rem 0;
 
-
       @include from($tablet) {
         padding: 3rem 0;
+      }
+      p{
+        margin-bottom: 1em;
       }
     }
   }
