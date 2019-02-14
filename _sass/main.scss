@@ -227,14 +227,16 @@ header{
       li{
         padding-left: 1.2em;
         margin-bottom: 0;
+        line-height: normal;
       }
     }
 
 
     li {
       list-style: none;
-      margin-bottom: 1em;
-      padding-left: 50px;
+      margin-bottom: 0.75em;
+      padding-left: 46px;
+      line-height: 2;
 
     }
     li:before{

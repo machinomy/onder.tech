@@ -94,32 +94,21 @@ function scroller() {
 
     function position() {
         var graph=d3.select("#graph").node().getBoundingClientRect().height-100
-        var w=window.innerWidth,
-            h=window.innerHeight
+        var w=window.innerWidth
 
         if (w>=568) graph=100
         if (w>=1024) graph=50
         if (w>=1366) graph=-200
 
-        console.log("delta = ", graph)
         var pos = window.pageYOffset - graph - containerStart;
-        console.log("pos = ", pos)
         var sectionIndex = d3.bisect(sectionPositions, pos);
         sectionIndex = Math.min(sections.size() - 1, sectionIndex);
-        console.log("index = ", sectionIndex, sectionPositions)
 
         if (currentIndex !== sectionIndex) {
             // @v4 you now `.call` the dispatch callback
             dispatch.call('active', this, sectionIndex);
             currentIndex = sectionIndex;
-            console.log("!!!!!!!!!!!!!!!!!")
         }
-
-        /*var prevIndex = Math.max(sectionIndex - 1, 0);
-        var prevTop = sectionPositions[prevIndex];
-        var progress = (pos - prevTop) / (sectionPositions[sectionIndex] - prevTop);
-        // @v4 you now `.call` the dispatch callback
-        dispatch.call('progress', this, currentIndex, progress);*/
 
     }
 
