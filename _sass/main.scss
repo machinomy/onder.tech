@@ -125,13 +125,14 @@ header{
     font-size: 64px;
     line-height: 1em;
     z-index: 2;
-    padding-top: 164px;
+    padding-top: 120px;
+    line-height: normal;
     @include until($tablet){
       font-size: 24px;
       line-height: 1.25em;
     }
     @include until($desktop){
-      padding-top: 106px;
+      padding-top: 80px;
     }
     @include until($landscape){
       padding-top: 48px;
