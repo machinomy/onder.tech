@@ -1,6 +1,9 @@
 @charset "utf-8";
 html{
-  font-size: 20px;
+  font-size: $font-size-m;
+  @include until($desktop){
+    font-size: $font-size-s;
+  }
 
 }
 body{
@@ -145,7 +148,7 @@ header{
 }
 
 .main-content{
-  font-size: $font-size-m;
+  //font-size: $font-size-m;
 
   h1{
     font-size: $font-size-h1;
