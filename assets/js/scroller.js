@@ -97,7 +97,8 @@ function scroller() {
         var w=window.innerWidth
 
         if (w>=568) graph=100
-        if (w>=1024) graph=50
+        if (w>=768) graph=50
+        if (w>=1024) graph=10
         if (w>=1366) graph=-200
 
         var pos = window.pageYOffset - graph - containerStart;
