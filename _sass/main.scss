@@ -218,7 +218,7 @@ header{
         content: url("ui/checkbox_off.svg");
         margin-top: -0.25em;
         @include until($desktop){
-          margin-top: -0.5em;
+          margin-top: -0.4em;
           transform: scale(0.6);
         }
       }
