@@ -217,6 +217,10 @@ header{
       li:before {
         content: url("ui/checkbox_off.svg");
         margin-top: -0.25em;
+        @include until($desktop){
+          margin-top: -0.5em;
+          transform: scale(0.6);
+        }
       }
     }
     &.checked {
@@ -241,10 +245,12 @@ header{
       margin-bottom: 0.75em;
       padding-left: 46px;
       line-height: normal;
+      @include until($desktop) {
+        padding-left: 36px;
+      }
 
     }
     li:before{
-
       position: absolute;
       left: 0;
     }
@@ -367,9 +373,11 @@ header{
     .section{
       padding: 1.5rem 0;
 
-
       @include from($tablet) {
         padding: 3rem 0;
+      }
+      p{
+
       }
     }
   }
