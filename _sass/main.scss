@@ -216,6 +216,7 @@ header{
     &.with-square-bullets{
       li:before {
         content: url("ui/checkbox_off.svg");
+        margin-top: -0.25em;
       }
     }
     &.checked {
@@ -239,7 +240,7 @@ header{
       list-style: none;
       margin-bottom: 0.75em;
       padding-left: 46px;
-      line-height: 2;
+      line-height: normal;
 
     }
     li:before{
