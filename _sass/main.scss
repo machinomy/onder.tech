@@ -277,10 +277,9 @@ header{
     @include until($tablet){
       font-size: $font-size-m;
     }
-    @media screen and (orientation: landscape) {
+    @media screen and (orientation: landscape) and (max-width: 813px){
       font-size: $font-size-m;
       line-height: 1em;
-
     }
   }
   a{
