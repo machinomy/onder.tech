@@ -68,8 +68,10 @@ a:hover{
     margin-top: -1px;
     width: 400px;
     .brand {
-      margin-left: 0px;
+      margin-left: 16px;
       transform: scale(0.7);
+      transform-origin: left;
+
     }
     .navbar-menu{
       margin-left: 0;
@@ -86,8 +88,9 @@ a:hover{
     width: 100% !important;
     border-radius: 0 !important;
     .brand {
-      margin-left: 0px;
-      transform: scale(0.6)translateX(-46px) !important;
+      margin-left: 16px;
+      transform: scale(0.6) !important;
+      transform-origin: left;
     }
     .navbar-menu{
       margin-left: 0;
@@ -234,10 +237,11 @@ header{
   ul{
     margin-left: 0;
     position: relative;
-    @include until($desktop) {
-      margin-left: -0.5em;
-    }
+
     &.with-square-bullets{
+      @include until($desktop) {
+        margin-left: -0.5em;
+      }
       li:before {
         content: url("ui/checkbox_off.svg");
         margin-top: -0.25em;
@@ -326,7 +330,7 @@ header{
     color: $color-blue;
   }
   img{
-    padding-bottom: 0.5em;
+    padding-bottom: 8em;
   }
   .email{
     flex-grow: 2;
@@ -337,6 +341,12 @@ header{
     z-index: 2;
     @include until($tablet){
       padding-top: 48px;
+
+      img{
+        transform-origin: center;
+        transform: scale(0.6);
+        padding-bottom: 2em;
+      }
     }
     @media screen and (orientation: landscape) {
       padding-top: 48px;
