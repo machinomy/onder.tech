@@ -30,7 +30,6 @@ a:hover {
     z-index: 10;
   }
   display: flex;
-  width: 400px;
   background: $color-white;
   transition: all 0.5s ease;
   margin: 0 $offset-m;
@@ -54,13 +53,13 @@ a:hover {
 
   .nav-menu{
     display: flex;
+    align-items: flex-end;
 
-    .navbar-item{
-      align-items: flex-end;
+    .nav-item{
       padding-left: 0;
       padding-right: 0;
     }
-    .navbar-item:not(:last-of-type){
+    .nav-item:not(:last-of-type){
       margin-right: 1em;
     }
   }
@@ -68,7 +67,6 @@ a:hover {
   a, a:hover {
     color: $color-black;
     background-color: initial;
-    text-decoration: underline;
   }
 
   &.fixed-nav {
@@ -84,8 +82,8 @@ a:hover {
       transform: scale(0.7);
       transform-origin: left center;
     }
-    .navbar-item{
-      align-items: center;
+    .nav-item{
+      align-self: center;
     }
   }
 
