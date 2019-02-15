@@ -23,7 +23,8 @@ window.onscroll = function() {
 }
 
 function init() {
-    drawGraph() // find place and draw scheme from Scheme.svg
+    fixedHeader();
+    drawGraph(); // find place and draw scheme from Scheme.svg
 }
 
 
@@ -42,7 +43,7 @@ function fixedHeader() {
     var pos = window.pageYOffset
     var nav = document.getElementById("navbar");
 
-    if (pos>50)
+    if (pos>10)
         nav.classList.add("fixed-nav");
 
     else

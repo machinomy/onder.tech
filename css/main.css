@@ -3,9 +3,9 @@ Error: Undefined variable: "$font-size-m".
         on line 3 of main.scss
 
 1: @charset "utf-8";
-2: html{
+2: html {
 3:   font-size: $font-size-m;
-4:   @include until($desktop){
+4:   @include until($desktop) {
 5:     font-size: $font-size-s;
 6:   }
 7: 
@@ -64,4 +64,4 @@ C:/Ruby24-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$font-size-m\".\A         on line 3 of main.scss\A \A 1: @charset \"utf-8\";\A 2: html{\A 3:   font-size: $font-size-m;\A 4:   @include until($desktop){\A 5:     font-size: $font-size-s;\A 6:   }\A 7: \A 8: }"; }
+  content: "Error: Undefined variable: \"$font-size-m\".\A         on line 3 of main.scss\A \A 1: @charset \"utf-8\";\A 2: html {\A 3:   font-size: $font-size-m;\A 4:   @include until($desktop) {\A 5:     font-size: $font-size-s;\A 6:   }\A 7: \A 8: }"; }
