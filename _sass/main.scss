@@ -36,7 +36,7 @@ a:hover {
   padding-top: $offset-m;
   @include from($tablet) {
     margin-left: $offset-m;
-    padding-top: $offset-xxl;
+    padding-top: $offset-xl;
   }
   @include from($desktop) {
     margin-left: $offset-xxl;
@@ -53,11 +53,13 @@ a:hover {
 
   .nav-menu{
     display: flex;
-    align-items: flex-end;
+    align-items: stretch;
 
     .nav-item{
       padding-left: 0;
       padding-right: 0;
+      display: flex;
+      align-items: flex-end;
     }
     .nav-item:not(:last-of-type){
       margin-right: 1em;
