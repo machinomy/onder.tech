@@ -1,18 +1,13 @@
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
-    <div class="brand">
-        <a class="navbar-item" href="https://bulma.io">
-            <img src="{{site.baseurl}}/assets/images/logo.svg" id="logo">
-        </a>
-    </div>
+<nav class="navigation is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
 
-    <div class="navbar-menu is-active">
-        <div class="navbar-start">
-            <div class="navbar-item">
-                <a href="{{site.url_medium}}" >Blog</a>
-            </div>
-            <div class="navbar-item">
-                <a href="{{site.url_twitter}}" >Twitter</a>
-            </div>
-        </div>
-    </div>
+    <a class="brand" href="{{site.url}}">
+        <img src="{{site.baseurl}}/assets/images/logo.svg" id="logo">
+    </a>
+
+<div class="nav-menu">
+    <a class="nav-item" href="{{site.url_medium}}"><div>Blog</div></a>
+
+    <a class="nav-item" href="{{site.url_twitter}}"><div>Twitter</div></a>
+</div>
+
 </nav>
