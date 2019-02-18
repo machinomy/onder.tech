@@ -174,7 +174,7 @@ function changeScheme(j) {
     }
 
     for (var i = 0; i < 4; i++) { //animate ghosts: they are going to current path
-        clones[i].transition().duration(i * 200 + 600).attr("opacity", 1)
+        clones[i].transition().duration(i * 100 + 400).attr("opacity", 1)
             .attr("d", paths[j])
     }
 

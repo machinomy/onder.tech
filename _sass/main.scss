@@ -125,7 +125,7 @@ a:hover {
 #container {
   canvas {
     position: absolute;
-    top: 200px;
+    top: 120px;
     left: 0;
     z-index: -1;
   }
@@ -135,12 +135,13 @@ a:hover {
   position: absolute;
   width: 100%;
   z-index: 1;
+  margin-top: -140px;
 }
 
 .wave-top {
   position: absolute;
   z-index: -1;
-  top: 40%;
+  top: 100px;
   width: 100%;
   left: -2px;
 }
@@ -149,6 +150,13 @@ a:hover {
   @extend .wave-top;
   top: initial;
   z-index: 1;
+  margin-top: -80px;
+  @include from($tablet){
+    margin-top: -175px;
+  }
+  @include from($desktop){
+    margin-top: -120px;
+  }
 }
 
 header {
