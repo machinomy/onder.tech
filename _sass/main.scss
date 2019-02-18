@@ -15,6 +15,7 @@ body {
 }
 
 a {
+
   color: initial;
 }
 
@@ -22,6 +23,7 @@ a:hover {
   opacity: $opacity-half;
   color: initial;
 }
+
 
 .navigation{
   &.is-fixed-top{
@@ -32,10 +34,12 @@ a:hover {
   display: flex;
   background: $color-white;
   transition: all 0.5s ease;
-  margin: 0 $offset-m;
+
+  margin: 0 $offset-m 0 0;
   padding-top: $offset-m;
+  padding-left: $offset-m;
   @include from($tablet) {
-    margin-left: $offset-m;
+
     padding-top: $offset-xl;
   }
   @include from($desktop) {
@@ -44,7 +48,9 @@ a:hover {
   }
   .brand {
     transition: all 0.5s ease;
-    margin: 0 $offset-l 0 0;
+
+    margin: 0 $offset-l 0 -16px;
+
     flex-basis: 236px;
     @include until($desktop) {
       margin-left: 0;
@@ -79,11 +85,14 @@ a:hover {
     border-radius: 0 0 8px 8px;
     padding-top: 0;
     margin-top: -1px;
-    padding-right: $offset-m;
+
     padding-left: $offset-m;
+
     .brand{
       transform: scale(0.7);
       transform-origin: left center;
+      padding-left: $offset-m;
+
     }
     .nav-item{
       align-items: center !important;
@@ -104,6 +113,9 @@ a:hover {
       align-items: center;
       flex-shrink: 1;
       margin-left: 0;
+
+      padding-left: 0 !important;
+
       transform: scale(0.7) !important;
       transform-origin: left center;
     }
@@ -123,7 +135,9 @@ a:hover {
 #container {
   canvas {
     position: absolute;
-    top: 200px;
+
+    top: 120px;
+
     left: 0;
     z-index: -1;
   }
@@ -133,12 +147,15 @@ a:hover {
   position: absolute;
   width: 100%;
   z-index: 1;
+  margin-top: -140px;
 }
 
 .wave-top {
   position: absolute;
   z-index: -1;
-  top: 40%;
+
+  top: 100px;
+
   width: 100%;
   left: -2px;
 }
@@ -147,15 +164,20 @@ a:hover {
   @extend .wave-top;
   top: initial;
   z-index: 1;
+  margin-top: -80px;
+  @include from($tablet){
+    margin-top: -175px;
+  }
+  @include from($desktop){
+    margin-top: -120px;
+  }
 }
 
 header {
   min-height: 100vh;
 
-
   .main {
-
-      padding-top: 2em;
+    padding-top: 2em;
 
     font-family: $font-montserrat;
     font-weight: 900;
@@ -181,6 +203,14 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0 0 $offset-m 0;
+
+  @include from($tablet) {
+    padding-bottom: 48px;
+  }
+  @include from($desktop) {
+    padding-bottom: 64px;
+  }
+
   .columns {
     z-index: 2;
     margin-top: auto;
@@ -340,9 +370,7 @@ header {
   a {
     color: $color-blue;
   }
-  img {
-    padding-bottom: 8em;
-  }
+
   .email {
     flex-grow: 2;
     display: flex;
@@ -353,14 +381,18 @@ header {
     @include until($tablet) {
       padding-top: $offset-xl;
 
-      img {
-        transform-origin: center;
-        transform: scale(0.6);
-        padding-bottom: 2em;
-      }
     }
     @media screen and (orientation: landscape) {
       padding-top: $offset-xl;
+    }
+    img {
+      padding-bottom: 4em;
+      @include until($tablet) {
+        padding-bottom: 2em;
+        transform-origin: center;
+        transform: scale(0.6);
+      }
+
     }
   }
   .social_links {

@@ -182,8 +182,10 @@ void main(void){
             //sourceCanvas.style.height=sourceCanvas.width/2;
             destinationCanvas.width=sourceCanvas.width;
             destinationCanvas.height=sourceCanvas.height;
-            sourceCanvas.style.height=sourceCanvas.width/3;
-            destinationCanvas.style.height=sourceCanvas.width/3;
+
+            sourceCanvas.style.height=sourceCanvas.width/2;
+            destinationCanvas.style.height=sourceCanvas.width/2;
+
             var destinationCtx, sourceCtx;
             //get the destination and source context
             sourceCtx = sourceCanvas.getContext("webgl");

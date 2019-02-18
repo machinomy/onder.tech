@@ -3,7 +3,9 @@ title: ONDER — platform for creating, piloting and running new business models
 email: hello@onder.tech
 description: >- # this means to ignore newlines until "baseurl:"
   Commonwealth environment for digital energy business
+
 baseurl: "" # the subpath of your site, e.g. /blog
+
 url: "http://onder.tech" # the base hostname & protocol for your site, e.g. http://example.com
 
 
