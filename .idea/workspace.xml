@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4504238c-2420-4fa0-9080-6095c98f3ab2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/shader.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/shader.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +21,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_sass/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="82" column="6" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
+            <state relative-caret-position="187">
+              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_includes/shader.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="185" column="63" selection-start-line="185" selection-start-column="63" selection-end-line="185" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -98,6 +107,7 @@
         <option value="$PROJECT_DIR$/assets/js/scroller.js" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_sass/main.scss" />
+        <option value="$PROJECT_DIR$/_includes/shader.html" />
       </list>
     </option>
   </component>
@@ -118,6 +128,11 @@
             <path>
               <item name="onder.tech" type="b2602c69:ProjectViewProjectNode" />
               <item name="onder.tech" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onder.tech" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onder.tech" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="onder.tech" type="b2602c69:ProjectViewProjectNode" />
@@ -160,12 +175,12 @@
       <option name="presentableId" value="Default" />
       <updated>1550216627686</updated>
       <workItem from="1550216628967" duration="15942000" />
-      <workItem from="1550476321258" duration="3653000" />
+      <workItem from="1550476321258" duration="4005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19595000" />
+    <option name="totallyTimeSpent" value="19947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -180,7 +195,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -292,8 +307,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_sass/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="82" column="6" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
+        <state relative-caret-position="187">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/shader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="185" column="63" selection-start-line="185" selection-start-column="63" selection-end-line="185" selection-end-column="63" />
         </state>
       </provider>
     </entry>
