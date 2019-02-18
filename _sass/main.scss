@@ -32,10 +32,11 @@ a:hover {
   display: flex;
   background: $color-white;
   transition: all 0.5s ease;
-  margin: 0 $offset-m;
+  margin: 0 $offset-m 0 0;
   padding-top: $offset-m;
+  padding-right: $offset-m;
+  padding-left: $offset-m;
   @include from($tablet) {
-    margin-left: $offset-m;
     padding-top: $offset-xl;
   }
   @include from($desktop) {
@@ -44,7 +45,7 @@ a:hover {
   }
   .brand {
     transition: all 0.5s ease;
-    margin: 0 $offset-l 0 0;
+    margin: 0 $offset-l 0 -16px;
     flex-basis: 236px;
     @include until($desktop) {
       margin-left: 0;
@@ -81,9 +82,11 @@ a:hover {
     margin-top: -1px;
     padding-right: $offset-m;
     padding-left: $offset-m;
+
     .brand{
       transform: scale(0.7);
       transform-origin: left center;
+      padding-left: $offset-m;
     }
     .nav-item{
       align-items: center !important;
@@ -104,6 +107,7 @@ a:hover {
       align-items: center;
       flex-shrink: 1;
       margin-left: 0;
+      padding-left: 0 !important;
       transform: scale(0.7) !important;
       transform-origin: left center;
     }
@@ -340,9 +344,7 @@ header {
   a {
     color: $color-blue;
   }
-  img {
-    padding-bottom: 8em;
-  }
+
   .email {
     flex-grow: 2;
     display: flex;
@@ -352,15 +354,17 @@ header {
     z-index: 2;
     @include until($tablet) {
       padding-top: $offset-xl;
-
-      img {
-        transform-origin: center;
-        transform: scale(0.6);
-        padding-bottom: 2em;
-      }
     }
     @media screen and (orientation: landscape) {
       padding-top: $offset-xl;
+    }
+    img {
+      padding-bottom: 4em;
+      @include until($tablet) {
+        padding-bottom: 2em;
+        transform-origin: center;
+        transform: scale(0.6);
+      }
     }
   }
   .social_links {
