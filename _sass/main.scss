@@ -15,6 +15,7 @@ body {
 }
 
 a {
+
   color: initial;
 }
 
@@ -22,6 +23,7 @@ a:hover {
   opacity: $opacity-half;
   color: initial;
 }
+
 
 .navigation{
   &.is-fixed-top{
@@ -32,10 +34,12 @@ a:hover {
   display: flex;
   background: $color-white;
   transition: all 0.5s ease;
+
   margin: 0 $offset-m 0 0;
   padding-top: $offset-m;
   padding-left: $offset-m;
   @include from($tablet) {
+
     padding-top: $offset-xl;
   }
   @include from($desktop) {
@@ -44,7 +48,9 @@ a:hover {
   }
   .brand {
     transition: all 0.5s ease;
+
     margin: 0 $offset-l 0 -16px;
+
     flex-basis: 236px;
     @include until($desktop) {
       margin-left: 0;
@@ -79,12 +85,14 @@ a:hover {
     border-radius: 0 0 8px 8px;
     padding-top: 0;
     margin-top: -1px;
+
     padding-left: $offset-m;
 
     .brand{
       transform: scale(0.7);
       transform-origin: left center;
       padding-left: $offset-m;
+
     }
     .nav-item{
       align-items: center !important;
@@ -105,7 +113,9 @@ a:hover {
       align-items: center;
       flex-shrink: 1;
       margin-left: 0;
+
       padding-left: 0 !important;
+
       transform: scale(0.7) !important;
       transform-origin: left center;
     }
@@ -125,7 +135,9 @@ a:hover {
 #container {
   canvas {
     position: absolute;
+
     top: 120px;
+
     left: 0;
     z-index: -1;
   }
@@ -141,7 +153,9 @@ a:hover {
 .wave-top {
   position: absolute;
   z-index: -1;
+
   top: 100px;
+
   width: 100%;
   left: -2px;
 }
@@ -164,6 +178,7 @@ header {
 
   .main {
     padding-top: 2em;
+
     font-family: $font-montserrat;
     font-weight: 900;
     font-size: $font-size-xl;
@@ -188,12 +203,14 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0 0 $offset-m 0;
+
   @include from($tablet) {
     padding-bottom: 48px;
   }
   @include from($desktop) {
     padding-bottom: 64px;
   }
+
   .columns {
     z-index: 2;
     margin-top: auto;
@@ -363,6 +380,7 @@ header {
     z-index: 2;
     @include until($tablet) {
       padding-top: $offset-xl;
+
     }
     @media screen and (orientation: landscape) {
       padding-top: $offset-xl;
@@ -374,6 +392,7 @@ header {
         transform-origin: center;
         transform: scale(0.6);
       }
+
     }
   }
   .social_links {
