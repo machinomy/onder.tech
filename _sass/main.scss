@@ -154,11 +154,8 @@ a:hover {
 header {
   min-height: 100vh;
 
-
   .main {
-
-      padding-top: 2em;
-
+    padding-top: 2em;
     font-family: $font-montserrat;
     font-weight: 900;
     font-size: $font-size-xl;
@@ -183,6 +180,12 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0 0 $offset-m 0;
+  @include from($tablet) {
+    padding-bottom: 48px;
+  }
+  @include from($desktop) {
+    padding-bottom: 64px;
+  }
   .columns {
     z-index: 2;
     margin-top: auto;

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4504238c-2420-4fa0-9080-6095c98f3ab2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_includes/shader.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/shader.html" afterDir="false" />
-    </list>
+    <list default="true" id="4504238c-2420-4fa0-9080-6095c98f3ab2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,16 +19,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_sass/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="-2618">
               <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/shader.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="246">
@@ -175,12 +173,12 @@
       <option name="presentableId" value="Default" />
       <updated>1550216627686</updated>
       <workItem from="1550216628967" duration="15942000" />
-      <workItem from="1550476321258" duration="4005000" />
+      <workItem from="1550476321258" duration="4608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19947000" />
+    <option name="totallyTimeSpent" value="20550000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,17 +303,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/shader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="185" column="63" selection-start-line="185" selection-start-column="63" selection-end-line="185" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2618">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
         </state>
       </provider>
     </entry>
