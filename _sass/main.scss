@@ -291,11 +291,9 @@ header {
           transform: scale(0.6);
         }
       }
-    }
-    &.checked {
-      li:before {
-        content: url("ui/checkbox_on.svg");
-      }
+			li.checked:before {
+				content: url("ui/checkbox_on.svg");
+			}
     }
     &.with-long-dash {
       li:before {
